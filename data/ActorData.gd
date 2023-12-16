@@ -9,7 +9,7 @@ var hitpointData : HitpointData = HitpointData.new()
 var currentMove : MoveData = null
 var idleMove : MoveRes = preload("res://assets/moves/defaults/DefaultIdle.tres")
 var hurtMove : MoveRes = preload("res://assets/moves/defaults/DefaultHurt.tres")
-var moveBus : Array[MoveRes]
+var moveBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 6, 0.8)
 var recoveryFrames : int = 0
 
 func is_free_to_move():
@@ -22,11 +22,22 @@ func is_free_to_move():
 				return true
 	return false
 
+func add_move_to_bus(moveRes : MoveRes):
+	moveBus.add_item(moveRes)
+
 func do_move(move : MoveRes):
-	#print("starting move " + str(move))
 	currentMove = MoveData.new(move)
 
+func do_next_move():
+	var nextMove : MoveRes = get_next_move_in_bus()
+	if nextMove:
+		do_move(nextMove)
+		return
+	do_move(idleMove)
+
 func tick_time(delta):
+	if is_free_to_move():
+		do_next_move()
 	if recoveryFrames > 0:
 		recoveryFrames -= 1
 		return
@@ -39,8 +50,11 @@ func tick_time(delta):
 				pass
 			TickResult.RESULT.MOVEENDED:
 				direction = targetDirection
-				currentMove = MoveData.new(idleMove)
-				#print("move ended for " + str(self))
+				var nextMove = get_next_move_in_bus()
+				if nextMove:
+					do_move(nextMove)
+				else:
+					do_move(idleMove)
 
 func parse_current_frame():
 	if currentMove:
@@ -69,6 +83,9 @@ func get_current_move_frame_index():
 	if currentMove:
 		return currentMove.currentFrame
 	return 0
+
+func get_next_move_in_bus():
+	return moveBus.pop_at(0)
 
 func take_damage(damage:int):
 	hitpointData.take_damage(damage)

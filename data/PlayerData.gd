@@ -7,9 +7,9 @@ var characterData : ActorData = ActorData.new()
 var inputData : InputData = InputData.new()
 
 func process(delta):
+	pass
 	if inputData != null:
 		inputData.process(delta) ##TODO:overwegen om dit door inputscene te laten doen
-	if is_character_free_to_move():
 		var inputRule : InputRule = get_next_input_rule()
 		if inputRule:
 			var moveName : int = translate_inputrule_to_movename(inputRule)
@@ -18,8 +18,9 @@ func process(delta):
 	
 func handle_event(event : InputEvent):
 	if inputData != null:
-		inputData.handle_event(event)
-		check_combo()
+		var inputRule : InputRule = inputData.handle_event(event)
+		var moveName = translate_inputrule_to_movename(inputRule)
+		start_move(moveName)
 
 func is_character_free_to_move():
 	return characterData.is_free_to_move()
@@ -32,7 +33,7 @@ func get_next_input_rule():
 func start_move(moveName):
 	var move = characterRes.get_move_by_name(moveName)
 	if move:
-		characterData.do_move(move)
+		characterData.add_move_to_bus(move)
 
 func translate_inputrule_to_movename(inputRule:InputRule):
 	if inputRule != null:

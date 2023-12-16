@@ -12,6 +12,8 @@ func handle_event(event : InputEvent):
 		if can_rule_enter_bus(inputRule):
 			put_rule_in_bus(inputRule)
 		cache_input(inputRule, event)
+		return inputRule
+	return null
 
 ##TODO: dit opnieuw uitdenken
 func process(delta):
