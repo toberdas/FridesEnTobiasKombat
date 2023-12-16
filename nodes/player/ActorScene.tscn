@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://cakje4dknu4wv"]
+
+[ext_resource type="Script" path="res://nodes/player/ActorScene.gd" id="1_bxpna"]
+[ext_resource type="Script" path="res://nodes/player/HitboxScene.gd" id="2_f5nxu"]
+[ext_resource type="Script" path="res://nodes/player/CollisionManager.gd" id="3_ovgnm"]
+[ext_resource type="Script" path="res://nodes/player/ProjectileManager.gd" id="4_g3gxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lmwh"]
+resource_local_to_scene = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1lps"]
+resource_local_to_scene = true
+
+[node name="ActorScene" type="Node2D"]
+script = ExtResource("1_bxpna")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionManager" type="Node2D" parent="."]
+script = ExtResource("3_ovgnm")
+
+[node name="AttackHitbox" type="Area2D" parent="CollisionManager"]
+monitorable = false
+script = ExtResource("2_f5nxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionManager/AttackHitbox"]
+shape = SubResource("RectangleShape2D_5lmwh")
+
+[node name="Hitbox" type="Area2D" parent="CollisionManager"]
+monitoring = false
+script = ExtResource("2_f5nxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionManager/Hitbox"]
+shape = SubResource("RectangleShape2D_m1lps")
+
+[node name="ProjectileManager" type="Node" parent="."]
+script = ExtResource("4_g3gxx")

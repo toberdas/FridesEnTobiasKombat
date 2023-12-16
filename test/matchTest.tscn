@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkkuhl4ykn25y"]
+
+[ext_resource type="PackedScene" uid="uid://bqrykh2ybv2w0" path="res://nodes/MatchScene.tscn" id="1_bewcq"]
+
+[node name="MatchTest" type="Node2D"]
+
+[node name="MatchScene" parent="." instance=ExtResource("1_bewcq")]

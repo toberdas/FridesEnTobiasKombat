@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://botdl5lei8ja6"]
+
+[ext_resource type="PackedScene" uid="uid://bdcvonf8ymfvv" path="res://nodes/player/PlayerScene.tscn" id="1_8l1bt"]
+[ext_resource type="Script" path="res://test/hitTest.gd" id="1_uno3k"]
+[ext_resource type="PackedScene" uid="uid://cakje4dknu4wv" path="res://nodes/player/ActorScene.tscn" id="2_w0mn0"]
+
+[node name="HitTest" type="Node2D"]
+script = ExtResource("1_uno3k")
+
+[node name="PlayerScene" parent="." instance=ExtResource("1_8l1bt")]
+
+[node name="ActorScene" parent="PlayerScene" instance=ExtResource("2_w0mn0")]
+position = Vector2(-82, 0)
+
+[node name="PlayerScene2" parent="." instance=ExtResource("1_8l1bt")]
+
+[node name="ActorScene" parent="PlayerScene2" instance=ExtResource("2_w0mn0")]
+position = Vector2(78, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]

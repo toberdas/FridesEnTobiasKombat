@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=12 format=3 uid="uid://wymfycgyi88a"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_iuas2"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_p3f54"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_pbqst"]
+[ext_resource type="Texture2D" uid="uid://bcjdi6tqxpl6c" path="res://assets/sprites/frides/Frides_Jump.png" id="4_qcodf"]
+
+[sub_resource type="Resource" id="Resource_tg520"]
+script = ExtResource("1_p3f54")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_kh043"]
+script = ExtResource("1_p3f54")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_ayhpj"]
+script = ExtResource("1_p3f54")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_kc3wj"]
+script = ExtResource("2_pbqst")
+verticalDisplacement = -30.0
+horizontalDisplacement = 10.0
+
+[sub_resource type="Resource" id="Resource_c0p5e"]
+script = ExtResource("1_p3f54")
+displacementRes = SubResource("Resource_kc3wj")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_q6wve"]
+script = ExtResource("2_pbqst")
+verticalDisplacement = 30.0
+horizontalDisplacement = 5.0
+
+[sub_resource type="Resource" id="Resource_n7cyo"]
+script = ExtResource("1_p3f54")
+displacementRes = SubResource("Resource_q6wve")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[resource]
+script = ExtResource("1_iuas2")
+spriteSheet = ExtResource("4_qcodf")
+moveName = 6
+moveFrames = Array[ExtResource("1_p3f54")]([SubResource("Resource_tg520"), SubResource("Resource_kh043"), SubResource("Resource_ayhpj"), SubResource("Resource_c0p5e"), SubResource("Resource_n7cyo")])

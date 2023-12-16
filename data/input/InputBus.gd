@@ -1,0 +1,2 @@
+extends TimedLimitedCollection
+class_name InputBus

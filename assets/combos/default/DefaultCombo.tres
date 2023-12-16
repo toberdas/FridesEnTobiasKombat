@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ComboRes" load_steps=3 format=3 uid="uid://bj700644ewdw5"]
+
+[ext_resource type="Resource" uid="uid://chgvf8u0p7703" path="res://assets/moves/defaults/DefaultSpecial.tres" id="1_1m6to"]
+[ext_resource type="Script" path="res://resources/character/moves/ComboRes.gd" id="1_sdi04"]
+
+[resource]
+script = ExtResource("1_sdi04")
+moveNames = Array[int]([1, 0, 0])
+resultingMove = ExtResource("1_1m6to")

@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=10 format=3 uid="uid://berxkmitncfgp"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_71s07"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_tjndq"]
+[ext_resource type="Texture2D" uid="uid://cvaejgksy16dr" path="res://assets/sprites/frides/Frides_Punch.png" id="3_1kq3p"]
+
+[sub_resource type="Resource" id="Resource_alg6s"]
+script = ExtResource("1_71s07")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_p5e6w"]
+script = ExtResource("1_71s07")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_bpwj5"]
+script = ExtResource("1_71s07")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_oobhk"]
+script = ExtResource("1_71s07")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_i37h5"]
+script = ExtResource("1_71s07")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_6yy72"]
+script = ExtResource("1_71s07")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[resource]
+script = ExtResource("1_tjndq")
+spriteSheet = ExtResource("3_1kq3p")
+moveName = 0
+moveFrames = Array[ExtResource("1_71s07")]([SubResource("Resource_alg6s"), SubResource("Resource_p5e6w"), SubResource("Resource_bpwj5"), SubResource("Resource_oobhk"), SubResource("Resource_i37h5"), SubResource("Resource_6yy72")])

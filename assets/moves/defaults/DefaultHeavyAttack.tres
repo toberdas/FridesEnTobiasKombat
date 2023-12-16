@@ -1,0 +1,138 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=25 format=3 uid="uid://bnfraro8o3f0d"]
+
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="1_6va8l"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_tg0ab"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_eront"]
+[ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="3_itea8"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_044wi"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="4_yvnm8"]
+[ext_resource type="Texture2D" uid="uid://dvfj5u7pa5dml" path="res://assets/sprites/frides/Frides_Kick.png" id="6_262wq"]
+
+[sub_resource type="Resource" id="Resource_rlk2s"]
+script = ExtResource("2_eront")
+verticalDisplacement = 0.0
+horizontalDisplacement = 1.0
+
+[sub_resource type="Resource" id="Resource_e5g6w"]
+script = ExtResource("2_eront")
+verticalDisplacement = 1.0
+horizontalDisplacement = 1.0
+
+[sub_resource type="Resource" id="Resource_r6xvh"]
+script = ExtResource("3_itea8")
+displacementRes = SubResource("Resource_e5g6w")
+recoveryFrames = 0
+damageReduction = 0
+blocks = false
+
+[sub_resource type="Resource" id="Resource_u86h5"]
+script = ExtResource("4_yvnm8")
+hitRes = SubResource("Resource_r6xvh")
+displacementRes = SubResource("Resource_rlk2s")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = true
+
+[sub_resource type="Resource" id="Resource_15h6d"]
+script = ExtResource("4_yvnm8")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = true
+
+[sub_resource type="Resource" id="Resource_1hoea"]
+script = ExtResource("4_yvnm8")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = true
+
+[sub_resource type="Resource" id="Resource_mpjds"]
+script = ExtResource("4_yvnm8")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_y6u4n"]
+script = ExtResource("4_044wi")
+hitboxSize = Vector2(24, 20)
+hitboxLocation = Vector2(8, 0)
+
+[sub_resource type="Resource" id="Resource_ftkac"]
+script = ExtResource("1_6va8l")
+hitboxRes = SubResource("Resource_y6u4n")
+damage = 1
+recoveryFramesWhenBlocked = 1
+recoveryFramesWhenNotBlocked = 0
+
+[sub_resource type="Resource" id="Resource_vpj4r"]
+script = ExtResource("4_yvnm8")
+attackRes = SubResource("Resource_ftkac")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_u8gpa"]
+script = ExtResource("2_eront")
+verticalDisplacement = 0.0
+horizontalDisplacement = 1.0
+
+[sub_resource type="Resource" id="Resource_mpkns"]
+script = ExtResource("4_yvnm8")
+displacementRes = SubResource("Resource_u8gpa")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = true
+
+[sub_resource type="Resource" id="Resource_3nmpq"]
+script = ExtResource("4_044wi")
+hitboxSize = Vector2(20, 20)
+hitboxLocation = Vector2(8, 0)
+
+[sub_resource type="Resource" id="Resource_e8tbt"]
+script = ExtResource("1_6va8l")
+hitboxRes = SubResource("Resource_3nmpq")
+damage = 1
+recoveryFramesWhenBlocked = 1
+recoveryFramesWhenNotBlocked = 0
+
+[sub_resource type="Resource" id="Resource_wrr1k"]
+script = ExtResource("4_yvnm8")
+attackRes = SubResource("Resource_e8tbt")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_eiyy4"]
+script = ExtResource("4_yvnm8")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[sub_resource type="Resource" id="Resource_i1tvx"]
+script = ExtResource("4_yvnm8")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[resource]
+script = ExtResource("1_tg0ab")
+spriteSheet = ExtResource("6_262wq")
+moveName = 1
+moveFrames = Array[ExtResource("4_yvnm8")]([SubResource("Resource_u86h5"), SubResource("Resource_15h6d"), SubResource("Resource_1hoea"), SubResource("Resource_mpjds"), SubResource("Resource_vpj4r"), SubResource("Resource_mpkns"), SubResource("Resource_wrr1k"), SubResource("Resource_eiyy4"), SubResource("Resource_i1tvx")])

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=5 format=3 uid="uid://dtpvixtievp1y"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_3jmqm"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_npqxu"]
+[ext_resource type="Texture2D" uid="uid://cmaxkndnnlscm" path="res://assets/sprites/frides/Frides_Hurt-sheet_oneframe.png" id="3_2pqxo"]
+
+[sub_resource type="Resource" id="Resource_otnbc"]
+script = ExtResource("1_3jmqm")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+
+[resource]
+script = ExtResource("1_npqxu")
+spriteSheet = ExtResource("3_2pqxo")
+moveName = 8
+moveFrames = Array[ExtResource("1_3jmqm")]([SubResource("Resource_otnbc")])

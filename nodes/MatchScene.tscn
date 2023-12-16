@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqrykh2ybv2w0"]
+
+[ext_resource type="Script" path="res://nodes/MatchScene.gd" id="1_mbe0c"]
+[ext_resource type="PackedScene" uid="uid://bdcvonf8ymfvv" path="res://nodes/player/PlayerScene.tscn" id="2_hltu7"]
+[ext_resource type="PackedScene" uid="uid://cakje4dknu4wv" path="res://nodes/player/ActorScene.tscn" id="3_up8g1"]
+
+[node name="MatchScene" type="Node2D"]
+script = ExtResource("1_mbe0c")
+
+[node name="PlayerScene" parent="." instance=ExtResource("2_hltu7")]
+
+[node name="ActorScene" parent="PlayerScene" instance=ExtResource("3_up8g1")]
+
+[node name="PlayerScene2" parent="." instance=ExtResource("2_hltu7")]
+
+[node name="ActorScene" parent="PlayerScene2" instance=ExtResource("3_up8g1")]
