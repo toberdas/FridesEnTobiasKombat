@@ -11,7 +11,7 @@ canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
-canCombo = false
+canCombo = true
 
 [sub_resource type="Resource" id="Resource_gw5pv"]
 script = ExtResource("2_c5dpy")
@@ -49,7 +49,7 @@ horizontalDisplacement = -4.0
 [sub_resource type="Resource" id="Resource_ighvt"]
 script = ExtResource("1_jv0ly")
 displacementRes = SubResource("Resource_hw61e")
-canBeCancelled = false
+canBeCancelled = true
 canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false

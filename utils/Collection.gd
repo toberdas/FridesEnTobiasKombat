@@ -17,6 +17,7 @@ func get_first():
 func get_last():
 	if array.size()>0:
 		return array[-1]
+	return null
 
 func size():
 	return array.size()
@@ -27,7 +28,7 @@ func get_at(ind):
 	return null
 
 func pop_at(ind):
-	if array.size()>0:
+	if array.size()>ind:
 		#print(str(self) + " popped index " + str(ind))
 		return array.pop_at(ind)
 	return null

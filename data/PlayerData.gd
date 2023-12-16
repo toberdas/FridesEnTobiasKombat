@@ -46,22 +46,28 @@ func check_combo():
 		if currentMoveFrame:
 			if currentMoveFrame.can_combo():
 				var currentMoveName = currentMove.get_move_name()
-				var combo : ComboRes = characterRes.get_combo_by_starting_move(currentMoveName)
-				if combo:
+				var combos = characterRes.get_combos_by_starting_move(currentMoveName)
+				print(combos)
+				for combo in combos:
 					var _inputBus : InputBus = inputData.inputBus
 					var i = 0
+					var removeArray = []
 					var hit = true
+					removeArray.append(i)
 					for comboPartName in combo.get_rest_of_combo():
 						var moveName = translate_inputrule_to_movename(_inputBus.get_at(i))
 						if moveName != comboPartName:
 							hit = false
 						i += 1
+						removeArray.append(i)
 					if i < combo.get_amount_of_moves() - 1:
 						hit = false
 					if hit:
 						print("combo hit")
 						characterData.do_move(combo.get_resulting_move())
-						#inputData.inputBus.erase_all()
+						for removeIndex in removeArray:
+							_inputBus.pop_at(removeIndex)
+						return
 
 func set_player_id(newID:int):
 	playerID = newID

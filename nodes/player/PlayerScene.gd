@@ -9,6 +9,7 @@ func _ready():
 func _process(delta):
 	playerData.process(delta)
 
-func _input(event : InputEvent):
-	print("incoming input")
+func _unhandled_input(event):
 	playerData.handle_event(event)
+#func _input(event : InputEvent):
+	#playerData.handle_event(event)

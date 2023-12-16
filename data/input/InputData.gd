@@ -3,7 +3,7 @@ class_name InputData
 
 var inputCollection : InputCollection = preload("res://assets/input/DefaultInputCollection.tres")
 var heldFrames : int
-var inputBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 6, 0.8)
+var inputBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 6, 0.9)
 var eventCache = {}
 
 func handle_event(event : InputEvent):
@@ -21,24 +21,30 @@ func get_rule(event : InputEvent):
 	return inputCollection.get_rule_for_event(event)
 
 func can_rule_enter_bus(inputRule : InputRule):
-	if is_last_input(inputRule):
+	if !inputRule.canStack && is_last_input(inputRule):
 		return false
 	if is_event_just_pressed(inputRule):
 		return true
 	if inputRule.canBeHeld:
 		heldFrames += 1
 		if heldFrames >= inputRule.holdBufferFrames:
+			print('heldframes reset')
 			heldFrames = 0
-			return true
+		return true
 
 func put_rule_in_bus(inputRule : InputRule):
 	inputBus.add_item(inputRule)
-	print(inputBus.get_all())
+	#print(inputBus.get_all())
 
 func is_last_input(inputRule : InputRule):
-	if inputBus.get_last() == inputRule:
-		return true
+	var lastInput = inputBus.get_last()
+	if lastInput:
+		if lastInput == inputRule:
+			return true
 	return false
+
+func is_last_two_inputs(inputRule : InputRule):
+	pass
 
 func get_last_input_rule():
 	return inputBus.get_last()

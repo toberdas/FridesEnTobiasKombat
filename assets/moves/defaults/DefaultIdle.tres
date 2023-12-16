@@ -78,5 +78,5 @@ canCombo = false
 [resource]
 script = ExtResource("1_qitw8")
 spriteSheet = ExtResource("3_ueuo6")
-moveName = 7
+moveName = 8
 moveFrames = Array[ExtResource("1_1vy3i")]([SubResource("Resource_0nq0g"), SubResource("Resource_vov6n"), SubResource("Resource_qls6o"), SubResource("Resource_jyj6n")])

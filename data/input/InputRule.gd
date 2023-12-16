@@ -6,6 +6,7 @@ class_name InputRule
 @export var canBeHeld : bool = false
 @export var holdBufferFrames : int = 6
 @export var decayTime : float = 1.0
+@export var canStack : bool = true
 
 func matches_event(event : InputEvent):
 	if event.device != input.device:

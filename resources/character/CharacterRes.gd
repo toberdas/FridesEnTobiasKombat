@@ -11,8 +11,9 @@ func get_move_by_name(moveName):
 			return move
 	return null
 
-func get_combo_by_starting_move(moveName):
+func get_combos_by_starting_move(moveName):
+	var _combos = []
 	for combo : ComboRes in combos:
 		if combo.moveNames[0] == moveName:
-			return combo
-	return null
+			_combos.append(combo)
+	return _combos

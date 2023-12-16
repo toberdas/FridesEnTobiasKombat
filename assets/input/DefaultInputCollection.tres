@@ -14,6 +14,7 @@ moveInputName = 1
 canBeHeld = false
 holdBufferFrames = 6
 decayTime = 2.0
+canStack = true
 
 [sub_resource type="InputEventKey" id="InputEventKey_nxboi"]
 keycode = 66
@@ -26,6 +27,7 @@ moveInputName = 0
 canBeHeld = false
 holdBufferFrames = 6
 decayTime = 1.0
+canStack = true
 
 [sub_resource type="InputEventKey" id="InputEventKey_skis5"]
 keycode = 65
@@ -38,6 +40,7 @@ moveInputName = 2
 canBeHeld = true
 holdBufferFrames = 6
 decayTime = 1.0
+canStack = false
 
 [sub_resource type="InputEventKey" id="InputEventKey_oxssg"]
 keycode = 68
@@ -50,6 +53,7 @@ moveInputName = 3
 canBeHeld = true
 holdBufferFrames = 6
 decayTime = 1.0
+canStack = false
 
 [sub_resource type="InputEventKey" id="InputEventKey_mjno2"]
 keycode = 67
@@ -62,6 +66,7 @@ moveInputName = 4
 canBeHeld = false
 holdBufferFrames = 6
 decayTime = 1.0
+canStack = true
 
 [sub_resource type="InputEventKey" id="InputEventKey_0rhxj"]
 keycode = 87
@@ -74,6 +79,7 @@ moveInputName = 5
 canBeHeld = false
 holdBufferFrames = 6
 decayTime = 1.0
+canStack = true
 
 [resource]
 script = ExtResource("1_68nu5")
