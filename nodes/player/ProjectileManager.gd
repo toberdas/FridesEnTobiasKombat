@@ -8,7 +8,7 @@ func handle_projectile_res(projectileRes : ProjectileRes):
 		shoot_projectile(projectileRes)
 
 func shoot_projectile(projectileRes : ProjectileRes):
-	var _actorData = ActorData.new()
+	var _actorData = actorData.duplicate(true)
 	_actorData.do_move(projectileRes.moveRes)
 	_actorData.ownerID = actorData.ownerID
 	var actorInstance = load("res://nodes/player/ActorScene.tscn").instantiate()

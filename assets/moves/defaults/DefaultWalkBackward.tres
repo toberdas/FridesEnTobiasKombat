@@ -78,3 +78,4 @@ canBeHeld = true
 cacheTime = 0.01
 increasesSpriteFrame = true
 spriteFrameAmount = 4
+canBeSkippedInBus = true

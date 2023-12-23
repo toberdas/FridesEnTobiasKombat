@@ -8,7 +8,7 @@ var currentMoveData : MoveData = null
 var nextMove : MoveRes = null
 var recoveryFrames : int = 0
 var cacheTimer : float = 0
-var moveBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 6, 0.6)
+var moveBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 2, 0.4)
 
 var ownerID : int = 0
 var characterRes : CharacterRes = null
@@ -17,49 +17,39 @@ var idleMove : MoveRes = preload("res://assets/moves/defaults/DefaultIdle.tres")
 var hurtMove : MoveRes = preload("res://assets/moves/defaults/DefaultHurt.tres")
 
 func is_free_to_move():
-	if nextMove == null:
+	if get_next_move() == null:
 		return true
 	else:
-		if nextMove == idleMove:
-			return true
-		if nextMove.canBeHeld:
-			return true
-	return false
+		return false
 
 func idle():
 	print("idle")
-	set_current_move(MoveData.new(idleMove))
-	set_next_move_res(idleMove)
+	set_current_move(idleMove)
 
 func do_next_move():
 	var canLoop = can_loop()
 	var canBeCancelled = can_be_cancelled()
-	if nextMove == null:
+	if get_next_move() == null:
 		return false
-	if nextMove.moveName == currentMoveData.moveRes.moveName && canLoop:
+	if get_next_move().moveName == currentMoveData.moveRes.moveName && canLoop:
 		print('a')
-		set_current_move(MoveData.new(nextMove))
+		set_current_move(get_next_move())
 		return true
-	if nextMove.moveName != currentMoveData.moveRes.moveName && canBeCancelled:
+	if get_next_move().moveName != currentMoveData.moveRes.moveName && canBeCancelled:
 		print('b')
-		set_current_move(MoveData.new(nextMove))
+		set_current_move(get_next_move())
 		return true
 	return false
 
 func cancel_process():
-	if nextMove == null:
+	if get_next_move() == null:
 		return
-	if nextMove != currentMoveData.moveRes && can_be_cancelled():
+	if get_next_move() != currentMoveData.moveRes && can_be_cancelled():
 		print('c')
-		set_current_move(MoveData.new(nextMove))
+		set_current_move(get_next_move())
 
 func do_move(move : MoveRes):
-	set_current_move(MoveData.new(move))
-
-func wipe_next_move():
-	if nextMove != null:
-		nextMove = null
-		print('Wiped next move')
+	set_current_move(move)
 
 func tick_time(delta):
 	moveBus.decay_timer(delta)
@@ -80,11 +70,7 @@ func tick_time(delta):
 				if !do_next_move():
 					idle()
 	if currentMoveData == null:
-		set_current_move(MoveData.new(nextMove))
-	cacheTimer -= delta
-	if cacheTimer <= 0.0:
-		wipe_next_move()
-	
+		set_current_move(get_next_move())
 
 func parse_current_frame():
 	if currentMoveData:
@@ -129,7 +115,8 @@ func can_be_cancelled():
 		return true
 	return false
 
-func set_current_move(moveData : MoveData):
+func set_current_move(moveRes : MoveRes):
+	var moveData = MoveData.new(moveRes)
 	if moveData:
 		currentMoveData = moveData
 
@@ -138,11 +125,21 @@ func set_next_move_res(moveRes : MoveRes):
 		nextMove = moveRes
 		cacheTimer = moveRes.cacheTime
 
+func get_next_move():
+	if characterRes == null:
+		return null
+	for moveName in moveBus.get_all():
+		var moveRes : MoveRes = characterRes.get_move_by_name(moveName)
+		if !moveRes.canBeSkippedInBus:
+			return moveRes
+	var moveName = moveBus.get_first()
+	return characterRes.get_move_by_name(moveName)
+
 func set_character_res(newRes : CharacterRes):
 	characterRes = newRes
 	hurtMove = characterRes.get_move_by_name(MOVES.moves.HURT)
 	idleMove = characterRes.get_move_by_name(MOVES.moves.IDLE)
-	set_current_move(MoveData.new(idleMove))
+	set_current_move(idleMove)
 	hitpointData = HitpointData.new(characterRes.hitpoints)
 
 func add_moveinputname_to_bus(moveInputName):
@@ -152,6 +149,7 @@ func add_moveinputname_to_bus(moveInputName):
 	moveBusCopy.insert(0, currentMoveData.moveRes.moveName)
 	var resultingMove : MoveRes = characterRes.check_combo_with_names(moveBusCopy)
 	if resultingMove:
+		moveBus.erase_all()
 		do_move(resultingMove)
 
 func take_damage(damage:int):
