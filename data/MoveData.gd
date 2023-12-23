@@ -3,6 +3,7 @@ class_name MoveData
 
 var moveRes : MoveRes
 var currentFrame : int = 0
+var currentSpriteFrame : int = 0
 var frameParsed : bool = false
 var timer : float = 0.0
 
@@ -15,21 +16,30 @@ func tick_time(delta):
 
 func check_increment():
 	if timer >= get_current_move_frame().frameDuration:
-		currentFrame += 1
+		if currentFrame >= moveRes.get_moveframes_amount() -1:
+			currentFrame = moveRes.get_moveframes_amount() -1
+			return TickResult.new(TickResult.RESULT.MOVEENDED)
 		timer = 0.0
 		frameParsed = false
-		if currentFrame >= moveRes.get_moveframes_amount():
-			return TickResult.new(TickResult.RESULT.MOVEENDED)
+		currentFrame += 1
 		var currentFrameRes : MoveFrameRes = moveRes.get_moveframe_res(currentFrame)
 		if currentFrameRes != null:
-			return TickResult.new(TickResult.RESULT.FRAMEINCREASE)
+			if currentFrameRes.increasesSpriteFrameCounter:
+				currentSpriteFrame += 1
+			var tickResult = TickResult.new(TickResult.RESULT.FRAMEINCREASE)
+			return tickResult
 	return TickResult.new(TickResult.RESULT.TIMERINCREASE)
-		
+
 func parse_current_frame():
 	if frameParsed == false:
 		frameParsed = true
 		return get_current_move_frame()
 	return null
+
+func is_on_last_frame():
+	if currentFrame >= moveRes.get_moveframes_amount() -1:
+		return true
+	return false
 
 func get_move_name():
 	return moveRes.moveName
@@ -41,3 +51,13 @@ func get_current_move_frame():
 	if moveRes:
 		return moveRes.get_moveframe_res(currentFrame)
 	return null
+
+func get_sprite_frame_count():
+	if moveRes:
+		return moveRes.spriteFrameAmount
+	return 0
+
+func get_cache_time():
+	if moveRes:
+		return moveRes.cacheTime
+	return 0.8

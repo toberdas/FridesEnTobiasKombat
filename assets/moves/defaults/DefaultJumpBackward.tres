@@ -1,64 +1,174 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=12 format=3 uid="uid://bpiycsrwbb3at"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=24 format=3 uid="uid://bpiycsrwbb3at"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_42tqx"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_hyf6n"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_rpvrc"]
 [ext_resource type="Texture2D" uid="uid://bcjdi6tqxpl6c" path="res://assets/sprites/frides/Frides_Jump.png" id="4_qqpgt"]
 
-[sub_resource type="Resource" id="Resource_tg520"]
+[sub_resource type="Resource" id="Resource_ko2ih"]
 script = ExtResource("1_hyf6n")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
-[sub_resource type="Resource" id="Resource_kh043"]
+[sub_resource type="Resource" id="Resource_r7ss8"]
 script = ExtResource("1_hyf6n")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
-[sub_resource type="Resource" id="Resource_ayhpj"]
+[sub_resource type="Resource" id="Resource_4otjh"]
 script = ExtResource("1_hyf6n")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
-[sub_resource type="Resource" id="Resource_kc3wj"]
+[sub_resource type="Resource" id="Resource_dblgg"]
 script = ExtResource("2_rpvrc")
-verticalDisplacement = -30.0
-horizontalDisplacement = -10.0
-
-[sub_resource type="Resource" id="Resource_c0p5e"]
-script = ExtResource("1_hyf6n")
-displacementRes = SubResource("Resource_kc3wj")
-canBeCancelled = false
-canBeInterrupted = false
-frameDuration = 0.1
-selfDestruct = false
-canCombo = false
-
-[sub_resource type="Resource" id="Resource_q6wve"]
-script = ExtResource("2_rpvrc")
-verticalDisplacement = 30.0
+verticalDisplacement = -10.0
 horizontalDisplacement = -5.0
 
-[sub_resource type="Resource" id="Resource_n7cyo"]
+[sub_resource type="Resource" id="Resource_kv8hd"]
 script = ExtResource("1_hyf6n")
-displacementRes = SubResource("Resource_q6wve")
+displacementRes = SubResource("Resource_dblgg")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_me0cd"]
+script = ExtResource("2_rpvrc")
+verticalDisplacement = -7.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_lsuuu"]
+script = ExtResource("1_hyf6n")
+displacementRes = SubResource("Resource_me0cd")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+
+[sub_resource type="Resource" id="Resource_d225r"]
+script = ExtResource("2_rpvrc")
+verticalDisplacement = -5.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_encj4"]
+script = ExtResource("1_hyf6n")
+displacementRes = SubResource("Resource_d225r")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+
+[sub_resource type="Resource" id="Resource_oxshd"]
+script = ExtResource("2_rpvrc")
+verticalDisplacement = -2.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_18nkt"]
+script = ExtResource("1_hyf6n")
+displacementRes = SubResource("Resource_oxshd")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+
+[sub_resource type="Resource" id="Resource_74fe8"]
+script = ExtResource("2_rpvrc")
+verticalDisplacement = 2.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_xx83d"]
+script = ExtResource("1_hyf6n")
+displacementRes = SubResource("Resource_74fe8")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_f2u2x"]
+script = ExtResource("2_rpvrc")
+verticalDisplacement = 5.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_ocugy"]
+script = ExtResource("1_hyf6n")
+displacementRes = SubResource("Resource_f2u2x")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+
+[sub_resource type="Resource" id="Resource_bmjxy"]
+script = ExtResource("2_rpvrc")
+verticalDisplacement = 7.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_ww4wr"]
+script = ExtResource("1_hyf6n")
+displacementRes = SubResource("Resource_bmjxy")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+
+[sub_resource type="Resource" id="Resource_gjyv2"]
+script = ExtResource("2_rpvrc")
+verticalDisplacement = 10.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_080yw"]
+script = ExtResource("1_hyf6n")
+displacementRes = SubResource("Resource_gjyv2")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
 
 [resource]
 script = ExtResource("1_42tqx")
 spriteSheet = ExtResource("4_qqpgt")
 moveName = 7
-moveFrames = Array[ExtResource("1_hyf6n")]([SubResource("Resource_tg520"), SubResource("Resource_kh043"), SubResource("Resource_ayhpj"), SubResource("Resource_c0p5e"), SubResource("Resource_n7cyo")])
+moveFrames = Array[ExtResource("1_hyf6n")]([SubResource("Resource_ko2ih"), SubResource("Resource_r7ss8"), SubResource("Resource_4otjh"), SubResource("Resource_kv8hd"), SubResource("Resource_lsuuu"), SubResource("Resource_encj4"), SubResource("Resource_18nkt"), SubResource("Resource_xx83d"), SubResource("Resource_ocugy"), SubResource("Resource_ww4wr"), SubResource("Resource_080yw")])
+canBeHeld = true
+cacheTime = 0.8
+increasesSpriteFrame = true
+spriteFrameAmount = 5

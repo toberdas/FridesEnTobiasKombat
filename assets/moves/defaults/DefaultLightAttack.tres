@@ -11,6 +11,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_p5e6w"]
 script = ExtResource("1_71s07")
@@ -19,6 +21,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_bpwj5"]
 script = ExtResource("1_71s07")
@@ -27,6 +31,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_oobhk"]
 script = ExtResource("1_71s07")
@@ -35,6 +41,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_i37h5"]
 script = ExtResource("1_71s07")
@@ -43,17 +51,25 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_6yy72"]
 script = ExtResource("1_71s07")
-canBeCancelled = false
+canBeCancelled = true
 canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [resource]
 script = ExtResource("1_tjndq")
 spriteSheet = ExtResource("3_1kq3p")
 moveName = 0
 moveFrames = Array[ExtResource("1_71s07")]([SubResource("Resource_alg6s"), SubResource("Resource_p5e6w"), SubResource("Resource_bpwj5"), SubResource("Resource_oobhk"), SubResource("Resource_i37h5"), SubResource("Resource_6yy72")])
+canBeHeld = false
+cacheTime = 0.8
+increasesSpriteFrame = true
+spriteFrameAmount = 6

@@ -11,9 +11,15 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [resource]
 script = ExtResource("1_npqxu")
 spriteSheet = ExtResource("3_2pqxo")
 moveName = 8
 moveFrames = Array[ExtResource("1_3jmqm")]([SubResource("Resource_otnbc")])
+canBeHeld = false
+cacheTime = 0.8
+increasesSpriteFrame = true
+spriteFrameAmount = 1

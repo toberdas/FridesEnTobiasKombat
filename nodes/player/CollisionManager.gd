@@ -8,8 +8,9 @@ func _ready():
 	pass
 
 func attack_body(body):
-	var _collision = Collision.new(actorData, body.get_parent().actorData)
-	$AttackHitbox.set_deferred("monitoring", false)
+	if actorData:
+		var _collision = Collision.new(actorData, body.get_parent().actorData)
+		$AttackHitbox.set_deferred("monitoring", false)
 
 func handle_attack_res(attackRes:AttackRes):
 	if attackRes:

@@ -1,15 +1,15 @@
 extends Node2D
 
-var playerData : PlayerData = PlayerData.new()
+var playerData : PlayerData
+@onready var actorScene = $ActorScene
 
-func _ready():
+func start():
 	playerData.start_move(MOVES.moves.IDLE)
-	$ActorScene.set_actor_data(playerData.characterData)
-	
+	if actorScene:
+		actorScene.set_actor_data(playerData.characterData)
 
 func _process(delta):
 	playerData.process(delta)
 
 func _input(event : InputEvent):
-	print("incoming input")
 	playerData.handle_event(event)

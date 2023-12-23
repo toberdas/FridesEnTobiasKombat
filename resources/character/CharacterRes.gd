@@ -16,3 +16,10 @@ func get_combo_by_starting_move(moveName):
 		if combo.moveNames[0] == moveName:
 			return combo
 	return null
+
+func check_combo_with_names(moveNames = []):
+	for combo : ComboRes in combos:
+		var resultingMove = combo.check_combo(moveNames)
+		if resultingMove != null:
+			return resultingMove
+	return null

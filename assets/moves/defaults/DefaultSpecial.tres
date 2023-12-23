@@ -13,6 +13,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_mguon"]
 script = ExtResource("1_s2fuw")
@@ -21,6 +23,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_51mnb"]
 script = ExtResource("1_s2fuw")
@@ -29,6 +33,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_y3600"]
 script = ExtResource("1_s2fuw")
@@ -37,6 +43,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_7vu06"]
 script = ExtResource("1_s2fuw")
@@ -45,6 +53,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_q4wp8"]
 script = ExtResource("1_s2fuw")
@@ -53,6 +63,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_a6plk"]
 script = ExtResource("2_j8ee7")
@@ -67,9 +79,15 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [resource]
 script = ExtResource("1_c4yos")
 spriteSheet = ExtResource("3_vys1d")
 moveName = 9
 moveFrames = Array[ExtResource("1_s2fuw")]([SubResource("Resource_21wfg"), SubResource("Resource_mguon"), SubResource("Resource_51mnb"), SubResource("Resource_y3600"), SubResource("Resource_7vu06"), SubResource("Resource_q4wp8"), SubResource("Resource_e43ah")])
+canBeHeld = false
+cacheTime = 0.8
+increasesSpriteFrame = true
+spriteFrameAmount = 7

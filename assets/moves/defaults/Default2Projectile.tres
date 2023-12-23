@@ -27,6 +27,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_evgl6"]
 script = ExtResource("1_431tn")
@@ -41,6 +43,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_f3gf0"]
 script = ExtResource("1_431tn")
@@ -55,6 +59,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_6w11u"]
 script = ExtResource("1_431tn")
@@ -69,6 +75,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_4h8ib"]
 script = ExtResource("1_431tn")
@@ -83,6 +91,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_85lvy"]
 script = ExtResource("2_amnrg")
@@ -91,6 +101,8 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_x36s0"]
 script = ExtResource("3_fxkqy")
@@ -112,6 +124,8 @@ canBeInterrupted = false
 frameDuration = 0.3
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_vhvdn"]
 script = ExtResource("2_amnrg")
@@ -120,6 +134,8 @@ canBeInterrupted = false
 frameDuration = 0.2
 selfDestruct = false
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [sub_resource type="Resource" id="Resource_eki6v"]
 script = ExtResource("2_amnrg")
@@ -128,9 +144,15 @@ canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = true
 canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
 
 [resource]
 script = ExtResource("5_oc3ac")
 spriteSheet = ExtResource("6_ss88d")
 moveName = 9
 moveFrames = Array[ExtResource("2_amnrg")]([SubResource("Resource_h31t0"), SubResource("Resource_dktdq"), SubResource("Resource_fcwwj"), SubResource("Resource_km1hn"), SubResource("Resource_js5aj"), SubResource("Resource_85lvy"), SubResource("Resource_57uyv"), SubResource("Resource_vhvdn"), SubResource("Resource_eki6v")])
+canBeHeld = false
+cacheTime = 0.8
+increasesSpriteFrame = true
+spriteFrameAmount = 9
