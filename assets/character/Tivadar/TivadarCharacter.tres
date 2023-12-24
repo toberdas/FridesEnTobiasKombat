@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterRes" load_steps=21 format=3 uid="uid://dhh8r8lth7jmr"]
+[gd_resource type="Resource" script_class="CharacterRes" load_steps=22 format=3 uid="uid://dhh8r8lth7jmr"]
 
 [ext_resource type="Resource" uid="uid://coh62n3fodrix" path="res://assets/character/Tivadar/combos/DefaultJumpBackwardCombo.tres" id="1_pq20q"]
 [ext_resource type="Resource" uid="uid://dlxcl8hfih6yy" path="res://assets/character/Tivadar/combos/DefaultJumpForwardsCombo.tres" id="2_m5p0u"]
 [ext_resource type="Resource" uid="uid://btefx4pyguylf" path="res://assets/character/Tivadar/combos/TiviSpecialCombo.tres" id="3_rh0tv"]
+[ext_resource type="Texture2D" uid="uid://c7g3oqf6wuktl" path="res://assets/character/Tivadar/sprites/Tivadar_HurtStill.png" id="4_d4thw"]
 [ext_resource type="Resource" uid="uid://cl00skudhj60k" path="res://assets/character/Tivadar/moves/TiviBlock.tres" id="4_xxww5"]
 [ext_resource type="Resource" uid="uid://fu8ttuogcfex" path="res://assets/character/Tivadar/moves/TiviDeath.tres" id="5_qkjsb"]
 [ext_resource type="Resource" uid="uid://b3p5yfo5fearv" path="res://assets/character/Tivadar/moves/TiviEntrance.tres" id="6_hsqwg"]
@@ -26,3 +27,4 @@ script = ExtResource("18_sog1t")
 moves = Array[Resource("res://resources/character/moves/MoveRes.gd")]([ExtResource("4_xxww5"), ExtResource("5_qkjsb"), ExtResource("6_hsqwg"), ExtResource("7_7x6jh"), ExtResource("8_ifkoo"), ExtResource("9_g6og4"), ExtResource("10_bnm0w"), ExtResource("11_r8ior"), ExtResource("12_3s2h4"), ExtResource("13_ki0pd"), ExtResource("14_ywima"), ExtResource("15_38pfr"), ExtResource("16_7kbuy"), ExtResource("17_fq6ph"), ExtResource("18_erpw3"), ExtResource("19_xjbuj")])
 combos = Array[Resource("res://resources/character/moves/ComboRes.gd")]([ExtResource("1_pq20q"), ExtResource("2_m5p0u"), ExtResource("3_rh0tv")])
 hitpoints = Array[Resource("res://resources/character/HitpointRes.gd")]([])
+icon = ExtResource("4_d4thw")

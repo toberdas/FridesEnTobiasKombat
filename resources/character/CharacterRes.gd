@@ -1,9 +1,13 @@
 extends Resource
 class_name CharacterRes
-
+@export_category("Moves")
 @export var moves : Array[MoveRes]
+@export_category("Combos")
 @export var combos : Array[ComboRes]
+@export_category("Hitpoints")
 @export var hitpoints : Array[HitpointRes]
+@export_category("Properties")
+@export var icon : Texture2D
 
 func get_move_by_name(moveName):
 	for move in moves:

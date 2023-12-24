@@ -38,6 +38,7 @@ func displace(displacementRes : DisplacementRes):
 	var hdisplacement = displacementRes.horizontalDisplacement
 	position.x += hdisplacement * actorData.direction
 	position.y += displacementRes.verticalDisplacement
+	actorData.location = position
 	
 func set_actor_data(_actorData):
 	actorData = _actorData

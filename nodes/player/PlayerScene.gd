@@ -1,19 +1,24 @@
 extends Node2D
 
-@export var characterRes : CharacterRes
-@export var inputCollection : InputCollection
-
-var playerData : PlayerData
+@export var playerData : PlayerData
 @onready var actorScene = $ActorScene
 
-func start():
-	playerData = PlayerData.new(characterRes)
-	playerData.set_input_data(InputData.new(inputCollection))
+var started : bool = false
+
+func start(_playerData : PlayerData):
+	playerData = _playerData
 	if actorScene:
 		actorScene.set_actor_data(playerData.characterData)
+	started = true
 
 func _process(delta):
-	playerData.process(delta)
+	if started:
+		playerData.process(delta)
 
 func _input(event : InputEvent):
-	playerData.handle_event(event)
+	if started:
+		playerData.handle_event(event)
+
+func get_actor_location():
+	if actorScene:
+		return actorScene.global_position

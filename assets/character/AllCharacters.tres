@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Collection" load_steps=8 format=3 uid="uid://oblj6sopt2b2"]
+
+[ext_resource type="Resource" uid="uid://cica0u7m0lhco" path="res://assets/character/Daan/DaanCharacter.tres" id="1_6vmig"]
+[ext_resource type="Script" path="res://utils/Collection.gd" id="1_jtvj6"]
+[ext_resource type="Resource" uid="uid://e8i0yic5dk8h" path="res://assets/character/Frides/FridesCharacter.tres" id="2_hyeai"]
+[ext_resource type="Resource" uid="uid://c2gv50iig14q6" path="res://assets/character/Jip/JipCharacter.tres" id="3_phfjx"]
+[ext_resource type="Resource" uid="uid://4txc7deykkt" path="res://assets/character/Tijmen/TijmenCharacter.tres" id="4_h4i78"]
+[ext_resource type="Resource" uid="uid://dhh8r8lth7jmr" path="res://assets/character/Tivadar/TivadarCharacter.tres" id="5_52ily"]
+[ext_resource type="Resource" uid="uid://cmaoj7821e6j0" path="res://assets/character/Tobias/TobiasCharacter.tres" id="6_f1me4"]
+
+[resource]
+script = ExtResource("1_jtvj6")
+array = [ExtResource("1_6vmig"), ExtResource("2_hyeai"), ExtResource("3_phfjx"), ExtResource("4_h4i78"), ExtResource("5_52ily"), ExtResource("6_f1me4")]
+dictionary = {}

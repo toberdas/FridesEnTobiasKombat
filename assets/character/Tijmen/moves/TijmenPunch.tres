@@ -58,8 +58,8 @@ increasesSpriteFrameCounter = true
 [sub_resource type="Resource" id="Resource_hmp7e"]
 script = ExtResource("2_mqc8x")
 damage = 1
-recoveryFramesWhenBlocked = 1
-recoveryFramesWhenNotBlocked = 0
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
 
 [sub_resource type="Resource" id="Resource_1mlvb"]
 script = ExtResource("1_52isq")

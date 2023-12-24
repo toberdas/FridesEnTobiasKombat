@@ -99,8 +99,8 @@ increasesSpriteFrameCounter = true
 [sub_resource type="Resource" id="Resource_obla2"]
 script = ExtResource("3_apyhb")
 damage = 1
-recoveryFramesWhenBlocked = 1
-recoveryFramesWhenNotBlocked = 0
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
 
 [sub_resource type="Resource" id="Resource_73ek3"]
 script = ExtResource("2_k1kvl")

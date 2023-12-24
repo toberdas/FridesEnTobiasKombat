@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgtjyua2sghuu"]
+
+[ext_resource type="Script" path="res://nodes/CharacterSelectionScene.gd" id="1_pcsbd"]
+
+[node name="CharacterSelectScene" type="Node2D"]
+script = ExtResource("1_pcsbd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="SelectableRoot" type="Node" parent="."]
+
+[node name="Node2D" type="Node2D" parent="SelectableRoot"]
+position = Vector2(-26, -26)
+
+[node name="Node2D2" type="Node2D" parent="SelectableRoot"]
+position = Vector2(-43, 1)
+
+[node name="Node2D3" type="Node2D" parent="SelectableRoot"]
+position = Vector2(-55, 29)
+
+[node name="Node2D4" type="Node2D" parent="SelectableRoot"]
+position = Vector2(29, -28)
+
+[node name="Node2D5" type="Node2D" parent="SelectableRoot"]
+position = Vector2(45, 0)
+
+[node name="Node2D6" type="Node2D" parent="SelectableRoot"]
+position = Vector2(54, 28)

@@ -21,5 +21,5 @@ moveFrames = Array[ExtResource("1_xby27")]([SubResource("Resource_j7gxu")])
 moveName = 10
 canBeHeld = false
 cacheTime = 0.8
-spriteFrameAmount = 2
+spriteFrameAmount = 1
 canBeSkippedInBus = false

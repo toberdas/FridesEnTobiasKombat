@@ -69,8 +69,8 @@ increasesSpriteFrameCounter = true
 [sub_resource type="Resource" id="Resource_hdbb3"]
 script = ExtResource("2_482v3")
 damage = 1
-recoveryFramesWhenBlocked = 1
-recoveryFramesWhenNotBlocked = 0
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
 
 [sub_resource type="Resource" id="Resource_wxpno"]
 script = ExtResource("3_ck1ix")
@@ -92,8 +92,8 @@ increasesSpriteFrameCounter = true
 [sub_resource type="Resource" id="Resource_a6uo2"]
 script = ExtResource("2_482v3")
 damage = 1
-recoveryFramesWhenBlocked = 1
-recoveryFramesWhenNotBlocked = 0
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
 
 [sub_resource type="Resource" id="Resource_ssry3"]
 script = ExtResource("3_ck1ix")
@@ -115,8 +115,8 @@ increasesSpriteFrameCounter = false
 [sub_resource type="Resource" id="Resource_ry4ch"]
 script = ExtResource("2_482v3")
 damage = 1
-recoveryFramesWhenBlocked = 1
-recoveryFramesWhenNotBlocked = 0
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
 
 [sub_resource type="Resource" id="Resource_ko5rm"]
 script = ExtResource("3_ck1ix")
@@ -138,8 +138,8 @@ increasesSpriteFrameCounter = false
 [sub_resource type="Resource" id="Resource_2r84x"]
 script = ExtResource("2_482v3")
 damage = 1
-recoveryFramesWhenBlocked = 1
-recoveryFramesWhenNotBlocked = 0
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
 
 [sub_resource type="Resource" id="Resource_um5ll"]
 script = ExtResource("3_ck1ix")

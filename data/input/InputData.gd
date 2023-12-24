@@ -1,13 +1,9 @@
 extends Resource
 class_name InputData
 
-var inputCollection : InputCollection = preload("res://assets/input/DefaultInputCollection.tres")
+@export var inputCollection : InputCollection = preload("res://assets/input/DefaultInputCollection.tres")
 
-var lastInput : InputRule
 var inputHeldCache = {}
-
-func _init(_inputCollection):
-	inputCollection = _inputCollection
 
 func handle_event(event : InputEvent):
 	var inputRule = get_rule(event)
@@ -43,3 +39,6 @@ func is_event_just_pressed(rule):
 		cache_pressed(rule)
 		return true
 	return false
+
+func set_input_collection(_inputCollection : InputCollection):
+	inputCollection = _inputCollection
