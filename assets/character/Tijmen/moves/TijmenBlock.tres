@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=10 format=3 uid="uid://btba66lqhduiu"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_51syk"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_m8ko3"]
+[ext_resource type="Texture2D" uid="uid://offj1my045av" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Block.png" id="3_nllsa"]
+
+[sub_resource type="Resource" id="Resource_fd0ju"]
+script = ExtResource("1_51syk")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.0
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_o4qw7"]
+script = ExtResource("1_51syk")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.05
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_fbc1p"]
+script = ExtResource("1_51syk")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.05
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_44ivd"]
+script = ExtResource("1_51syk")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_wv0yc"]
+script = ExtResource("1_51syk")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.3
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_kckpl"]
+script = ExtResource("1_51syk")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("2_m8ko3")
+spriteSheet = ExtResource("3_nllsa")
+moveFrames = Array[ExtResource("1_51syk")]([SubResource("Resource_fd0ju"), SubResource("Resource_o4qw7"), SubResource("Resource_fbc1p"), SubResource("Resource_44ivd"), SubResource("Resource_wv0yc"), SubResource("Resource_kckpl")])
+moveName = 4
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 6
+canBeSkippedInBus = false

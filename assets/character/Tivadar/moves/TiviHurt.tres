@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=5 format=3 uid="uid://h2kpg5xk43o8"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_xby27"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_0wlmc"]
+[ext_resource type="Texture2D" uid="uid://c7g3oqf6wuktl" path="res://assets/character/Tivadar/sprites/Tivadar_HurtStill.png" id="3_spnkc"]
+
+[sub_resource type="Resource" id="Resource_j7gxu"]
+script = ExtResource("1_xby27")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("2_0wlmc")
+spriteSheet = ExtResource("3_spnkc")
+moveFrames = Array[ExtResource("1_xby27")]([SubResource("Resource_j7gxu")])
+moveName = 10
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 2
+canBeSkippedInBus = false

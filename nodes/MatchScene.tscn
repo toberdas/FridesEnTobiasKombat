@@ -1,16 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqrykh2ybv2w0"]
+[gd_scene load_steps=8 format=3 uid="uid://bqrykh2ybv2w0"]
 
 [ext_resource type="Script" path="res://nodes/MatchScene.gd" id="1_mbe0c"]
 [ext_resource type="PackedScene" uid="uid://bdcvonf8ymfvv" path="res://nodes/player/PlayerScene.tscn" id="2_hltu7"]
+[ext_resource type="Resource" uid="uid://cmaoj7821e6j0" path="res://assets/character/Tobias/TobiasCharacter.tres" id="2_j16st"]
+[ext_resource type="Resource" uid="uid://e8i0yic5dk8h" path="res://assets/character/Frides/FridesCharacter.tres" id="3_7ns78"]
 [ext_resource type="PackedScene" uid="uid://cakje4dknu4wv" path="res://nodes/player/ActorScene.tscn" id="3_up8g1"]
+[ext_resource type="Resource" uid="uid://csosbuga346lp" path="res://assets/input/DefaultInputCollection.tres" id="4_5ddq6"]
+[ext_resource type="Resource" uid="uid://kdqh24eh5amh" path="res://assets/input/SecondDefaultInputCollection.tres" id="7_6ggk4"]
 
 [node name="MatchScene" type="Node2D"]
 script = ExtResource("1_mbe0c")
+playerOneCharacterResource = ExtResource("2_j16st")
+playerOneInputCollection = ExtResource("4_5ddq6")
+playerTwoCharacterResource = ExtResource("3_7ns78")
+playerTwoInputCollection = ExtResource("7_6ggk4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="PlayerScene" parent="." instance=ExtResource("2_hltu7")]
+position = Vector2(-110, 0)
 
 [node name="ActorScene" parent="PlayerScene" instance=ExtResource("3_up8g1")]
 
 [node name="PlayerScene2" parent="." instance=ExtResource("2_hltu7")]
+position = Vector2(110, 0)
 
 [node name="ActorScene" parent="PlayerScene2" instance=ExtResource("3_up8g1")]

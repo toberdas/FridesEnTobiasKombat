@@ -1,0 +1,96 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=15 format=3 uid="uid://dshxukjw0nk24"]
+
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_2ab34"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_557qp"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="3_0xcl1"]
+[ext_resource type="Texture2D" uid="uid://c26l1rsrphwgh" path="res://assets/character/Jip/sprites/Jip_MK-Run.png" id="4_73hpi"]
+
+[sub_resource type="Resource" id="Resource_pubvu"]
+script = ExtResource("1_2ab34")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_pfi7w"]
+script = ExtResource("2_557qp")
+displacementRes = SubResource("Resource_pubvu")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_pp7au"]
+script = ExtResource("1_2ab34")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_6cua5"]
+script = ExtResource("2_557qp")
+displacementRes = SubResource("Resource_pp7au")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_svxsb"]
+script = ExtResource("1_2ab34")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_1ij30"]
+script = ExtResource("2_557qp")
+displacementRes = SubResource("Resource_svxsb")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_vo282"]
+script = ExtResource("1_2ab34")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_txmxi"]
+script = ExtResource("2_557qp")
+displacementRes = SubResource("Resource_vo282")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_daedr"]
+script = ExtResource("1_2ab34")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_x1ebg"]
+script = ExtResource("2_557qp")
+displacementRes = SubResource("Resource_daedr")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = true
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("3_0xcl1")
+spriteSheet = ExtResource("4_73hpi")
+moveFrames = Array[ExtResource("2_557qp")]([SubResource("Resource_pfi7w"), SubResource("Resource_6cua5"), SubResource("Resource_1ij30"), SubResource("Resource_txmxi"), SubResource("Resource_x1ebg")])
+moveName = 3
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 5
+canBeSkippedInBus = true

@@ -2,9 +2,9 @@ extends Resource
 class_name PlayerData
 
 var playerID : int = 0
-var characterRes : CharacterRes = preload("res://assets/character/default/DefaultCharacter.tres")
+var characterRes : CharacterRes = null
 var characterData : ActorData = null
-var inputData : InputData = InputData.new()
+var inputData : InputData = null
 
 func _init(_characterRes:CharacterRes):
 	characterRes = _characterRes
@@ -12,7 +12,7 @@ func _init(_characterRes:CharacterRes):
 	characterData.ownerID = playerID
 	characterData.set_character_res(characterRes)
 
-func process(delta):
+func process(_delta):
 	if inputData:
 		if characterData.is_free_to_move():
 			var rule : InputRule = inputData.get_pressed_input_rule()
@@ -34,3 +34,6 @@ func get_next_input_rule():
 func set_player_id(newID:int):
 	playerID = newID
 	characterData.ownerID = newID
+
+func set_input_data(newInputData):
+	inputData = newInputData

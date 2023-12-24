@@ -6,6 +6,9 @@ var inputCollection : InputCollection = preload("res://assets/input/DefaultInput
 var lastInput : InputRule
 var inputHeldCache = {}
 
+func _init(_inputCollection):
+	inputCollection = _inputCollection
+
 func handle_event(event : InputEvent):
 	var inputRule = get_rule(event)
 	if inputRule != null:

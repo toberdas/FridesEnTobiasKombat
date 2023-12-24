@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=12 format=3 uid="uid://dbfmuticqjqpp"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_5phtn"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_mr1bc"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_1ag42"]
+[ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="2_qq2a7"]
+[ext_resource type="Texture2D" uid="uid://di4lo3rjbq2xl" path="res://assets/character/Tobias/sprites/Tobias_Block.png" id="3_nqrt3"]
+
+[sub_resource type="Resource" id="Resource_ybwuk"]
+script = ExtResource("1_mr1bc")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.02
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_cltmk"]
+script = ExtResource("1_mr1bc")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.08
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_xj7dl"]
+script = ExtResource("2_1ag42")
+hitboxSize = Vector2(32, 64)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_5i3m5"]
+script = ExtResource("2_qq2a7")
+recoveryTime = 0.0
+hitboxRes = SubResource("Resource_xj7dl")
+damageReduction = 0
+blocks = true
+
+[sub_resource type="Resource" id="Resource_klcnx"]
+script = ExtResource("1_mr1bc")
+hitRes = SubResource("Resource_5i3m5")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_2ebxf"]
+script = ExtResource("1_mr1bc")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.3
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_5phtn")
+spriteSheet = ExtResource("3_nqrt3")
+moveFrames = Array[ExtResource("1_mr1bc")]([SubResource("Resource_ybwuk"), SubResource("Resource_cltmk"), SubResource("Resource_klcnx"), SubResource("Resource_2ebxf")])
+moveName = 4
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 4
+canBeSkippedInBus = false

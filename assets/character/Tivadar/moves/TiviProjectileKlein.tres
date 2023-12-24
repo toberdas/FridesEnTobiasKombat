@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=8 format=3 uid="uid://dvkx0jcn5uhis"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_dn85k"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_p06ku"]
+[ext_resource type="Texture2D" uid="uid://bk1rllsr0r33e" path="res://assets/character/Tivadar/sprites/Tivadar_Projectiles-Klein projectiel.png" id="3_njh3w"]
+
+[sub_resource type="Resource" id="Resource_fd8uj"]
+script = ExtResource("1_dn85k")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_ero11"]
+script = ExtResource("1_dn85k")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_8pg0t"]
+script = ExtResource("1_dn85k")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_2aabk"]
+script = ExtResource("1_dn85k")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = true
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_p06ku")
+spriteSheet = ExtResource("3_njh3w")
+moveFrames = Array[ExtResource("1_dn85k")]([SubResource("Resource_fd8uj"), SubResource("Resource_ero11"), SubResource("Resource_8pg0t"), SubResource("Resource_2aabk")])
+moveName = 0
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 4
+canBeSkippedInBus = false

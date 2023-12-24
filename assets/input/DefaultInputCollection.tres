@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InputCollection" load_steps=15 format=3 uid="uid://csosbuga346lp"]
+[gd_resource type="Resource" script_class="InputCollection" load_steps=17 format=3 uid="uid://csosbuga346lp"]
 
 [ext_resource type="Script" path="res://data/input/InputCollection.gd" id="1_68nu5"]
 [ext_resource type="Script" path="res://data/input/InputRule.gd" id="1_aklht"]
@@ -75,6 +75,18 @@ canBeHeld = false
 holdBufferFrames = 6
 decayTime = 1.0
 
+[sub_resource type="InputEventKey" id="InputEventKey_ahinc"]
+keycode = 90
+unicode = 122
+
+[sub_resource type="Resource" id="Resource_hhsbv"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventKey_ahinc")
+moveInputName = 6
+canBeHeld = false
+holdBufferFrames = 6
+decayTime = 1.0
+
 [resource]
 script = ExtResource("1_68nu5")
-inputRules = Array[ExtResource("1_aklht")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle")])
+inputRules = Array[ExtResource("1_aklht")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle"), SubResource("Resource_hhsbv")])

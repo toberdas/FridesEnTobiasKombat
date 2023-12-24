@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=12 format=3 uid="uid://c5toibmhbqbqt"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_ccimf"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_jxi8f"]
+[ext_resource type="Texture2D" uid="uid://mxyeb0cqyraw" path="res://assets/character/Tobias/sprites/Tobias_Idle.png" id="3_0wufu"]
+
+[sub_resource type="Resource" id="Resource_tw0g7"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_4t2ns"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_nx0n3"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_07x18"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_gypgj"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_2wt7f"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_rdy33"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_7se5s"]
+script = ExtResource("1_ccimf")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_jxi8f")
+spriteSheet = ExtResource("3_0wufu")
+moveFrames = Array[ExtResource("1_ccimf")]([SubResource("Resource_tw0g7"), SubResource("Resource_4t2ns"), SubResource("Resource_nx0n3"), SubResource("Resource_07x18"), SubResource("Resource_gypgj"), SubResource("Resource_2wt7f"), SubResource("Resource_rdy33"), SubResource("Resource_7se5s")])
+moveName = 8
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 8
+canBeSkippedInBus = false

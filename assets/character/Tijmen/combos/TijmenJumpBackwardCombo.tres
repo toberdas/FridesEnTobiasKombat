@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ComboRes" load_steps=3 format=3 uid="uid://djmsn1oj0n1nl"]
+
+[ext_resource type="Resource" uid="uid://dgqp1f588pds2" path="res://assets/character/Tijmen/moves/TijmenJumpBackward.tres" id="1_f6rir"]
+[ext_resource type="Script" path="res://resources/character/moves/ComboRes.gd" id="2_isuab"]
+
+[resource]
+script = ExtResource("2_isuab")
+moveNames = Array[int]([3, 3, 3, 3])
+resultingMove = ExtResource("1_f6rir")

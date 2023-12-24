@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=13 format=3 uid="uid://cllq4o6jyf3f7"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_is65s"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_tg6jc"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_bul2o"]
+[ext_resource type="Texture2D" uid="uid://dsa81q3sv3fa3" path="res://assets/character/Tobias/sprites/Tobias_Run.png" id="4_sigyr"]
+
+[sub_resource type="Resource" id="Resource_pubvu"]
+script = ExtResource("1_tg6jc")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_pfi7w"]
+script = ExtResource("2_bul2o")
+displacementRes = SubResource("Resource_pubvu")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_pp7au"]
+script = ExtResource("1_tg6jc")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_6cua5"]
+script = ExtResource("2_bul2o")
+displacementRes = SubResource("Resource_pp7au")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_svxsb"]
+script = ExtResource("1_tg6jc")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_1ij30"]
+script = ExtResource("2_bul2o")
+displacementRes = SubResource("Resource_svxsb")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_vo282"]
+script = ExtResource("1_tg6jc")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_txmxi"]
+script = ExtResource("2_bul2o")
+displacementRes = SubResource("Resource_vo282")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = true
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_is65s")
+spriteSheet = ExtResource("4_sigyr")
+moveFrames = Array[ExtResource("2_bul2o")]([SubResource("Resource_pfi7w"), SubResource("Resource_6cua5"), SubResource("Resource_1ij30"), SubResource("Resource_txmxi")])
+moveName = 3
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 5
+canBeSkippedInBus = true

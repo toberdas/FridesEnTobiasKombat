@@ -20,6 +20,7 @@ script = ExtResource("1_bxpna")
 script = ExtResource("3_ovgnm")
 
 [node name="AttackHitbox" type="Area2D" parent="CollisionManager"]
+collision_layer = 0
 monitorable = false
 script = ExtResource("2_f5nxu")
 
@@ -27,6 +28,7 @@ script = ExtResource("2_f5nxu")
 shape = SubResource("RectangleShape2D_5lmwh")
 
 [node name="Hitbox" type="Area2D" parent="CollisionManager"]
+collision_mask = 0
 monitoring = false
 script = ExtResource("2_f5nxu")
 

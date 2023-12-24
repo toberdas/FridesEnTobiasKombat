@@ -37,5 +37,5 @@ func set_hitbox(hitRes : HitRes):
 	$Hitbox.monitorable = true
 
 func clear_hitbox():
-	$Hitbox.set_hitbox_from_res(null)
-	$Hitbox.monitorable = false
+	$Hitbox.set_hitbox_from_res(preload("res://assets/misc/DefaultHitRes.tres").hitboxRes)
+	$Hitbox.monitorable = true

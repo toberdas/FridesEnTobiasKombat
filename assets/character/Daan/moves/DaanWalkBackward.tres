@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=13 format=3 uid="uid://4c6gn30s2v0y"]
+
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_h2ims"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_pqhqb"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_2hg25"]
+[ext_resource type="Texture2D" uid="uid://53c4p6og1yt" path="res://assets/character/Daan/sprites/Daan_MK-Run.png" id="4_080wf"]
+
+[sub_resource type="Resource" id="Resource_q82id"]
+script = ExtResource("1_h2ims")
+verticalDisplacement = 0.0
+horizontalDisplacement = -4.0
+
+[sub_resource type="Resource" id="Resource_882vx"]
+script = ExtResource("2_2hg25")
+displacementRes = SubResource("Resource_q82id")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_e780g"]
+script = ExtResource("1_h2ims")
+verticalDisplacement = 0.0
+horizontalDisplacement = -4.0
+
+[sub_resource type="Resource" id="Resource_yr83u"]
+script = ExtResource("2_2hg25")
+displacementRes = SubResource("Resource_e780g")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_gxeac"]
+script = ExtResource("1_h2ims")
+verticalDisplacement = 0.0
+horizontalDisplacement = -5.0
+
+[sub_resource type="Resource" id="Resource_qgqpd"]
+script = ExtResource("2_2hg25")
+displacementRes = SubResource("Resource_gxeac")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_k102n"]
+script = ExtResource("1_h2ims")
+verticalDisplacement = 0.0
+horizontalDisplacement = -4.0
+
+[sub_resource type="Resource" id="Resource_uyrs5"]
+script = ExtResource("2_2hg25")
+displacementRes = SubResource("Resource_k102n")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = true
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_pqhqb")
+spriteSheet = ExtResource("4_080wf")
+moveFrames = Array[ExtResource("2_2hg25")]([SubResource("Resource_882vx"), SubResource("Resource_yr83u"), SubResource("Resource_qgqpd"), SubResource("Resource_uyrs5")])
+moveName = 3
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 4
+canBeSkippedInBus = true

@@ -6,15 +6,15 @@ var direction : int = 1
 var targetDirection : int = 1
 var currentMoveData : MoveData = null
 var nextMove : MoveRes = null
-var recoveryFrames : int = 0
+var recoveryTime : float = 0
 var cacheTimer : float = 0
-var moveBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 2, 0.4)
+var moveBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 6, 0.8)
 
 var ownerID : int = 0
 var characterRes : CharacterRes = null
 var hitpointData : HitpointData = null
-var idleMove : MoveRes = preload("res://assets/moves/defaults/DefaultIdle.tres")
-var hurtMove : MoveRes = preload("res://assets/moves/defaults/DefaultHurt.tres")
+var idleMove : MoveRes = preload("res://assets/character/Frides/moves/DefaultIdle.tres")
+var hurtMove : MoveRes = preload("res://assets/character/Frides/moves/DefaultHurt.tres")
 
 func is_free_to_move():
 	if get_next_move() == null:
@@ -34,10 +34,14 @@ func do_next_move():
 	if get_next_move().moveName == currentMoveData.moveRes.moveName && canLoop:
 		print('a')
 		set_current_move(get_next_move())
+		moveBus.erase_all()
+		print('bus cleares')
 		return true
 	if get_next_move().moveName != currentMoveData.moveRes.moveName && canBeCancelled:
 		print('b')
 		set_current_move(get_next_move())
+		moveBus.erase_all()
+		print('bus cleares')
 		return true
 	return false
 
@@ -47,23 +51,28 @@ func cancel_process():
 	if get_next_move() != currentMoveData.moveRes && can_be_cancelled():
 		print('c')
 		set_current_move(get_next_move())
+		moveBus.erase_all()
+		print('bus cleares')
 
 func do_move(move : MoveRes):
 	set_current_move(move)
 
 func tick_time(delta):
 	moveBus.decay_timer(delta)
-	if recoveryFrames > 0:
-		recoveryFrames -= 1
+	if recoveryTime > 0.0:
+		recoveryTime -= delta
 		return
 	if currentMoveData != null:
 		var tickResult : TickResult = currentMoveData.tick_time(delta)
+		if tickResult == null:
+			print("tick failed")
+			return
 		match tickResult.result:
 			TickResult.RESULT.FRAMEINCREASE:
-				print('frame increase')
-				cancel_process()
-			TickResult.RESULT.TIMERINCREASE:
 				pass
+			TickResult.RESULT.TIMERINCREASE:
+				#do_next_move()
+				cancel_process()
 			TickResult.RESULT.MOVEENDED:
 				print('move ended')
 				direction = targetDirection
@@ -126,25 +135,31 @@ func set_next_move_res(moveRes : MoveRes):
 		cacheTimer = moveRes.cacheTime
 
 func get_next_move():
+	var rv = null
 	if characterRes == null:
-		return null
+		return rv
 	for moveName in moveBus.get_all():
 		var moveRes : MoveRes = characterRes.get_move_by_name(moveName)
-		if !moveRes.canBeSkippedInBus:
-			return moveRes
+		if moveRes != null:
+			if !moveRes.canBeSkippedInBus:
+				return moveRes
 	var moveName = moveBus.get_first()
+	var move = characterRes.get_move_by_name(moveName)
+	if move == null:
+		return null	
 	return characterRes.get_move_by_name(moveName)
 
 func set_character_res(newRes : CharacterRes):
 	characterRes = newRes
 	hurtMove = characterRes.get_move_by_name(MOVES.moves.HURT)
 	idleMove = characterRes.get_move_by_name(MOVES.moves.IDLE)
-	set_current_move(idleMove)
+	set_current_move(characterRes.get_move_by_name(MOVES.moves.ENTRANCE))
 	hitpointData = HitpointData.new(characterRes.hitpoints)
 
 func add_moveinputname_to_bus(moveInputName):
 	var translatedName = translate_moveinputname_to_movename(moveInputName)
-	moveBus.add_item(translatedName)
+	if translatedName != null:
+		moveBus.add_item(translatedName)
 	var moveBusCopy : Array = moveBus.get_all().duplicate()
 	moveBusCopy.insert(0, currentMoveData.moveRes.moveName)
 	var resultingMove : MoveRes = characterRes.check_combo_with_names(moveBusCopy)
@@ -153,16 +168,19 @@ func add_moveinputname_to_bus(moveInputName):
 		do_move(resultingMove)
 
 func take_damage(damage:int):
-	hitpointData.take_damage(damage)
+	if hitpointData != null:
+		hitpointData.take_damage(damage)
 	do_move(hurtMove)
 
-func take_recovery_frames(frames:int):
-	recoveryFrames = frames
+func take_recovery_time(time:float):
+	recoveryTime = time
 
 func translate_moveinputname_to_movename(moveInputName): ##Ik schrijf dit nu uit, maar zou mooi zijn om het ook in regels te kunnen vatten.
 	var rv = moveInputName
 	if moveInputName == MOVES.moveInputs.WALKLEFT or moveInputName == MOVES.moveInputs.WALKRIGHT: 
 		rv = handle_movement_input(moveInputName)
+	if moveInputName == MOVES.moveInputs.TEST:
+		rv = MOVES.moves.TEST
 	return rv
 
 func handle_movement_input(moveInputName):
