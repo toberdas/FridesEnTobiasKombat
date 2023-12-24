@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=10 format=3 uid="uid://3cfl58h08sgo"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_aixhg"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_c0cib"]
+[ext_resource type="Texture2D" uid="uid://cw0ci1v3d140k" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Idle.png" id="3_k0j4i"]
+
+[sub_resource type="Resource" id="Resource_tahtw"]
+script = ExtResource("1_aixhg")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_b7v70"]
+script = ExtResource("1_aixhg")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_r3y2o"]
+script = ExtResource("1_aixhg")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.08
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_xgoo3"]
+script = ExtResource("1_aixhg")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.06
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_vo58e"]
+script = ExtResource("1_aixhg")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_xe3wj"]
+script = ExtResource("1_aixhg")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("2_c0cib")
+spriteSheet = ExtResource("3_k0j4i")
+moveFrames = Array[ExtResource("1_aixhg")]([SubResource("Resource_tahtw"), SubResource("Resource_b7v70"), SubResource("Resource_r3y2o"), SubResource("Resource_xgoo3"), SubResource("Resource_vo58e"), SubResource("Resource_xe3wj")])
+moveName = 8
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 6
+canBeSkippedInBus = false

@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=10 format=3 uid="uid://c52s3ibrp3orb"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_cl30t"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_38gyn"]
+[ext_resource type="Texture2D" uid="uid://c4dmjpb24lcl0" path="res://assets/character/Tivadar/sprites/Tivadar_MK-Idle.png" id="3_oixpy"]
+
+[sub_resource type="Resource" id="Resource_tw0g7"]
+script = ExtResource("1_cl30t")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_4t2ns"]
+script = ExtResource("1_cl30t")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_nx0n3"]
+script = ExtResource("1_cl30t")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_07x18"]
+script = ExtResource("1_cl30t")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_gypgj"]
+script = ExtResource("1_cl30t")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_3bcy3"]
+script = ExtResource("1_cl30t")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("2_38gyn")
+spriteSheet = ExtResource("3_oixpy")
+moveFrames = Array[ExtResource("1_cl30t")]([SubResource("Resource_tw0g7"), SubResource("Resource_4t2ns"), SubResource("Resource_nx0n3"), SubResource("Resource_07x18"), SubResource("Resource_gypgj"), SubResource("Resource_3bcy3")])
+moveName = 8
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 6
+canBeSkippedInBus = false

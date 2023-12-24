@@ -1,0 +1,155 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=18 format=3 uid="uid://crl3sfxowslkv"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_bi8ji"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_ucsu4"]
+[ext_resource type="Texture2D" uid="uid://dvf6snhhy8x51" path="res://assets/character/Tijmen/sprites/Tijmen projectiles-Special.png" id="3_grv7f"]
+
+[sub_resource type="Resource" id="Resource_ddtms"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_un4op"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_ox3l6"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_31pmd"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_05l7u"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_hu654"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_vchnw"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_0b7um"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_wid7x"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_ocql5"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_wecfn"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_ootyo"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_bkasg"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_qf2n1"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = true
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_bi8ji")
+spriteSheet = ExtResource("3_grv7f")
+moveFrames = Array[ExtResource("1_ucsu4")]([SubResource("Resource_ddtms"), SubResource("Resource_un4op"), SubResource("Resource_ox3l6"), SubResource("Resource_31pmd"), SubResource("Resource_05l7u"), SubResource("Resource_hu654"), SubResource("Resource_vchnw"), SubResource("Resource_0b7um"), SubResource("Resource_wid7x"), SubResource("Resource_ocql5"), SubResource("Resource_wecfn"), SubResource("Resource_ootyo"), SubResource("Resource_bkasg"), SubResource("Resource_qf2n1")])
+moveName = 0
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 14
+canBeSkippedInBus = false

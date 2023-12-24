@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=5 format=3 uid="uid://c8kl4jl2qudyj"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_1luea"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_eepvi"]
+[ext_resource type="Texture2D" uid="uid://od6o3dbc70ri" path="res://assets/character/Daan/sprites/Daan_HurtStill.png" id="3_ybyk4"]
+
+[sub_resource type="Resource" id="Resource_bw3sj"]
+script = ExtResource("1_1luea")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_eepvi")
+spriteSheet = ExtResource("3_ybyk4")
+moveFrames = Array[ExtResource("1_1luea")]([SubResource("Resource_bw3sj")])
+moveName = 10
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 1
+canBeSkippedInBus = false

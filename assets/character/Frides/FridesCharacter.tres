@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterRes" load_steps=18 format=3 uid="uid://e8i0yic5dk8h"]
+
+[ext_resource type="Resource" uid="uid://bj700644ewdw5" path="res://assets/character/Frides/combos/DefaultCombo.tres" id="1_pjd53"]
+[ext_resource type="Script" path="res://resources/character/CharacterRes.gd" id="1_s5vlc"]
+[ext_resource type="Resource" uid="uid://cnclvd65od8r8" path="res://assets/character/Frides/combos/DefaultJumpBackwardCombo.tres" id="2_5f7fv"]
+[ext_resource type="Resource" uid="uid://py1ablnq40p4" path="res://assets/character/Frides/combos/DefaultJumpForwardsCombo.tres" id="3_s07w3"]
+[ext_resource type="Resource" uid="uid://bnfraro8o3f0d" path="res://assets/character/Frides/moves/DefaultHeavyAttack.tres" id="4_23rot"]
+[ext_resource type="Resource" uid="uid://berxkmitncfgp" path="res://assets/character/Frides/moves/DefaultLightAttack.tres" id="5_tcvwd"]
+[ext_resource type="Resource" uid="uid://dvsvdsfrr7j00" path="res://assets/character/Frides/moves/DefaultWalkBackward.tres" id="6_b8nsh"]
+[ext_resource type="Resource" uid="uid://c5xdh88nhhheb" path="res://assets/character/Frides/moves/DefaultWalkForward.tres" id="7_pja5s"]
+[ext_resource type="Resource" uid="uid://xiyj03uktvgw" path="res://assets/character/Frides/moves/DefaultIdle.tres" id="8_gr6mg"]
+[ext_resource type="Resource" uid="uid://dpw06oer6i6fo" path="res://assets/character/Frides/moves/DefaultBlock.tres" id="9_t6x5s"]
+[ext_resource type="Resource" uid="uid://dtpvixtievp1y" path="res://assets/character/Frides/moves/DefaultHurt.tres" id="13_t50a0"]
+[ext_resource type="Resource" uid="uid://baphvokx6fmfu" path="res://assets/character/Frides/moves/FridesJump.tres" id="14_8s767"]
+[ext_resource type="Resource" uid="uid://baqbvjb37wgsg" path="res://assets/character/Frides/moves/FridesEntree.tres" id="14_deban"]
+[ext_resource type="Resource" uid="uid://cnn7fpc62vv11" path="res://assets/character/Frides/moves/FridesJumpBackward.tres" id="15_qpab6"]
+[ext_resource type="Resource" uid="uid://bibbcvy0267p2" path="res://assets/character/Frides/moves/FridesWin.tres" id="15_rwdj1"]
+[ext_resource type="Resource" uid="uid://cvtycaanu3xlw" path="res://assets/character/Frides/moves/FridesJumpForward.tres" id="16_d63md"]
+[ext_resource type="Resource" uid="uid://5by8kf4gvldh" path="res://assets/character/Frides/moves/FridesDeath.tres" id="16_g8v5p"]
+
+[resource]
+script = ExtResource("1_s5vlc")
+moves = Array[Resource("res://resources/character/moves/MoveRes.gd")]([ExtResource("4_23rot"), ExtResource("5_tcvwd"), ExtResource("6_b8nsh"), ExtResource("7_pja5s"), ExtResource("8_gr6mg"), ExtResource("9_t6x5s"), ExtResource("13_t50a0"), ExtResource("14_deban"), ExtResource("15_rwdj1"), ExtResource("16_g8v5p"), ExtResource("14_8s767"), ExtResource("15_qpab6"), ExtResource("16_d63md")])
+combos = Array[Resource("res://resources/character/moves/ComboRes.gd")]([ExtResource("1_pjd53"), ExtResource("2_5f7fv"), ExtResource("3_s07w3")])
+hitpoints = Array[Resource("res://resources/character/HitpointRes.gd")]([])

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=5 format=3 uid="uid://iilhfqls5aro"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_7ltd8"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_vykie"]
+[ext_resource type="Texture2D" uid="uid://8px0n4r5b8kd" path="res://assets/character/Tobias/sprites/Tobias_HurtStill.png" id="2_2rn4q"]
+
+[sub_resource type="Resource" id="Resource_j7gxu"]
+script = ExtResource("1_vykie")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_7ltd8")
+spriteSheet = ExtResource("2_2rn4q")
+moveFrames = Array[ExtResource("1_vykie")]([SubResource("Resource_j7gxu")])
+moveName = 10
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 1
+canBeSkippedInBus = false

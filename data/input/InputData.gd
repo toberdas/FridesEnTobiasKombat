@@ -2,24 +2,33 @@ extends Resource
 class_name InputData
 
 var inputCollection : InputCollection = preload("res://assets/input/DefaultInputCollection.tres")
+<<<<<<< HEAD
 var heldFrames : int
 var inputBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 6, 0.9)
 var eventCache = {}
+=======
+
+var lastInput : InputRule
+var inputHeldCache = {}
+
+func _init(_inputCollection):
+	inputCollection = _inputCollection
+>>>>>>> movebus
 
 func handle_event(event : InputEvent):
 	var inputRule = get_rule(event)
 	if inputRule != null:
-		if can_rule_enter_bus(inputRule):
-			put_rule_in_bus(inputRule)
-		cache_input(inputRule, event)
-
-##TODO: dit opnieuw uitdenken
-func process(delta):
-	inputBus.decay_timer(delta)
+		if !event.is_pressed():
+			cache_released(inputRule)
+			return null
+		if is_event_just_pressed(inputRule):
+			return inputRule
+	return null
 
 func get_rule(event : InputEvent):
 	return inputCollection.get_rule_for_event(event)
 
+<<<<<<< HEAD
 func can_rule_enter_bus(inputRule : InputRule):
 	if !inputRule.canStack && is_last_input(inputRule):
 		return false
@@ -57,11 +66,26 @@ func pop_first_input_rule():
 
 func cache_input(rule : InputRule, event : InputEvent):
 	eventCache[rule] = event
+=======
+func cache_pressed(rule : InputRule):
+	inputHeldCache[rule] = true
+
+func cache_released(rule : InputRule):
+	inputHeldCache[rule] = false
+
+func get_pressed_input_rule():
+	for key : InputRule in inputHeldCache.keys():
+		if inputHeldCache[key] == true:
+			if key.canBeHeld:
+				return key
+	return null
+>>>>>>> movebus
 
 func is_event_just_pressed(rule):
-	if !eventCache.has(rule):
+	if !inputHeldCache.has(rule):
+		cache_pressed(rule)
 		return true
-	else:
-		if eventCache[rule].is_pressed() == false:
-			return true
+	if inputHeldCache[rule] == false:
+		cache_pressed(rule)
+		return true
 	return false

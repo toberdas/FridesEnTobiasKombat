@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=14 format=3 uid="uid://berxkmitncfgp"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_l8qq1"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_ghg8h"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_khsqe"]
+[ext_resource type="Texture2D" uid="uid://cvaejgksy16dr" path="res://assets/character/Frides/sprites/Frides_Punch.png" id="3_t7t4v"]
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_ycy7n"]
+
+[sub_resource type="Resource" id="Resource_alg6s"]
+script = ExtResource("1_l8qq1")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.02
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_p5e6w"]
+script = ExtResource("1_l8qq1")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_bpwj5"]
+script = ExtResource("1_l8qq1")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_oobhk"]
+script = ExtResource("1_l8qq1")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.08
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_uh4ea"]
+script = ExtResource("2_ghg8h")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(16, 0)
+
+[sub_resource type="Resource" id="Resource_twdm6"]
+script = ExtResource("3_ycy7n")
+hitboxRes = SubResource("Resource_uh4ea")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+
+[sub_resource type="Resource" id="Resource_i37h5"]
+script = ExtResource("1_l8qq1")
+attackRes = SubResource("Resource_twdm6")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_6yy72"]
+script = ExtResource("1_l8qq1")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("2_khsqe")
+spriteSheet = ExtResource("3_t7t4v")
+moveFrames = Array[ExtResource("1_l8qq1")]([SubResource("Resource_alg6s"), SubResource("Resource_p5e6w"), SubResource("Resource_bpwj5"), SubResource("Resource_oobhk"), SubResource("Resource_i37h5"), SubResource("Resource_6yy72")])
+moveName = 0
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 6
+canBeSkippedInBus = false

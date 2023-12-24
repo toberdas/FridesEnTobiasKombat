@@ -1,0 +1,85 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=11 format=3 uid="uid://cbkvqeoboc6oy"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_106gq"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_mt45p"]
+[ext_resource type="Texture2D" uid="uid://b8afj2g4dv16" path="res://assets/character/Daan/sprites/Daan_MK-Punch.png" id="3_gumth"]
+
+[sub_resource type="Resource" id="Resource_enwjp"]
+script = ExtResource("1_mt45p")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.02
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_mgyqs"]
+script = ExtResource("1_mt45p")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.05
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_um5n0"]
+script = ExtResource("1_mt45p")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_631bd"]
+script = ExtResource("1_mt45p")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.05
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_pds50"]
+script = ExtResource("1_mt45p")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_1mlvb"]
+script = ExtResource("1_mt45p")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_tgkbj"]
+script = ExtResource("1_mt45p")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.01
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_106gq")
+spriteSheet = ExtResource("3_gumth")
+moveFrames = Array[ExtResource("1_mt45p")]([SubResource("Resource_enwjp"), SubResource("Resource_mgyqs"), SubResource("Resource_um5n0"), SubResource("Resource_631bd"), SubResource("Resource_pds50"), SubResource("Resource_1mlvb"), SubResource("Resource_tgkbj")])
+moveName = 0
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 7
+canBeSkippedInBus = false

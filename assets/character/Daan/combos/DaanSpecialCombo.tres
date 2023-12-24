@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ComboRes" load_steps=3 format=3 uid="uid://xa213udbc86"]
+
+[ext_resource type="Resource" uid="uid://dpsxogq5oqxvx" path="res://assets/character/Daan/moves/DaanSpecial.tres" id="1_1e51d"]
+[ext_resource type="Script" path="res://resources/character/moves/ComboRes.gd" id="1_6pcdd"]
+
+[resource]
+script = ExtResource("1_6pcdd")
+moveNames = Array[int]([0, 2, 5, 2, 0])
+resultingMove = ExtResource("1_1e51d")

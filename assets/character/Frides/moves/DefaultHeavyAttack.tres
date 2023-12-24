@@ -1,0 +1,166 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=26 format=3 uid="uid://bnfraro8o3f0d"]
+
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_m0ri0"]
+[ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="2_vkbbo"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="3_juv36"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_fuc2h"]
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="5_sm3ki"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="6_rygbk"]
+[ext_resource type="Texture2D" uid="uid://dvfj5u7pa5dml" path="res://assets/character/Frides/sprites/Frides_Kick.png" id="7_vvh5n"]
+
+[sub_resource type="Resource" id="Resource_e5g6w"]
+script = ExtResource("1_m0ri0")
+verticalDisplacement = 1.0
+horizontalDisplacement = 1.0
+
+[sub_resource type="Resource" id="Resource_r6xvh"]
+script = ExtResource("2_vkbbo")
+displacementRes = SubResource("Resource_e5g6w")
+recoveryTime = 0.0
+damageReduction = 0
+blocks = false
+
+[sub_resource type="Resource" id="Resource_u86h5"]
+script = ExtResource("3_juv36")
+hitRes = SubResource("Resource_r6xvh")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.02
+selfDestruct = false
+canCombo = true
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_gmlpt"]
+script = ExtResource("1_m0ri0")
+verticalDisplacement = 0.0
+horizontalDisplacement = 2.0
+
+[sub_resource type="Resource" id="Resource_15h6d"]
+script = ExtResource("3_juv36")
+displacementRes = SubResource("Resource_gmlpt")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = true
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_a8fqx"]
+script = ExtResource("1_m0ri0")
+verticalDisplacement = 0.0
+horizontalDisplacement = 2.0
+
+[sub_resource type="Resource" id="Resource_1hoea"]
+script = ExtResource("3_juv36")
+displacementRes = SubResource("Resource_a8fqx")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = true
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_lp3of"]
+script = ExtResource("1_m0ri0")
+verticalDisplacement = 0.0
+horizontalDisplacement = 1.0
+
+[sub_resource type="Resource" id="Resource_mpjds"]
+script = ExtResource("3_juv36")
+displacementRes = SubResource("Resource_lp3of")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.08
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_y6u4n"]
+script = ExtResource("4_fuc2h")
+hitboxSize = Vector2(24, 20)
+hitboxLocation = Vector2(14, 0)
+
+[sub_resource type="Resource" id="Resource_ftkac"]
+script = ExtResource("5_sm3ki")
+hitboxRes = SubResource("Resource_y6u4n")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+
+[sub_resource type="Resource" id="Resource_vpj4r"]
+script = ExtResource("3_juv36")
+attackRes = SubResource("Resource_ftkac")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_mpkns"]
+script = ExtResource("3_juv36")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = true
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_wrr1k"]
+script = ExtResource("3_juv36")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.08
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_lr6ea"]
+script = ExtResource("4_fuc2h")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_h336g"]
+script = ExtResource("5_sm3ki")
+hitboxRes = SubResource("Resource_lr6ea")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+
+[sub_resource type="Resource" id="Resource_eiyy4"]
+script = ExtResource("3_juv36")
+attackRes = SubResource("Resource_h336g")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_i1tvx"]
+script = ExtResource("3_juv36")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("6_rygbk")
+spriteSheet = ExtResource("7_vvh5n")
+moveFrames = Array[ExtResource("3_juv36")]([SubResource("Resource_u86h5"), SubResource("Resource_15h6d"), SubResource("Resource_1hoea"), SubResource("Resource_mpjds"), SubResource("Resource_vpj4r"), SubResource("Resource_mpkns"), SubResource("Resource_wrr1k"), SubResource("Resource_eiyy4"), SubResource("Resource_i1tvx")])
+moveName = 1
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 9
+canBeSkippedInBus = false

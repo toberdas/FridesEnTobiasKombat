@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=5 format=3 uid="uid://b66bhn7uda6iq"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_8q5ei"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_qe20g"]
+[ext_resource type="Texture2D" uid="uid://v8ee6bk0p3jn" path="res://assets/character/Jip/sprites/Jip_HurtStill.png" id="3_a0ag2"]
+
+[sub_resource type="Resource" id="Resource_j7gxu"]
+script = ExtResource("1_8q5ei")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("2_qe20g")
+spriteSheet = ExtResource("3_a0ag2")
+moveFrames = Array[ExtResource("1_8q5ei")]([SubResource("Resource_j7gxu")])
+moveName = 10
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 2
+canBeSkippedInBus = false

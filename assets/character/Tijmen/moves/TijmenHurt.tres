@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=5 format=3 uid="uid://cxhn5ogipo54v"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_cqvcp"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_yus5y"]
+[ext_resource type="Texture2D" uid="uid://cb2v7oa3x4yl2" path="res://assets/character/Tijmen/sprites/Tijmen_HurtStill.png" id="3_d0ufj"]
+
+[sub_resource type="Resource" id="Resource_bw3sj"]
+script = ExtResource("1_cqvcp")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("2_yus5y")
+spriteSheet = ExtResource("3_d0ufj")
+moveFrames = Array[ExtResource("1_cqvcp")]([SubResource("Resource_bw3sj")])
+moveName = 10
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 1
+canBeSkippedInBus = false

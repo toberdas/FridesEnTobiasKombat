@@ -7,7 +7,7 @@ class_name ComboRes
 func get_resulting_move():
 	return resultingMove
 
-func get_rest_of_combo():
+func get_rest_of_combo_names():
 	return moveNames.slice(1,moveNames.size())
 
 func get_all_move_names():
@@ -18,3 +18,15 @@ func get_move_at_index(index):
 
 func get_amount_of_moves():
 	return moveNames.size()
+
+func check_combo(busMoveNames : Array):
+	var i = 0
+	for busMoveName in busMoveNames:
+		if i < moveNames.size():
+			if busMoveName != moveNames[i]:
+				return null
+		i += 1
+		if i == moveNames.size():
+			print("combo hit")
+			return get_resulting_move()
+

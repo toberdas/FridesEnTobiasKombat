@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=8 format=3 uid="uid://5xc463m5asan"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_dangu"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_s2rqh"]
+[ext_resource type="Texture2D" uid="uid://bji6cb0ma56j1" path="res://assets/character/Daan/sprites/Daan_MK-Idle.png" id="3_w8lpp"]
+
+[sub_resource type="Resource" id="Resource_tahtw"]
+script = ExtResource("1_dangu")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.3
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_b7v70"]
+script = ExtResource("1_dangu")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_r3y2o"]
+script = ExtResource("1_dangu")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.08
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_xgoo3"]
+script = ExtResource("1_dangu")
+canBeCancelled = true
+canBeInterrupted = false
+frameDuration = 0.06
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[resource]
+script = ExtResource("1_s2rqh")
+spriteSheet = ExtResource("3_w8lpp")
+moveFrames = Array[ExtResource("1_dangu")]([SubResource("Resource_tahtw"), SubResource("Resource_b7v70"), SubResource("Resource_r3y2o"), SubResource("Resource_xgoo3")])
+moveName = 8
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 4
+canBeSkippedInBus = false

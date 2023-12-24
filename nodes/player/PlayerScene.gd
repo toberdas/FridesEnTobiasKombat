@@ -1,15 +1,22 @@
 extends Node2D
 
-var playerData : PlayerData = PlayerData.new()
+@export var characterRes : CharacterRes
+@export var inputCollection : InputCollection
 
-func _ready():
-	playerData.start_move(MOVES.moves.IDLE)
-	$ActorScene.set_actor_data(playerData.characterData)
+var playerData : PlayerData
+@onready var actorScene = $ActorScene
+
+func start():
+	playerData = PlayerData.new(characterRes)
+	playerData.set_input_data(InputData.new(inputCollection))
+	if actorScene:
+		actorScene.set_actor_data(playerData.characterData)
 
 func _process(delta):
 	playerData.process(delta)
 
-func _unhandled_input(event):
+
+func _input(event : InputEvent):
 	playerData.handle_event(event)
 #func _input(event : InputEvent):
 	#playerData.handle_event(event)

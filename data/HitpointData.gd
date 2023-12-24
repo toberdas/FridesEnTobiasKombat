@@ -5,6 +5,10 @@ var hitpoints : int = 10
 var hitpointResources : Array[HitpointRes] = []
 var currentHitpointRes : HitpointRes
 
+func _init(hitpointResourceArray):
+	hitpointResources = hitpointResourceArray
+	find_current_hitpoint_res()
+
 func take_damage(damage:int):
 	hitpoints -= damage
 	find_current_hitpoint_res()

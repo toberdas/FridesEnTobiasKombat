@@ -15,5 +15,12 @@ func get_combos_by_starting_move(moveName):
 	var _combos = []
 	for combo : ComboRes in combos:
 		if combo.moveNames[0] == moveName:
-			_combos.append(combo)
-	return _combos
+			return combo
+	return null
+
+func check_combo_with_names(moveNames = []):
+	for combo : ComboRes in combos:
+		var resultingMove = combo.check_combo(moveNames)
+		if resultingMove != null:
+			return resultingMove
+	return null

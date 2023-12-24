@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=12 format=3 uid="uid://dgqp1f588pds2"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_k7hsp"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_nnf2f"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="3_11gw1"]
+[ext_resource type="Texture2D" uid="uid://uc3odgugglml" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Jump.png" id="4_sus35"]
+
+[sub_resource type="Resource" id="Resource_6ysox"]
+script = ExtResource("1_k7hsp")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.02
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_k1675"]
+script = ExtResource("1_k7hsp")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.05
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_sk8fe"]
+script = ExtResource("1_k7hsp")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_cltox"]
+script = ExtResource("1_k7hsp")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_372xa"]
+script = ExtResource("2_nnf2f")
+verticalDisplacement = 0.0
+horizontalDisplacement = -60.0
+
+[sub_resource type="Resource" id="Resource_3breu"]
+script = ExtResource("1_k7hsp")
+displacementRes = SubResource("Resource_372xa")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_prbkc"]
+script = ExtResource("1_k7hsp")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+
+[resource]
+script = ExtResource("3_11gw1")
+spriteSheet = ExtResource("4_sus35")
+moveFrames = Array[ExtResource("1_k7hsp")]([SubResource("Resource_6ysox"), SubResource("Resource_k1675"), SubResource("Resource_sk8fe"), SubResource("Resource_cltox"), SubResource("Resource_3breu"), SubResource("Resource_prbkc")])
+moveName = 7
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 6
+canBeSkippedInBus = false

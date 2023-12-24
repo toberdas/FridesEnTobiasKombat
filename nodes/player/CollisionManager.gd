@@ -8,8 +8,9 @@ func _ready():
 	pass
 
 func attack_body(body):
-	var _collision = Collision.new(actorData, body.get_parent().actorData)
-	$AttackHitbox.set_deferred("monitoring", false)
+	if actorData:
+		var _collision = Collision.new(actorData, body.get_parent().actorData)
+		$AttackHitbox.set_deferred("monitoring", false)
 
 func handle_attack_res(attackRes:AttackRes):
 	if attackRes:
@@ -36,5 +37,5 @@ func set_hitbox(hitRes : HitRes):
 	$Hitbox.monitorable = true
 
 func clear_hitbox():
-	$Hitbox.set_hitbox_from_res(null)
-	$Hitbox.monitorable = false
+	$Hitbox.set_hitbox_from_res(preload("res://assets/misc/DefaultHitRes.tres").hitboxRes)
+	$Hitbox.monitorable = true

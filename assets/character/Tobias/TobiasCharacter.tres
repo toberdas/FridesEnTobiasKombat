@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CharacterRes" load_steps=19 format=3 uid="uid://cmaoj7821e6j0"]
+
+[ext_resource type="Resource" uid="uid://c5toibmhbqbqt" path="res://assets/character/Tobias/moves/TobiasIdle.tres" id="1_3qpxk"]
+[ext_resource type="Script" path="res://resources/character/CharacterRes.gd" id="1_m0eit"]
+[ext_resource type="Resource" uid="uid://djav8vuoo2oni" path="res://assets/character/Tobias/combos/DefaultJumpBackwardCombo.tres" id="1_xq5ol"]
+[ext_resource type="Resource" uid="uid://d02rvkv3epiqi" path="res://assets/character/Tobias/combos/DefaultJumpForwardsCombo.tres" id="2_5lp3p"]
+[ext_resource type="Resource" uid="uid://dbfmuticqjqpp" path="res://assets/character/Tobias/moves/TobiasBlock.tres" id="2_b3kqc"]
+[ext_resource type="Resource" uid="uid://bj23x36f00g4u" path="res://assets/character/Tobias/combos/TobiasSpecialCombo.tres" id="3_n25ur"]
+[ext_resource type="Resource" uid="uid://503cfl4rsqvt" path="res://assets/character/Tobias/moves/TobiasPunch.tres" id="3_s2rdf"]
+[ext_resource type="Resource" uid="uid://c8rta86iv0jye" path="res://assets/character/Tobias/moves/TobiasKick.tres" id="4_0gnte"]
+[ext_resource type="Resource" uid="uid://c5rb0rsyluun0" path="res://assets/character/Tobias/moves/TobiasJump.tres" id="5_kgyq2"]
+[ext_resource type="Resource" uid="uid://bpiycsrwbb3at" path="res://assets/character/Tobias/moves/TobiasJumpBackward.tres" id="6_ygoh7"]
+[ext_resource type="Resource" uid="uid://wymfycgyi88a" path="res://assets/character/Tobias/moves/TobiasJumpForward.tres" id="7_6l1om"]
+[ext_resource type="Resource" uid="uid://ds3q72qh728f" path="res://assets/character/Tobias/moves/TobiasWalkForward.tres" id="8_4i0sq"]
+[ext_resource type="Resource" uid="uid://cllq4o6jyf3f7" path="res://assets/character/Tobias/moves/TobiasMoveBackward.tres" id="9_guqll"]
+[ext_resource type="Resource" uid="uid://boghba4st2yaq" path="res://assets/character/Tobias/moves/TobiasWin.tres" id="12_ig16e"]
+[ext_resource type="Resource" uid="uid://vqb8nmg84ivy" path="res://assets/character/Tobias/moves/TobiasEntrance.tres" id="13_stdtp"]
+[ext_resource type="Resource" uid="uid://w68cdkbcvcs2" path="res://assets/character/Tobias/moves/TobiasDeath.tres" id="14_42vod"]
+[ext_resource type="Resource" uid="uid://dg6q152mpg2ll" path="res://assets/character/Tobias/moves/TobiasSpecial.tres" id="15_b8tsk"]
+[ext_resource type="Resource" uid="uid://iilhfqls5aro" path="res://assets/character/Tobias/moves/TobiasHurt.tres" id="17_tc3ql"]
+
+[resource]
+script = ExtResource("1_m0eit")
+moves = Array[Resource("res://resources/character/moves/MoveRes.gd")]([ExtResource("1_3qpxk"), ExtResource("2_b3kqc"), ExtResource("3_s2rdf"), ExtResource("4_0gnte"), ExtResource("5_kgyq2"), ExtResource("6_ygoh7"), ExtResource("7_6l1om"), ExtResource("8_4i0sq"), ExtResource("9_guqll"), ExtResource("12_ig16e"), ExtResource("13_stdtp"), ExtResource("14_42vod"), ExtResource("15_b8tsk"), ExtResource("17_tc3ql")])
+combos = Array[Resource("res://resources/character/moves/ComboRes.gd")]([ExtResource("1_xq5ol"), ExtResource("2_5lp3p"), ExtResource("3_n25ur")])
+hitpoints = Array[Resource("res://resources/character/HitpointRes.gd")]([])
