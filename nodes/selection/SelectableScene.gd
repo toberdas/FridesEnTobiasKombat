@@ -1,7 +1,11 @@
 extends Node2D
 
 @export var characterRes : CharacterRes
-var selectable : Selectable
+var selectable : Selectable:
+	set(val):
+		selectable = val
+		if selectable != null:
+			selectable.connect("confirmed", play_confirm)
 
 func _ready():
 	if selectable != null:
@@ -19,3 +23,7 @@ func _process(_delta):
 			return
 	$Sprite2D.material.set_shader_parameter("color", Color.WHITE)
 	
+func play_confirm():
+	if selectable.selectValue.selectionSound:
+		$AudioStreamPlayer2D.stream = characterRes.selectionSound
+		$AudioStreamPlayer2D.play(0.0)

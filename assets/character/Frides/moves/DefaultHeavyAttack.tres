@@ -90,6 +90,7 @@ hitboxRes = SubResource("Resource_y6u4n")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_vpj4r"]
 script = ExtResource("3_juv36")
@@ -133,6 +134,7 @@ hitboxRes = SubResource("Resource_lr6ea")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_eiyy4"]
 script = ExtResource("3_juv36")

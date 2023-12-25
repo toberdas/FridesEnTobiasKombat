@@ -15,6 +15,7 @@ resource_local_to_scene = true
 script = ExtResource("1_bxpna")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+hframes = 7
 
 [node name="CollisionManager" type="Node2D" parent="."]
 script = ExtResource("3_ovgnm")

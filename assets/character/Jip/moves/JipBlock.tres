@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=9 format=3 uid="uid://rhk21x7kcfv0"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=13 format=3 uid="uid://rhk21x7kcfv0"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_rbpwc"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_bxaah"]
+[ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="2_s4gph"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_um3ax"]
 [ext_resource type="Texture2D" uid="uid://c4n42rvug2nx6" path="res://assets/character/Jip/sprites/Jip_MK-Block.png" id="3_ngwp0"]
 
 [sub_resource type="Resource" id="Resource_ybwuk"]
@@ -34,8 +36,21 @@ canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 
+[sub_resource type="Resource" id="Resource_fak8o"]
+script = ExtResource("2_um3ax")
+hitboxSize = Vector2(32, 64)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_fxv3i"]
+script = ExtResource("2_s4gph")
+recoveryTime = 0.0
+hitboxRes = SubResource("Resource_fak8o")
+damageReduction = 0
+blocks = true
+
 [sub_resource type="Resource" id="Resource_2ebxf"]
 script = ExtResource("1_rbpwc")
+hitRes = SubResource("Resource_fxv3i")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.2

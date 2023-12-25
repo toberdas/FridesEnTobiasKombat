@@ -4,6 +4,8 @@ class_name Selectable
 var selectDict : Dictionary =  {}
 var selectValue = null
 
+signal confirmed
+
 func dehighlighted_by(playerData : PlayerData):
 	if !selectDict.has(playerData):
 		selectDict[playerData] = Select.new()
@@ -16,6 +18,7 @@ func highlighted_by(playerData : PlayerData):
 
 func confirmed_by(playerData : PlayerData):
 	selectDict[playerData].confirmed = true
+	emit_signal("confirmed")
 
 func is_highlighted_by(playerData : PlayerData):
 	if selectDict.has(playerData):
@@ -27,9 +30,9 @@ func is_confirmed_by(playerData : PlayerData):
 
 func get_string(playerData : PlayerData):
 	if is_highlighted_by(playerData) && !is_confirmed_by(playerData):
-		return "P " + str(playerData.playerID)
+		return "P " + str(playerData.playerID + 1)
 	if is_confirmed_by(playerData):
-		return "P " + str(playerData.playerID) + " gekozen"
+		return "P " + str(playerData.playerID + 1) + " <<"
 	return ""
 
 func get_color(playerData : PlayerData):

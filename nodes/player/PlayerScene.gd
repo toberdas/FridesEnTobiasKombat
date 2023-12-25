@@ -2,6 +2,7 @@ extends Node2D
 
 @export var playerData : PlayerData
 @onready var actorScene = $ActorScene
+@onready var hpBarScene = $HpBarScene
 
 var started : bool = false
 
@@ -10,6 +11,8 @@ func start(_playerData : PlayerData):
 	if actorScene:
 		actorScene.set_actor_data(playerData.characterData)
 	started = true
+	if hpBarScene:
+		hpBarScene.hitPointData = playerData.characterData.hitpointData
 
 func _process(delta):
 	if started:

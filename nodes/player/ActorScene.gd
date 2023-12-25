@@ -1,6 +1,9 @@
 extends Node2D
 
-var actorData : ActorData = null
+var actorData : ActorData = null:
+	set(val):
+		actorData = val
+		actorData.location = global_position
 
 func check_collisions():
 	pass
@@ -33,12 +36,30 @@ func _process(delta):
 					$Sprite2D.frame = spriteIndex
 				else:
 					print_debug("sprite index overflow")
+		var passiveParseFrame : MoveFrameRes = actorData.parse_current_passive_frame()
+		if passiveParseFrame:
+			var displacementRes = passiveParseFrame.displacementRes
+			if displacementRes != null:
+				displace(displacementRes)
+		var currentMove : MoveData = actorData.get_current_move()
+		if currentMove:
+			adjust_sprite_location(currentMove)
+
+func adjust_sprite_location(currentMove):
+	var spriteSheet : Texture2D = currentMove.moveRes.spriteSheet
+	var w = spriteSheet.get_width()
+	var wpf = w / currentMove.moveRes.spriteFrameAmount
+	var h = spriteSheet.get_height()
+	var xDif = wpf - 64
+	var yDif = h - 64
+	var rX = xDif
+	$Sprite2D.position = Vector2(rX * 0.5, -yDif * 0.5)
 
 func displace(displacementRes : DisplacementRes):
 	var hdisplacement = displacementRes.horizontalDisplacement
-	position.x += hdisplacement * actorData.direction
-	position.y += displacementRes.verticalDisplacement
-	actorData.location = position
+	global_position.x += hdisplacement * actorData.direction
+	global_position.y += displacementRes.verticalDisplacement
+	actorData.location = global_position
 	
 func set_actor_data(_actorData):
 	actorData = _actorData

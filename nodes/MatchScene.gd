@@ -11,16 +11,19 @@ func _ready():
 
 func start_match():
 	if matchData:
-		var i = 0
-		for player : PlayerData in matchData.players:
-			var playerInstance = playerScene.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
-			$PlayerSceneRoot.get_child(i).add_child(playerInstance)
-			playerInstance.start(player)
-			playerInstances.append(playerInstance)
-			i += 1
-			
-		playerInstances[1].playerData.characterData.direction = -1
+		spawn_players()
 		matchStarted = true
+
+func spawn_players():
+	var i = 0
+	for player : PlayerData in matchData.players:
+		var playerInstance = playerScene.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+		$PlayerSceneRoot.get_child(i).add_child(playerInstance)
+		playerInstance.start(player)
+		playerInstances.append(playerInstance)
+		i += 1
+		
+	playerInstances[1].playerData.characterData.direction = -1
 
 func _process(delta):
 	if matchStarted:

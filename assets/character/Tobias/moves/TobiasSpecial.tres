@@ -68,6 +68,7 @@ hitboxRes = SubResource("Resource_sxpge")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_64sg1"]
 script = ExtResource("2_3f2xt")
@@ -91,6 +92,7 @@ script = ExtResource("3_7imqk")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_jssxi"]
 script = ExtResource("2_3f2xt")
@@ -114,6 +116,7 @@ script = ExtResource("3_7imqk")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_rkfrf"]
 script = ExtResource("2_3f2xt")
@@ -137,6 +140,7 @@ script = ExtResource("3_7imqk")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_odp8m"]
 script = ExtResource("2_3f2xt")

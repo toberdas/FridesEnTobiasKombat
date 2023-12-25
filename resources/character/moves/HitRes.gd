@@ -6,3 +6,5 @@ class_name HitRes
 @export var hitboxRes : HitboxRes
 @export var damageReduction : int
 @export var blocks : bool
+@export var soundOnHit : AudioStream
+@export var resultingPassiveMove : MoveRes

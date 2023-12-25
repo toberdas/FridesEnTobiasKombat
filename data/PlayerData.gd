@@ -44,3 +44,9 @@ func set_player_id(newID:int):
 
 func set_input_collection(newInputCollection):
 	inputCollection = newInputCollection
+
+func win():
+	characterData.do_move_by_name(MOVES.moves.WIN)
+
+func lose():
+	characterData.do_move_by_name(MOVES.moves.DEATH)

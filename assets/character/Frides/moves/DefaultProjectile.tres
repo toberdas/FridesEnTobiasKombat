@@ -110,6 +110,7 @@ hitboxRes = SubResource("Resource_w1abg")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_57uyv"]
 script = ExtResource("2_nhp11")

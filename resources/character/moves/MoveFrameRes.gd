@@ -12,6 +12,7 @@ class_name MoveFrameRes
 @export var canCombo : bool = false
 @export var canLoop : bool = false
 @export var increasesSpriteFrameCounter : bool = true
+@export var soundOnFrame : AudioStream = null
 
 func get_frame_duration():
 	return frameDuration

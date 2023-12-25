@@ -75,6 +75,7 @@ script = ExtResource("3_eym4e")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_k38o3"]
 script = ExtResource("2_akbc7")

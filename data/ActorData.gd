@@ -5,6 +5,7 @@ var location : Vector2 = Vector2.ZERO
 var direction : int = 1
 var targetDirection : int = 1
 var currentMoveData : MoveData = null
+var passiveMove : MoveData = null
 var nextMove : MoveRes = null
 var recoveryTime : float = 0
 var cacheTimer : float = 0
@@ -57,11 +58,24 @@ func cancel_process():
 func do_move(move : MoveRes):
 	set_current_move(move)
 
+func do_move_by_name(moveName):
+	var moveRes = characterRes.get_move_by_name(moveName)
+	if moveRes:
+		do_move(moveRes)
+
+func do_passive_move(move : MoveRes):
+	if move:
+		passiveMove = MoveData.new(move)		
+
 func tick_time(delta):
 	moveBus.decay_timer(delta)
 	if recoveryTime > 0.0:
 		recoveryTime -= delta
 		return
+	if passiveMove != null:
+		var tickResult = passiveMove.tick_time(delta)
+		if tickResult.result == TickResult.RESULT.MOVEENDED:
+			passiveMove = null
 	if currentMoveData != null:
 		var tickResult : TickResult = currentMoveData.tick_time(delta)
 		if tickResult == null:
@@ -84,6 +98,11 @@ func tick_time(delta):
 func parse_current_frame():
 	if currentMoveData:
 		return currentMoveData.parse_current_frame()
+	return null
+
+func parse_current_passive_frame():
+	if passiveMove:
+		return passiveMove.parse_current_frame()
 	return null
 
 func get_current_move():
@@ -170,7 +189,8 @@ func add_moveinputname_to_bus(moveInputName):
 func take_damage(damage:int):
 	if hitpointData != null:
 		hitpointData.take_damage(damage)
-	do_move(hurtMove)
+	if hitpointData.hitpoints > 0:	
+		do_move(hurtMove)
 
 func take_recovery_time(time:float):
 	recoveryTime = time

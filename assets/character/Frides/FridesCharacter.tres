@@ -15,7 +15,7 @@
 [ext_resource type="Resource" uid="uid://baphvokx6fmfu" path="res://assets/character/Frides/moves/FridesJump.tres" id="14_8s767"]
 [ext_resource type="Resource" uid="uid://baqbvjb37wgsg" path="res://assets/character/Frides/moves/FridesEntree.tres" id="14_deban"]
 [ext_resource type="Resource" uid="uid://cnn7fpc62vv11" path="res://assets/character/Frides/moves/FridesJumpBackward.tres" id="15_qpab6"]
-[ext_resource type="Resource" uid="uid://bibbcvy0267p2" path="res://assets/character/Frides/moves/FridesWin.tres" id="15_rwdj1"]
+[ext_resource type="Resource" uid="uid://bibbcvy0267p2" path="res://assets/character/Frides/FridesWin.tres" id="15_rwdj1"]
 [ext_resource type="Resource" uid="uid://cvtycaanu3xlw" path="res://assets/character/Frides/moves/FridesJumpForward.tres" id="16_d63md"]
 [ext_resource type="Resource" uid="uid://5by8kf4gvldh" path="res://assets/character/Frides/moves/FridesDeath.tres" id="16_g8v5p"]
 

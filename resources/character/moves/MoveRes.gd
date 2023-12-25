@@ -7,7 +7,7 @@ class_name MoveRes
 @export_category("Move properties")
 @export var moveName : MOVES.moves
 @export var canBeHeld : bool = false
-@export var cacheTime : float = 0.8
+@export var cacheTime : float = 0.8 ##DEPRECATED
 @export var spriteFrameAmount : int = 0
 @export var canBeSkippedInBus : bool = false
 

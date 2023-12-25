@@ -29,5 +29,10 @@ func handle_collision(attacker : ActorData, attacked : ActorData):
 		attacker.take_recovery_time(attackingMoveFrame.attackRes.recoveryTimeWhenBlocked)
 		return
 	
+	if hitRes.resultingPassiveMove == null:
+		attacked.do_passive_move(preload("res://assets/misc/KnockbackLightMove.tres"))
+	else:
+		attacked.do_passive_move(hitRes.resultingPassiveMove)
+	
 	attacked.take_damage(attackingMoveFrame.attackRes.damage - hitRes.damageReduction)
 	attacked.take_recovery_time(hitRes.recoveryTime)

@@ -6,8 +6,9 @@ class_name CharacterRes
 @export var combos : Array[ComboRes]
 @export_category("Hitpoints")
 @export var hitpoints : Array[HitpointRes]
-@export_category("Properties")
+@export_category("Visual and audio properties")
 @export var icon : Texture2D
+@export var selectionSound : AudioStream
 
 func get_move_by_name(moveName):
 	for move in moves:

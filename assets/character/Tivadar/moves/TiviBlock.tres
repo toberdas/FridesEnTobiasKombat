@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=9 format=3 uid="uid://cl00skudhj60k"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=13 format=3 uid="uid://cl00skudhj60k"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_85usn"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_oni27"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_paiax"]
 [ext_resource type="Texture2D" uid="uid://dn234ufy1gyuv" path="res://assets/character/Tivadar/sprites/Tivadar_MK-Block.png" id="3_hh2fe"]
+[ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="3_nowcq"]
 
 [sub_resource type="Resource" id="Resource_ybwuk"]
 script = ExtResource("1_85usn")
@@ -34,8 +36,21 @@ canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 
+[sub_resource type="Resource" id="Resource_td13o"]
+script = ExtResource("2_paiax")
+hitboxSize = Vector2(32, 64)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_1fxuf"]
+script = ExtResource("3_nowcq")
+recoveryTime = 0.0
+hitboxRes = SubResource("Resource_td13o")
+damageReduction = 0
+blocks = true
+
 [sub_resource type="Resource" id="Resource_2ebxf"]
 script = ExtResource("1_85usn")
+hitRes = SubResource("Resource_1fxuf")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.2

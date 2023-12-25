@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=25 format=3 uid="uid://fu8ttuogcfex"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=24 format=3 uid="uid://fu8ttuogcfex"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_1txt2"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_bmo42"]
@@ -198,16 +198,6 @@ increasesSpriteFrameCounter = true
 script = ExtResource("1_1txt2")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
-selfDestruct = false
-canCombo = false
-canLoop = false
-increasesSpriteFrameCounter = true
-
-[sub_resource type="Resource" id="Resource_phy6y"]
-script = ExtResource("1_1txt2")
-canBeCancelled = false
-canBeInterrupted = false
 frameDuration = 10.0
 selfDestruct = false
 canCombo = false
@@ -217,9 +207,9 @@ increasesSpriteFrameCounter = true
 [resource]
 script = ExtResource("2_bmo42")
 spriteSheet = ExtResource("3_tj5n5")
-moveFrames = Array[ExtResource("1_1txt2")]([SubResource("Resource_jhrba"), SubResource("Resource_13nv8"), SubResource("Resource_skqe0"), SubResource("Resource_3gx0r"), SubResource("Resource_ywiqo"), SubResource("Resource_svitq"), SubResource("Resource_ksalk"), SubResource("Resource_k6o7v"), SubResource("Resource_xixqo"), SubResource("Resource_spdhx"), SubResource("Resource_6231a"), SubResource("Resource_pshfw"), SubResource("Resource_8j2jn"), SubResource("Resource_8iguu"), SubResource("Resource_3bqt8"), SubResource("Resource_wshry"), SubResource("Resource_lsrxv"), SubResource("Resource_7yqwx"), SubResource("Resource_5kjsr"), SubResource("Resource_m5bxe"), SubResource("Resource_phy6y")])
+moveFrames = Array[ExtResource("1_1txt2")]([SubResource("Resource_jhrba"), SubResource("Resource_13nv8"), SubResource("Resource_skqe0"), SubResource("Resource_3gx0r"), SubResource("Resource_ywiqo"), SubResource("Resource_svitq"), SubResource("Resource_ksalk"), SubResource("Resource_k6o7v"), SubResource("Resource_xixqo"), SubResource("Resource_spdhx"), SubResource("Resource_6231a"), SubResource("Resource_pshfw"), SubResource("Resource_8j2jn"), SubResource("Resource_8iguu"), SubResource("Resource_3bqt8"), SubResource("Resource_wshry"), SubResource("Resource_lsrxv"), SubResource("Resource_7yqwx"), SubResource("Resource_5kjsr"), SubResource("Resource_m5bxe")])
 moveName = 13
 canBeHeld = false
 cacheTime = 0.8
-spriteFrameAmount = 21
+spriteFrameAmount = 20
 canBeSkippedInBus = false

@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://rec6natd4x00"]
+[gd_scene load_steps=2 format=3 uid="uid://rec6natd4x00"]
 
 [ext_resource type="Script" path="res://nodes/player/HPBarScene.gd" id="1_2ekim"]
-[ext_resource type="Texture2D" uid="uid://dswmdx4wncycv" path="res://assets/menu/HPBAR.png" id="1_t7els"]
 
 [node name="HpBarScene" type="Sprite2D"]
-texture = ExtResource("1_t7els")
 hframes = 12
 script = ExtResource("1_2ekim")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "10
+"

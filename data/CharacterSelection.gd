@@ -13,17 +13,18 @@ class_name CharacterSelection
 
 var amountOfCharacters : int
 var selectables : Array[Selectable] = []
-var allConfirmed : bool = false
 var amountConfirmed : int = 0
 
+signal all_confirmed
+
 func player_confirms_selection(player : PlayerData):
-	var selectable :Selectable= get_highlighted_selectable(player)
+	var selectable :Selectable = get_highlighted_selectable(player)
 	if selectable:
 		player.characterRes = allCharactersCollection.get_at(get_highlighted_selectable_index(player))
 		selectable.confirmed_by(player)
 		amountConfirmed += 1
 		if amountConfirmed == players.size():
-			allConfirmed = true
+			emit_signal("all_confirmed")
 
 func handle_input_event(event : InputEvent):
 	for player in players:

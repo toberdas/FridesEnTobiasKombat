@@ -1,19 +1,35 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=22 format=3 uid="uid://b35iqykv1hpwk"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=42 format=3 uid="uid://b35iqykv1hpwk"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_2nj7u"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_5y6m1"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="1_f6jxa"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_mgph8"]
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="2_pjp2w"]
 [ext_resource type="Resource" uid="uid://dvkx0jcn5uhis" path="res://assets/character/Tivadar/moves/TiviProjectileKlein.tres" id="2_sh5id"]
 [ext_resource type="Script" path="res://resources/character/moves/ProjectileRes.gd" id="3_a23nq"]
 [ext_resource type="Texture2D" uid="uid://bdrebnfqa5twv" path="res://assets/character/Tivadar/sprites/Tivadar_Projectiles-Groot Projectiel.png" id="5_qboo4"]
 
+[sub_resource type="Resource" id="Resource_6cnej"]
+script = ExtResource("1_f6jxa")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_8ex5r"]
+script = ExtResource("2_pjp2w")
+hitboxRes = SubResource("Resource_6cnej")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+
 [sub_resource type="Resource" id="Resource_lmrp4"]
 script = ExtResource("1_mgph8")
 verticalDisplacement = 0.0
-horizontalDisplacement = 6.0
+horizontalDisplacement = 12.0
 
 [sub_resource type="Resource" id="Resource_hosq6"]
 script = ExtResource("1_2nj7u")
+attackRes = SubResource("Resource_8ex5r")
 displacementRes = SubResource("Resource_lmrp4")
 canBeCancelled = false
 canBeInterrupted = false
@@ -23,6 +39,24 @@ canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 
+[sub_resource type="Resource" id="Resource_p1vr2"]
+script = ExtResource("1_f6jxa")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_fc6oy"]
+script = ExtResource("2_pjp2w")
+hitboxRes = SubResource("Resource_p1vr2")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+
+[sub_resource type="Resource" id="Resource_6qcck"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
+
 [sub_resource type="Resource" id="Resource_66xit"]
 script = ExtResource("3_a23nq")
 spawnOffset = Vector2(0, 0)
@@ -30,6 +64,8 @@ moveRes = ExtResource("2_sh5id")
 
 [sub_resource type="Resource" id="Resource_oxmob"]
 script = ExtResource("1_2nj7u")
+attackRes = SubResource("Resource_fc6oy")
+displacementRes = SubResource("Resource_6qcck")
 projectileRes = SubResource("Resource_66xit")
 canBeCancelled = false
 canBeInterrupted = false
@@ -39,6 +75,24 @@ canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 
+[sub_resource type="Resource" id="Resource_hxxuq"]
+script = ExtResource("1_f6jxa")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_unkjt"]
+script = ExtResource("2_pjp2w")
+hitboxRes = SubResource("Resource_hxxuq")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+
+[sub_resource type="Resource" id="Resource_hu2yn"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
+
 [sub_resource type="Resource" id="Resource_htyib"]
 script = ExtResource("3_a23nq")
 spawnOffset = Vector2(0, 0)
@@ -46,6 +100,8 @@ moveRes = ExtResource("2_sh5id")
 
 [sub_resource type="Resource" id="Resource_su7w6"]
 script = ExtResource("1_2nj7u")
+attackRes = SubResource("Resource_unkjt")
+displacementRes = SubResource("Resource_hu2yn")
 projectileRes = SubResource("Resource_htyib")
 canBeCancelled = false
 canBeInterrupted = false
@@ -55,6 +111,24 @@ canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 
+[sub_resource type="Resource" id="Resource_m7fdq"]
+script = ExtResource("1_f6jxa")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_o8lxk"]
+script = ExtResource("2_pjp2w")
+hitboxRes = SubResource("Resource_m7fdq")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+
+[sub_resource type="Resource" id="Resource_g3tca"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
+
 [sub_resource type="Resource" id="Resource_wrhug"]
 script = ExtResource("3_a23nq")
 spawnOffset = Vector2(0, 0)
@@ -62,17 +136,25 @@ moveRes = ExtResource("2_sh5id")
 
 [sub_resource type="Resource" id="Resource_uqnwl"]
 script = ExtResource("1_2nj7u")
+attackRes = SubResource("Resource_o8lxk")
+displacementRes = SubResource("Resource_g3tca")
 projectileRes = SubResource("Resource_wrhug")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
-selfDestruct = true
+selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_bwig1"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
 
 [sub_resource type="Resource" id="Resource_me1df"]
 script = ExtResource("1_2nj7u")
+displacementRes = SubResource("Resource_bwig1")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -80,9 +162,15 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_emk6m"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
 
 [sub_resource type="Resource" id="Resource_cole5"]
 script = ExtResource("1_2nj7u")
+displacementRes = SubResource("Resource_emk6m")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -90,9 +178,15 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_542d2"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
 
 [sub_resource type="Resource" id="Resource_efwtu"]
 script = ExtResource("1_2nj7u")
+displacementRes = SubResource("Resource_542d2")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -100,9 +194,15 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_ab7e6"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
 
 [sub_resource type="Resource" id="Resource_taw2i"]
 script = ExtResource("1_2nj7u")
+displacementRes = SubResource("Resource_ab7e6")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -110,9 +210,15 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_m1xny"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
 
 [sub_resource type="Resource" id="Resource_vjr2a"]
 script = ExtResource("1_2nj7u")
+displacementRes = SubResource("Resource_m1xny")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -120,9 +226,15 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+
+[sub_resource type="Resource" id="Resource_arplc"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
 
 [sub_resource type="Resource" id="Resource_rp4p1"]
 script = ExtResource("1_2nj7u")
+displacementRes = SubResource("Resource_arplc")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -131,12 +243,18 @@ canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 
+[sub_resource type="Resource" id="Resource_n8qin"]
+script = ExtResource("1_mgph8")
+verticalDisplacement = 0.0
+horizontalDisplacement = 12.0
+
 [sub_resource type="Resource" id="Resource_ocu8w"]
 script = ExtResource("1_2nj7u")
+displacementRes = SubResource("Resource_n8qin")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
-selfDestruct = false
+selfDestruct = true
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true

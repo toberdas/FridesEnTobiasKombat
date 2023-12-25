@@ -1,8 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnag6ekrcwqpk"]
+[gd_scene load_steps=11 format=3 uid="uid://dnag6ekrcwqpk"]
 
 [ext_resource type="Script" path="res://nodes/GameScene.gd" id="1_0ygja"]
+[ext_resource type="Resource" uid="uid://csosbuga346lp" path="res://assets/input/DefaultInputCollection.tres" id="2_63syk"]
 [ext_resource type="PackedScene" uid="uid://bqrykh2ybv2w0" path="res://nodes/MatchScene.tscn" id="2_juxlh"]
+[ext_resource type="PackedScene" uid="uid://cgtjyua2sghuu" path="res://nodes/selection/CharacterSelectionScene.tscn" id="3_74t4a"]
+[ext_resource type="Script" path="res://data/PlayerData.gd" id="3_nkrre"]
+[ext_resource type="Resource" uid="uid://kdqh24eh5amh" path="res://assets/input/SecondDefaultInputCollection.tres" id="4_lkgh2"]
+[ext_resource type="Script" path="res://data/Game.gd" id="5_2fh8b"]
+
+[sub_resource type="Resource" id="Resource_mddsv"]
+script = ExtResource("3_nkrre")
+playerID = 0
+inputCollection = ExtResource("2_63syk")
+color = Color(0.909804, 0.654902, 1, 1)
+
+[sub_resource type="Resource" id="Resource_c51jo"]
+script = ExtResource("3_nkrre")
+playerID = 1
+inputCollection = ExtResource("4_lkgh2")
+color = Color(0, 0.619608, 0.870588, 1)
+
+[sub_resource type="Resource" id="Resource_lrpgy"]
+script = ExtResource("5_2fh8b")
+players = Array[ExtResource("3_nkrre")]([SubResource("Resource_mddsv"), SubResource("Resource_c51jo")])
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_0ygja")
+game = SubResource("Resource_lrpgy")
 matchScene = ExtResource("2_juxlh")
+characterSelectScene = ExtResource("3_74t4a")

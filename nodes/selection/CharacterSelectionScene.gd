@@ -2,13 +2,13 @@ extends Node2D
 
 var characterSelection : CharacterSelection = null
 
-const selectableScene = preload("res://nodes/SelectableScene.tscn")
+const selectableScene = preload("res://nodes/selection/SelectableScene.tscn")
 
 func _ready():
 	if characterSelection:
 		var i = 0
 		for selectable in characterSelection.selectables:
-			var selectableInstance = selectableScene.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+			var selectableInstance = selectableScene.instantiate()
 			selectableInstance.selectable = selectable
 			var parent = $SelectableRoot.get_child(i)
 			if parent:
