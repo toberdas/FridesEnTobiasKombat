@@ -2,7 +2,7 @@ extends Node2D
 
 var playerData : PlayerData = null
 
-func _process(delta):
+func _process(_delta):
 	var chargesNeeded = playerData.characterRes.chargesNeededForSpecial
 	var currentCharges = playerData.characterData.specialCharges
 	var text = ""

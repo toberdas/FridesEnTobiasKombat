@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InputCollection" load_steps=17 format=3 uid="uid://csosbuga346lp"]
+[gd_resource type="Resource" script_class="InputCollection" load_steps=29 format=3 uid="uid://csosbuga346lp"]
 
 [ext_resource type="Script" path="res://data/input/InputCollection.gd" id="1_68nu5"]
 [ext_resource type="Script" path="res://data/input/InputRule.gd" id="1_aklht"]
@@ -87,6 +87,71 @@ canBeHeld = false
 holdBufferFrames = 6
 decayTime = 1.0
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_o5wg2"]
+button_index = 2
+
+[sub_resource type="Resource" id="Resource_v4vsq"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadButton_o5wg2")
+moveInputName = 0
+canBeHeld = false
+holdBufferFrames = 6
+decayTime = 1.0
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_2iyw7"]
+
+[sub_resource type="Resource" id="Resource_kdqsh"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadButton_2iyw7")
+moveInputName = 1
+canBeHeld = false
+holdBufferFrames = 6
+decayTime = 1.0
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_glcc6"]
+button_index = 1
+
+[sub_resource type="Resource" id="Resource_417t6"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadButton_glcc6")
+moveInputName = 4
+canBeHeld = false
+holdBufferFrames = 6
+decayTime = 1.0
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_s2jto"]
+button_index = 13
+
+[sub_resource type="Resource" id="Resource_i22mk"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadButton_s2jto")
+moveInputName = 2
+canBeHeld = true
+holdBufferFrames = 6
+decayTime = 1.0
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_tqqpn"]
+button_index = 14
+
+[sub_resource type="Resource" id="Resource_j7qn7"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadButton_tqqpn")
+moveInputName = 3
+canBeHeld = true
+holdBufferFrames = 6
+decayTime = 1.0
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_oq2n1"]
+button_index = 11
+
+[sub_resource type="Resource" id="Resource_s8c2y"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadButton_oq2n1")
+moveInputName = 5
+canBeHeld = false
+holdBufferFrames = 6
+decayTime = 1.0
+
 [resource]
 script = ExtResource("1_68nu5")
-inputRules = Array[ExtResource("1_aklht")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle"), SubResource("Resource_hhsbv")])
+inputRules = Array[ExtResource("1_aklht")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle"), SubResource("Resource_hhsbv"), SubResource("Resource_v4vsq"), SubResource("Resource_kdqsh"), SubResource("Resource_417t6"), SubResource("Resource_i22mk"), SubResource("Resource_j7qn7"), SubResource("Resource_s8c2y")])

@@ -66,7 +66,9 @@ func adjust_sprite_location(currentMove):
 
 func displace(displacementRes : DisplacementRes):
 	var hdisplacement = displacementRes.horizontalDisplacement
-	global_position.x += hdisplacement * actorData.direction
+	var displacedPosition = global_position.x + hdisplacement * actorData.direction
+	if displacedPosition > -145 && displacedPosition < 145: ##TODO:dit niet hardcoden pls
+		global_position.x = displacedPosition
 	global_position.y += displacementRes.verticalDisplacement
 	actorData.location = global_position
 	

@@ -6,7 +6,7 @@ class_name Collection
 
 func get_random_item():
 	if array.size() > 0:
-		return array[randi() % (array.size() - 1)]
+		return array[randi() % (array.size())]
 	return null
 
 func get_item(item):

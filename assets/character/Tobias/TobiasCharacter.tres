@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://bpiycsrwbb3at" path="res://assets/character/Tobias/moves/TobiasJumpBackward.tres" id="6_ygoh7"]
 [ext_resource type="Resource" uid="uid://wymfycgyi88a" path="res://assets/character/Tobias/moves/TobiasJumpForward.tres" id="7_6l1om"]
 [ext_resource type="Resource" uid="uid://ds3q72qh728f" path="res://assets/character/Tobias/moves/TobiasWalkForward.tres" id="8_4i0sq"]
-[ext_resource type="Resource" uid="uid://cllq4o6jyf3f7" path="res://assets/character/Tobias/moves/TobiasMoveBackward.tres" id="9_guqll"]
+[ext_resource type="Resource" uid="uid://cllq4o6jyf3f7" path="res://assets/character/Tobias/moves/TobiasWalkBackward.tres" id="9_guqll"]
 [ext_resource type="Resource" uid="uid://boghba4st2yaq" path="res://assets/character/Tobias/moves/TobiasWin.tres" id="12_ig16e"]
 [ext_resource type="Resource" uid="uid://vqb8nmg84ivy" path="res://assets/character/Tobias/moves/TobiasEntrance.tres" id="13_stdtp"]
 [ext_resource type="Resource" uid="uid://w68cdkbcvcs2" path="res://assets/character/Tobias/moves/TobiasDeath.tres" id="14_42vod"]
