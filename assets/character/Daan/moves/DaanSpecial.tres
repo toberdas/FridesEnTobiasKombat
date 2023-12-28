@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=28 format=3 uid="uid://dpsxogq5oqxvx"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=29 format=3 uid="uid://dpsxogq5oqxvx"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_4v7qh"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_onbwl"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="2_482v3"]
+[ext_resource type="AudioStream" uid="uid://d5n7rei1ivuv" path="res://assets/geluid/sounds/special/DaanSpecial.wav" id="2_cup5v"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="3_ck1ix"]
 [ext_resource type="Texture2D" uid="uid://l6owlhc5yl1v" path="res://assets/character/Daan/sprites/Daan_MK-Special.png" id="5_0m7ub"]
 
@@ -15,6 +16,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_hl4o0"]
 script = ExtResource("1_4v7qh")
@@ -25,9 +27,11 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_jv6to"]
 script = ExtResource("1_4v7qh")
+specificSound = ExtResource("2_cup5v")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.08
@@ -35,6 +39,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_smdor"]
 script = ExtResource("1_4v7qh")
@@ -45,6 +50,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_6hfvg"]
 script = ExtResource("1_4v7qh")
@@ -55,6 +61,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_pde6f"]
 script = ExtResource("1_4v7qh")
@@ -65,6 +72,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_hdbb3"]
 script = ExtResource("2_482v3")
@@ -89,6 +97,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_a6uo2"]
 script = ExtResource("2_482v3")
@@ -113,6 +122,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
+grounding = false
 
 [sub_resource type="Resource" id="Resource_ry4ch"]
 script = ExtResource("2_482v3")
@@ -137,6 +147,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
+grounding = false
 
 [sub_resource type="Resource" id="Resource_2r84x"]
 script = ExtResource("2_482v3")
@@ -161,6 +172,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_464fd"]
 script = ExtResource("1_4v7qh")
@@ -171,6 +183,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_43meg"]
 script = ExtResource("1_4v7qh")
@@ -181,6 +194,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_xwi4x"]
 script = ExtResource("1_4v7qh")
@@ -191,6 +205,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_dybvx"]
 script = ExtResource("1_4v7qh")
@@ -201,6 +216,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [resource]
 script = ExtResource("1_onbwl")
@@ -211,3 +227,4 @@ canBeHeld = false
 cacheTime = 0.8
 spriteFrameAmount = 11
 canBeSkippedInBus = false
+specialChargesRequired = 3

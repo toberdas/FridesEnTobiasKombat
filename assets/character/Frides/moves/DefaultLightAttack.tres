@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=14 format=3 uid="uid://berxkmitncfgp"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=15 format=3 uid="uid://berxkmitncfgp"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_l8qq1"]
 [ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_ghg8h"]
+[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="2_iap2w"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_khsqe"]
 [ext_resource type="Texture2D" uid="uid://cvaejgksy16dr" path="res://assets/character/Frides/sprites/Frides_Punch.png" id="3_t7t4v"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_ycy7n"]
@@ -15,6 +16,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_p5e6w"]
 script = ExtResource("1_l8qq1")
@@ -25,6 +27,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_bpwj5"]
 script = ExtResource("1_l8qq1")
@@ -35,6 +38,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_oobhk"]
 script = ExtResource("1_l8qq1")
@@ -45,6 +49,8 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+soundFromCollection = ExtResource("2_iap2w")
+grounds = true
 
 [sub_resource type="Resource" id="Resource_uh4ea"]
 script = ExtResource("2_ghg8h")
@@ -69,6 +75,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_6yy72"]
 script = ExtResource("1_l8qq1")
@@ -79,6 +86,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("2_khsqe")

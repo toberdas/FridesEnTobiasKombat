@@ -13,6 +13,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_xjf3p"]
 script = ExtResource("1_3skll")
@@ -23,6 +24,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_q0qyn"]
 script = ExtResource("1_3skll")
@@ -33,6 +35,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_xyqds"]
 script = ExtResource("1_3skll")
@@ -43,6 +46,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_4ojgh"]
 script = ExtResource("1_3skll")
@@ -53,6 +57,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_gh814"]
 script = ExtResource("1_3skll")
@@ -63,6 +68,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_krxlm"]
 script = ExtResource("1_3skll")
@@ -73,6 +79,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_v3sai"]
 script = ExtResource("1_3skll")
@@ -83,6 +90,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_nj4bf"]
 script = ExtResource("1_3skll")
@@ -93,6 +101,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_s7ouo"]
 script = ExtResource("1_3skll")
@@ -103,6 +112,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_b3j8l"]
 script = ExtResource("1_3skll")
@@ -113,6 +123,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_g46of"]
 script = ExtResource("1_3skll")
@@ -123,6 +134,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_acqbf"]
 script = ExtResource("1_3skll")
@@ -133,6 +145,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_dasjj"]
 script = ExtResource("1_3skll")
@@ -143,6 +156,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_rxk5t"]
 script = ExtResource("1_3skll")
@@ -153,6 +167,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_yocs6"]
 script = ExtResource("1_3skll")
@@ -163,6 +178,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_r7bl8"]
 script = ExtResource("1_3skll")
@@ -173,6 +189,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("1_3acwu")

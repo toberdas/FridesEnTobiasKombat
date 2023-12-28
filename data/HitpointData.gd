@@ -1,7 +1,7 @@
 extends Resource
 class_name HitpointData
 
-var hitpoints : int = 10
+var hitpoints : int = 11
 var hitpointResources : Array[HitpointRes] = []
 var currentHitpointRes : HitpointRes
 

@@ -4,6 +4,11 @@ class_name Collection
 @export var array : Array
 @export var dictionary : Dictionary
 
+func get_random_item():
+	if array.size() > 0:
+		return array[randi() % (array.size() - 1)]
+	return null
+
 func get_item(item):
 	return array.find(item)
 

@@ -15,12 +15,16 @@ var amountOfCharacters : int
 var selectables : Array[Selectable] = []
 var amountConfirmed : int = 0
 
+signal character_confirmed
 signal all_confirmed
+signal cycled
 
 func player_confirms_selection(player : PlayerData):
 	var selectable :Selectable = get_highlighted_selectable(player)
 	if selectable:
-		player.characterRes = allCharactersCollection.get_at(get_highlighted_selectable_index(player))
+		var characterRes = allCharactersCollection.get_at(get_highlighted_selectable_index(player))
+		player.characterRes = characterRes
+		emit_signal("character_confirmed", characterRes)
 		selectable.confirmed_by(player)
 		amountConfirmed += 1
 		if amountConfirmed == players.size():
@@ -39,9 +43,11 @@ func parse_movename_for_player(moveName:int,player:PlayerData):
 		return
 	selectables[oldIndex].dehighlighted_by(player)
 	if moveName == MOVES.moveInputs.WALKLEFT:
-		oldIndex = wrapi(oldIndex - 1, 0, amountOfCharacters)
-	if moveName == MOVES.moveInputs.WALKRIGHT:
 		oldIndex = wrapi(oldIndex + 1, 0, amountOfCharacters)
+		emit_signal("cycled")
+	if moveName == MOVES.moveInputs.WALKRIGHT:
+		oldIndex = wrapi(oldIndex - 1, 0, amountOfCharacters)
+		emit_signal("cycled")
 	selectables[oldIndex].highlighted_by(player)
 	if moveName == MOVES.moveInputs.LIGHTATTACK:
 		player_confirms_selection(player)

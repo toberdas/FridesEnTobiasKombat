@@ -36,5 +36,11 @@ script = ExtResource("2_f5nxu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionManager/Hitbox"]
 shape = SubResource("RectangleShape2D_m1lps")
 
+[node name="HitAudio" type="AudioStreamPlayer2D" parent="CollisionManager"]
+
 [node name="ProjectileManager" type="Node" parent="."]
 script = ExtResource("4_g3gxx")
+
+[node name="MoveAudio" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="destroy_attacker" from="CollisionManager" to="." method="_on_collision_manager_destroy_attacker"]

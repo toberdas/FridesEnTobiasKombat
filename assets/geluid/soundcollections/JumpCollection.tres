@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collection" load_steps=10 format=3 uid="uid://cpflqf1c3lp0c"]
+
+[ext_resource type="AudioStream" uid="uid://dkjucwu5wbst3" path="res://assets/geluid/sounds/jump/Jump1.wav" id="1_1jvmf"]
+[ext_resource type="Script" path="res://utils/Collection.gd" id="1_mnmln"]
+[ext_resource type="AudioStream" uid="uid://dlbelmoojccpq" path="res://assets/geluid/sounds/jump/Jump2.wav" id="2_ilg1t"]
+[ext_resource type="AudioStream" uid="uid://do2yalnk3gtkq" path="res://assets/geluid/sounds/jump/Jump3.wav" id="3_w40jp"]
+[ext_resource type="AudioStream" uid="uid://ddqyckbcdfign" path="res://assets/geluid/sounds/jump/Jump4.wav" id="4_87w6d"]
+[ext_resource type="AudioStream" uid="uid://ff6y65hvvi2x" path="res://assets/geluid/sounds/jump/Jump5.wav" id="5_vp40f"]
+[ext_resource type="AudioStream" uid="uid://dmskm5r7rvrq1" path="res://assets/geluid/sounds/jump/Jump6.wav" id="6_twbe2"]
+[ext_resource type="AudioStream" uid="uid://di8opxkykudd5" path="res://assets/geluid/sounds/jump/Jump7.wav" id="7_qltjm"]
+[ext_resource type="AudioStream" uid="uid://cylwftibcfv5l" path="res://assets/geluid/sounds/jump/Jump8.wav" id="8_bcr1e"]
+
+[resource]
+script = ExtResource("1_mnmln")
+array = [ExtResource("1_1jvmf"), ExtResource("2_ilg1t"), ExtResource("3_w40jp"), ExtResource("4_87w6d"), ExtResource("5_vp40f"), ExtResource("6_twbe2"), ExtResource("7_qltjm"), ExtResource("8_bcr1e")]
+dictionary = {}

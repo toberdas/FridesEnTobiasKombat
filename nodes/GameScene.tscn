@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dnag6ekrcwqpk"]
+[gd_scene load_steps=16 format=3 uid="uid://dnag6ekrcwqpk"]
 
 [ext_resource type="Script" path="res://nodes/GameScene.gd" id="1_0ygja"]
 [ext_resource type="Resource" uid="uid://csosbuga346lp" path="res://assets/input/DefaultInputCollection.tres" id="2_63syk"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" path="res://data/PlayerData.gd" id="3_nkrre"]
 [ext_resource type="Resource" uid="uid://kdqh24eh5amh" path="res://assets/input/SecondDefaultInputCollection.tres" id="4_lkgh2"]
 [ext_resource type="Script" path="res://data/Game.gd" id="5_2fh8b"]
+[ext_resource type="PackedScene" uid="uid://crtuftsm4jl52" path="res://nodes/SplashScreen.tscn" id="8_e83nr"]
+[ext_resource type="Shader" path="res://assets/shaders/ScreenMelt.gdshader" id="10_8c0ja"]
+[ext_resource type="Texture2D" uid="uid://bv8xlvn1u6wca" path="res://assets/stage/Achtergrond1.png" id="11_5vfxv"]
+[ext_resource type="Script" path="res://nodes/ScreenTransition.gd" id="12_wk6rb"]
 
 [sub_resource type="Resource" id="Resource_mddsv"]
 script = ExtResource("3_nkrre")
@@ -24,8 +28,35 @@ color = Color(0, 0.619608, 0.870588, 1)
 script = ExtResource("5_2fh8b")
 players = Array[ExtResource("3_nkrre")]([SubResource("Resource_mddsv"), SubResource("Resource_c51jo")])
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0h58m"]
+shader = ExtResource("10_8c0ja")
+shader_parameter/timer = 0.0
+shader_parameter/y_offsets = null
+shader_parameter/melting = false
+
 [node name="GameScene" type="Node2D"]
+scale = Vector2(1, 0.994768)
 script = ExtResource("1_0ygja")
 game = SubResource("Resource_lrpgy")
 matchScene = ExtResource("2_juxlh")
 characterSelectScene = ExtResource("3_74t4a")
+splashScreenScene = ExtResource("8_e83nr")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+
+[node name="Control" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScreenTransition" type="Sprite2D" parent="."]
+z_index = 1000
+material = SubResource("ShaderMaterial_0h58m")
+texture = ExtResource("11_5vfxv")
+script = ExtResource("12_wk6rb")
+melt_speed = 0.01
+
+[connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]

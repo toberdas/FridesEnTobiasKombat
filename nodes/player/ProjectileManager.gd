@@ -13,7 +13,8 @@ func shoot_projectile(projectileRes : ProjectileRes):
 	_actorData.ownerID = actorData.ownerID
 	_actorData.direction = actorData.direction
 	var actorInstance = load("res://nodes/player/ActorScene.tscn").instantiate()
-	add_child(actorInstance)
+	##TODO: niet aan de tree root hangen please
+	get_tree().get_root().add_child(actorInstance)
 	actorInstance.global_position = owner.global_position + directed_vector2(projectileRes.spawnOffset)
 	actorInstance.set_actor_data(_actorData)
 

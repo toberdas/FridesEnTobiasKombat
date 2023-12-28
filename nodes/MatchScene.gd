@@ -24,6 +24,7 @@ func spawn_players():
 		i += 1
 		
 	playerInstances[1].playerData.characterData.direction = -1
+	playerInstances[1].set_hp_bar_direction(-1)
 
 func _process(delta):
 	if matchStarted:

@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=25 format=3 uid="uid://dttn3lukfmxh6"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=26 format=3 uid="uid://dttn3lukfmxh6"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_74ure"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_teu7x"]
+[ext_resource type="Resource" uid="uid://djkclflem8bp2" path="res://assets/geluid/soundcollections/DeathCollection.tres" id="2_w1c3v"]
 [ext_resource type="Texture2D" uid="uid://c5qvskrrti4wm" path="res://assets/character/Jip/sprites/Jip_Death.png" id="3_gd15r"]
 
 [sub_resource type="Resource" id="Resource_jhrba"]
@@ -13,6 +14,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_13nv8"]
 script = ExtResource("1_74ure")
@@ -23,6 +25,8 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+soundFromCollection = ExtResource("2_w1c3v")
+grounds = true
 
 [sub_resource type="Resource" id="Resource_skqe0"]
 script = ExtResource("1_74ure")
@@ -33,6 +37,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_3gx0r"]
 script = ExtResource("1_74ure")
@@ -43,6 +48,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_ywiqo"]
 script = ExtResource("1_74ure")
@@ -53,6 +59,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_svitq"]
 script = ExtResource("1_74ure")
@@ -63,6 +70,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_ksalk"]
 script = ExtResource("1_74ure")
@@ -73,6 +81,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_k6o7v"]
 script = ExtResource("1_74ure")
@@ -83,6 +92,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_xixqo"]
 script = ExtResource("1_74ure")
@@ -93,6 +103,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_spdhx"]
 script = ExtResource("1_74ure")
@@ -103,6 +114,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_6231a"]
 script = ExtResource("1_74ure")
@@ -113,6 +125,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_pshfw"]
 script = ExtResource("1_74ure")
@@ -123,6 +136,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_8j2jn"]
 script = ExtResource("1_74ure")
@@ -133,6 +147,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_8iguu"]
 script = ExtResource("1_74ure")
@@ -143,6 +158,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_3bqt8"]
 script = ExtResource("1_74ure")
@@ -153,6 +169,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_wshry"]
 script = ExtResource("1_74ure")
@@ -163,6 +180,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_lsrxv"]
 script = ExtResource("1_74ure")
@@ -173,6 +191,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_7yqwx"]
 script = ExtResource("1_74ure")
@@ -183,6 +202,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_5kjsr"]
 script = ExtResource("1_74ure")
@@ -193,6 +213,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_m5bxe"]
 script = ExtResource("1_74ure")
@@ -203,6 +224,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_phy6y"]
 script = ExtResource("1_74ure")
@@ -213,6 +235,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("2_teu7x")

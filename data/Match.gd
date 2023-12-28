@@ -6,6 +6,7 @@ var game : Game
 @export_category('Players')
 @export var players : Array[PlayerData]
 
+var game_over = false
 signal match_over
 
 func initialize_from_game(_game:Game):
@@ -23,11 +24,13 @@ func process(_delta):
 		players[0].characterData.targetDirection = -1
 
 func player_death():
-	var deadPlayer = find_dead_player()
-	var winningPlayer = find_alive_player()
-	deadPlayer.lose()
-	winningPlayer.win()
-	emit_signal("match_over")
+	if game_over == false:
+		var deadPlayer = find_dead_player()
+		var winningPlayer = find_alive_player()
+		deadPlayer.lose()
+		winningPlayer.win()
+		emit_signal("match_over")
+		game_over = true
 
 func find_alive_player():
 	for player in players:

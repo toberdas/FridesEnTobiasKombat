@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterRes" load_steps=20 format=3 uid="uid://c2gv50iig14q6"]
+[gd_resource type="Resource" script_class="CharacterRes" load_steps=21 format=3 uid="uid://c2gv50iig14q6"]
 
 [ext_resource type="Resource" uid="uid://6mmq3526h2rq" path="res://assets/character/Jip/combos/DefaultJumpBackwardCombo.tres" id="1_4mbyv"]
 [ext_resource type="Resource" uid="uid://rhk21x7kcfv0" path="res://assets/character/Jip/moves/JipBlock.tres" id="1_i340j"]
@@ -6,8 +6,8 @@
 [ext_resource type="Resource" uid="uid://cgjk4rtoavm8n" path="res://assets/character/Jip/combos/DefaultJumpForwardsCombo.tres" id="2_w4qr5"]
 [ext_resource type="Resource" uid="uid://cr7dqcnxs4uxj" path="res://assets/character/Jip/moves/JipEntrance.tres" id="3_h2sjv"]
 [ext_resource type="Resource" uid="uid://c02v2s5a4vbmg" path="res://assets/character/Jip/combos/JipSpecialCombo.tres" id="3_humxo"]
-[ext_resource type="Texture2D" uid="uid://v8ee6bk0p3jn" path="res://assets/character/Jip/sprites/Jip_HurtStill.png" id="4_h1dpb"]
 [ext_resource type="Resource" uid="uid://b66bhn7uda6iq" path="res://assets/character/Jip/moves/JipHurt.tres" id="4_jreqp"]
+[ext_resource type="Texture2D" uid="uid://hhh65t58uj74" path="res://assets/character/Jip/sprites/JipCharacterselection.png" id="4_s3ol4"]
 [ext_resource type="Resource" uid="uid://b7ttems7p07lw" path="res://assets/character/Jip/moves/JipIdle.tres" id="5_jqlrs"]
 [ext_resource type="Resource" uid="uid://cev43q8cq3wsd" path="res://assets/character/Jip/moves/JipJump.tres" id="6_dgocc"]
 [ext_resource type="Resource" uid="uid://crn0iwyftm6mq" path="res://assets/character/Jip/moves/JipJumpBackward.tres" id="7_r8t5m"]
@@ -19,10 +19,12 @@
 [ext_resource type="Resource" uid="uid://c3mhgxl4m0td1" path="res://assets/character/Jip/moves/JipWalkForward.tres" id="13_scfta"]
 [ext_resource type="Resource" uid="uid://doc8eojvn4mfa" path="res://assets/character/Jip/moves/JipWin.tres" id="14_fde48"]
 [ext_resource type="Script" path="res://resources/character/CharacterRes.gd" id="17_lfoa4"]
+[ext_resource type="AudioStream" uid="uid://blaqa8kjfkn48" path="res://assets/geluid/sounds/aankondiging/Jipaankond.wav" id="20_asbmk"]
 
 [resource]
 script = ExtResource("17_lfoa4")
 moves = Array[Resource("res://resources/character/moves/MoveRes.gd")]([ExtResource("1_i340j"), ExtResource("2_jne2y"), ExtResource("3_h2sjv"), ExtResource("4_jreqp"), ExtResource("5_jqlrs"), ExtResource("6_dgocc"), ExtResource("7_r8t5m"), ExtResource("8_tgjj3"), ExtResource("9_oahr0"), ExtResource("10_2ub01"), ExtResource("11_6dbcb"), ExtResource("12_go7g7"), ExtResource("13_scfta"), ExtResource("14_fde48")])
 combos = Array[Resource("res://resources/character/moves/ComboRes.gd")]([ExtResource("1_4mbyv"), ExtResource("2_w4qr5"), ExtResource("3_humxo")])
 hitpoints = Array[Resource("res://resources/character/HitpointRes.gd")]([])
-icon = ExtResource("4_h1dpb")
+icon = ExtResource("4_s3ol4")
+selectionSound = ExtResource("20_asbmk")

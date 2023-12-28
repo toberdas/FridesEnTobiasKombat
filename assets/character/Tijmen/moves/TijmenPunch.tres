@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=14 format=3 uid="uid://wi4r4abrl2p3"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=15 format=3 uid="uid://wi4r4abrl2p3"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_52isq"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="2_mqc8x"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_npfue"]
+[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="2_xjai7"]
 [ext_resource type="Texture2D" uid="uid://cegu0adade6mb" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Punch.png" id="3_xmdhp"]
 
 [sub_resource type="Resource" id="Resource_enwjp"]
@@ -14,6 +15,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_mgyqs"]
 script = ExtResource("1_52isq")
@@ -24,6 +26,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_um5n0"]
 script = ExtResource("1_52isq")
@@ -34,6 +37,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_631bd"]
 script = ExtResource("1_52isq")
@@ -44,6 +48,8 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+soundFromCollection = ExtResource("2_xjai7")
+grounds = true
 
 [sub_resource type="Resource" id="Resource_pds50"]
 script = ExtResource("1_52isq")
@@ -54,6 +60,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_hmp7e"]
 script = ExtResource("2_mqc8x")
@@ -72,6 +79,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_tgkbj"]
 script = ExtResource("1_52isq")
@@ -82,6 +90,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_kxlwv"]
 script = ExtResource("1_52isq")
@@ -92,6 +101,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("2_npfue")

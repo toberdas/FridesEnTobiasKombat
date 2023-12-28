@@ -1,5 +1,6 @@
 extends Resource
 class_name CharacterRes
+
 @export_category("Moves")
 @export var moves : Array[MoveRes]
 @export_category("Combos")
@@ -9,6 +10,8 @@ class_name CharacterRes
 @export_category("Visual and audio properties")
 @export var icon : Texture2D
 @export var selectionSound : AudioStream
+@export_group("Other properties")
+@export var chargesNeededForSpecial : int = 3
 
 func get_move_by_name(moveName):
 	for move in moves:

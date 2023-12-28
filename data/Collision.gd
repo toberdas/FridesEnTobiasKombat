@@ -1,8 +1,13 @@
 extends Resource
 class_name Collision
 
+enum HITS{NONE,LIGHT,HEAVY,BLOCKED}
+
 var attackedCharacter 
 var attackingCharacter
+
+var hit = HITS.NONE
+var destroyAttacker = false
 
 func _init(attacker : ActorData, attacked : ActorData):
 	if check_if_different_owner(attacker, attacked):
@@ -12,27 +17,43 @@ func check_if_different_owner(actor : ActorData,actor2 : ActorData):
 	return actor.ownerID != actor2.ownerID
 
 func handle_collision(attacker : ActorData, attacked : ActorData):
+	var attackMove : MoveData = attacker.get_current_move()
+	
 	var attackingMoveFrame : MoveFrameRes = attacker.get_current_move_frame()
 	var attackedMoveFrame : MoveFrameRes = attacked.get_current_move_frame()
-	var hitRes = attackedMoveFrame.hitRes
+	var hitRes : HitRes = attackedMoveFrame.hitRes
+	var attackRes : AttackRes = attackingMoveFrame.attackRes
 	
 	if attackedMoveFrame == null or attackingMoveFrame == null:
 		return
 	
-	if attackedMoveFrame.hitRes == null:
+	if hitRes == null:
 		hitRes = preload("res://assets/misc/DefaultHitRes.tres")
 	
-	if attackingMoveFrame.attackRes == null:
+	if attackRes == null:
 		return
 	
+	if attackRes.destroyOnHit:
+		destroyAttacker = true
+	
 	if hitRes.blocks:
+		hit = HITS.BLOCKED
+		attacked.increase_special_charges()
 		attacker.take_recovery_time(attackingMoveFrame.attackRes.recoveryTimeWhenBlocked)
 		return
 	
-	if hitRes.resultingPassiveMove == null:
+	if attackRes.resultingPassiveMove == null:
 		attacked.do_passive_move(preload("res://assets/misc/KnockbackLightMove.tres"))
 	else:
-		attacked.do_passive_move(hitRes.resultingPassiveMove)
+		attacked.do_passive_move(attackRes.resultingPassiveMove)
 	
+	attacker.increase_special_charges()
 	attacked.take_damage(attackingMoveFrame.attackRes.damage - hitRes.damageReduction)
-	attacked.take_recovery_time(hitRes.recoveryTime)
+	##TODO:recoverytime uitwerken
+	var recoveryTime = hitRes.recoveryTime
+	attacked.take_recovery_time(0.2)
+	
+	if attackMove.get_move_name() == MOVES.moves.LIGHTATTACK:
+		hit = HITS.LIGHT
+	if attackMove.get_move_name() == MOVES.moves.HEAVYATTACK:
+		hit = HITS.HEAVY

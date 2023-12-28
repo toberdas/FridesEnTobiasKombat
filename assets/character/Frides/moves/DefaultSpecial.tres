@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=14 format=3 uid="uid://chgvf8u0p7703"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=15 format=3 uid="uid://chgvf8u0p7703"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_33viv"]
 [ext_resource type="Resource" uid="uid://d3t2lg0dseqei" path="res://assets/character/Frides/moves/DefaultProjectile.tres" id="2_8tffc"]
+[ext_resource type="AudioStream" uid="uid://btmgbjnevl2n5" path="res://assets/geluid/sounds/special/FridesSpecialExplosie.wav" id="2_n84ov"]
 [ext_resource type="Script" path="res://resources/character/moves/ProjectileRes.gd" id="3_wlpel"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="4_ie4q2"]
 [ext_resource type="Texture2D" uid="uid://hls32li1ax7r" path="res://assets/character/Frides/sprites/Frides_Special.png" id="5_043cq"]
@@ -15,9 +16,11 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_mguon"]
 script = ExtResource("1_33viv")
+specificSound = ExtResource("2_n84ov")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -25,6 +28,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_51mnb"]
 script = ExtResource("1_33viv")
@@ -35,6 +39,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_y3600"]
 script = ExtResource("1_33viv")
@@ -45,6 +50,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_7vu06"]
 script = ExtResource("1_33viv")
@@ -55,6 +61,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_q4wp8"]
 script = ExtResource("1_33viv")
@@ -65,15 +72,16 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
-[sub_resource type="Resource" id="Resource_a6plk"]
+[sub_resource type="Resource" id="Resource_q7m3n"]
 script = ExtResource("3_wlpel")
-spawnOffset = Vector2(0, 0)
+spawnOffset = Vector2(16, 0)
 moveRes = ExtResource("2_8tffc")
 
 [sub_resource type="Resource" id="Resource_e43ah"]
 script = ExtResource("1_33viv")
-projectileRes = SubResource("Resource_a6plk")
+projectileRes = SubResource("Resource_q7m3n")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -81,13 +89,15 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [resource]
 script = ExtResource("4_ie4q2")
 spriteSheet = ExtResource("5_043cq")
 moveFrames = Array[ExtResource("1_33viv")]([SubResource("Resource_21wfg"), SubResource("Resource_mguon"), SubResource("Resource_51mnb"), SubResource("Resource_y3600"), SubResource("Resource_7vu06"), SubResource("Resource_q4wp8"), SubResource("Resource_e43ah")])
-moveName = 9
+moveName = 11
 canBeHeld = false
 cacheTime = 0.8
 spriteFrameAmount = 7
 canBeSkippedInBus = false
+specialChargesRequired = 3

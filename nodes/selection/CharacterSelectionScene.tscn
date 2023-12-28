@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgtjyua2sghuu"]
+[gd_scene load_steps=4 format=3 uid="uid://cgtjyua2sghuu"]
 
 [ext_resource type="Script" path="res://nodes/selection/CharacterSelectionScene.gd" id="1_x3whx"]
+[ext_resource type="Texture2D" uid="uid://ci43pb65lnxs3" path="res://assets/stage/CharSelectAchter.png" id="2_62kmy"]
+[ext_resource type="AudioStream" uid="uid://b57dnp3qabv67" path="res://assets/geluid/sounds/menu/cycleBeep.wav" id="3_oiidm"]
 
 [node name="CharacterSelectScene" type="Node2D"]
 script = ExtResource("1_x3whx")
@@ -10,19 +12,29 @@ script = ExtResource("1_x3whx")
 [node name="SelectableRoot" type="Node" parent="."]
 
 [node name="Node2D" type="Node2D" parent="SelectableRoot"]
-position = Vector2(-26, -26)
+position = Vector2(-23, -37)
 
 [node name="Node2D2" type="Node2D" parent="SelectableRoot"]
-position = Vector2(-43, 1)
+position = Vector2(-56, -2)
 
 [node name="Node2D3" type="Node2D" parent="SelectableRoot"]
-position = Vector2(-55, 29)
+position = Vector2(-89, 32)
 
 [node name="Node2D4" type="Node2D" parent="SelectableRoot"]
-position = Vector2(29, -28)
+position = Vector2(89, 32)
 
 [node name="Node2D5" type="Node2D" parent="SelectableRoot"]
-position = Vector2(45, 0)
+position = Vector2(57, -2)
 
 [node name="Node2D6" type="Node2D" parent="SelectableRoot"]
-position = Vector2(54, 28)
+position = Vector2(24, -37)
+
+[node name="AankondigingPlayer" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 5
+texture = ExtResource("2_62kmy")
+
+[node name="CyclePlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_oiidm")
+volume_db = -5.0

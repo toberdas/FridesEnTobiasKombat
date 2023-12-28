@@ -17,20 +17,31 @@ shader_parameter/add_margins = true
 script = ExtResource("1_dv8vn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 material = SubResource("ShaderMaterial_f5cam")
 
 [node name="SelectableLabel" parent="Sprite2D" instance=ExtResource("3_j0d4g")]
+offset_left = -11.0
+offset_top = 15.0
+offset_right = -11.0
+offset_bottom = 15.0
 
 [node name="SelectableLabel2" parent="Sprite2D" instance=ExtResource("3_j0d4g")]
+offset_left = 7.0
 offset_top = 15.0
+offset_right = 7.0
 offset_bottom = 15.0
 
 [node name="SelectableLabel3" parent="Sprite2D" instance=ExtResource("3_j0d4g")]
-offset_top = 30.0
-offset_bottom = 30.0
+offset_left = -11.0
+offset_top = 27.0
+offset_right = -11.0
+offset_bottom = 27.0
 
 [node name="SelectableLabel4" parent="Sprite2D" instance=ExtResource("3_j0d4g")]
-offset_top = 45.0
-offset_bottom = 45.0
+offset_left = 7.0
+offset_top = 27.0
+offset_right = 7.0
+offset_bottom = 27.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

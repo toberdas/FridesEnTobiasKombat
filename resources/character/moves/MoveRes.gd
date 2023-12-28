@@ -10,6 +10,7 @@ class_name MoveRes
 @export var cacheTime : float = 0.8 ##DEPRECATED
 @export var spriteFrameAmount : int = 0
 @export var canBeSkippedInBus : bool = false
+@export var specialChargesRequired : int = 0
 
 func get_moveframe_res(index):
 	if index < moveFrames.size():

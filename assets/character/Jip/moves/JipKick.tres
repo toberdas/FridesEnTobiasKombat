@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=21 format=3 uid="uid://x7dm6x5r55yj"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=22 format=3 uid="uid://x7dm6x5r55yj"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_57lb1"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_k1kvl"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_apyhb"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="3_etxe0"]
+[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="3_whwki"]
 [ext_resource type="Texture2D" uid="uid://d3eio8ya0cif0" path="res://assets/character/Jip/sprites/Jip_MK-Kick.png" id="4_xhsnp"]
 
 [sub_resource type="Resource" id="Resource_4akxn"]
@@ -21,6 +22,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_ugf5a"]
 script = ExtResource("1_57lb1")
@@ -37,6 +39,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_viiyk"]
 script = ExtResource("1_57lb1")
@@ -53,6 +56,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_6n68q"]
 script = ExtResource("1_57lb1")
@@ -69,6 +73,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_yll2h"]
 script = ExtResource("1_57lb1")
@@ -85,6 +90,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_15i7m"]
 script = ExtResource("2_k1kvl")
@@ -95,6 +101,8 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+soundFromCollection = ExtResource("3_whwki")
+grounds = true
 
 [sub_resource type="Resource" id="Resource_obla2"]
 script = ExtResource("3_apyhb")
@@ -113,6 +121,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_ujxju"]
 script = ExtResource("2_k1kvl")
@@ -123,6 +132,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_xx0w0"]
 script = ExtResource("2_k1kvl")
@@ -133,6 +143,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("3_etxe0")

@@ -1,11 +1,94 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqrykh2ybv2w0"]
+[gd_scene load_steps=14 format=3 uid="uid://bqrykh2ybv2w0"]
 
 [ext_resource type="Script" path="res://nodes/MatchScene.gd" id="1_mbe0c"]
+[ext_resource type="Texture2D" uid="uid://bv8xlvn1u6wca" path="res://assets/stage/Achtergrond1.png" id="2_bs5vs"]
+[ext_resource type="Texture2D" uid="uid://qk8ko8g2lntb" path="res://assets/stage/Achtergrond2.png" id="3_k3ipf"]
+[ext_resource type="Texture2D" uid="uid://cxs7g7w4gm2cs" path="res://assets/stage/Pipeslevel2.png" id="4_35tqp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j32he"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(0, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efwdl"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(300, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aolfi"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(600, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn35q"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(900, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvndm"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(1200, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7yak"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(1500, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjb7j"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(1800, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ql7e"]
+atlas = ExtResource("4_35tqp")
+region = Rect2(2100, 0, 300, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tehrc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j32he")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efwdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aolfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn35q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvndm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7yak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjb7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ql7e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="MatchScene" type="Node2D"]
 script = ExtResource("1_mbe0c")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -13)
+
+[node name="Background" type="Sprite2D" parent="Camera2D"]
+z_index = -10
+texture = ExtResource("2_bs5vs")
+
+[node name="Foreground" type="Sprite2D" parent="Camera2D"]
+z_index = 100
+texture = ExtResource("3_k3ipf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D"]
+visible = false
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_tehrc")
+autoplay = "default"
+frame_progress = 0.958638
 
 [node name="PlayerSceneRoot" type="Node2D" parent="."]
 

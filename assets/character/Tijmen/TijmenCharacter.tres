@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CharacterRes" load_steps=19 format=3 uid="uid://4txc7deykkt"]
+[gd_resource type="Resource" script_class="CharacterRes" load_steps=20 format=3 uid="uid://4txc7deykkt"]
 
 [ext_resource type="Resource" uid="uid://djmsn1oj0n1nl" path="res://assets/character/Tijmen/combos/TijmenJumpBackwardCombo.tres" id="1_suaxm"]
 [ext_resource type="Resource" uid="uid://dveqnjd3opndo" path="res://assets/character/Tijmen/combos/TijmenJumpForwardCombo.tres" id="2_0ealr"]
 [ext_resource type="Resource" uid="uid://b7nr2pqwsgc80" path="res://assets/character/Tijmen/combos/TijmenSpecialCombo.tres" id="3_gxx8w"]
-[ext_resource type="Texture2D" uid="uid://cb2v7oa3x4yl2" path="res://assets/character/Tijmen/sprites/Tijmen_HurtStill.png" id="4_1so7d"]
 [ext_resource type="Resource" uid="uid://btba66lqhduiu" path="res://assets/character/Tijmen/moves/TijmenBlock.tres" id="4_4i117"]
+[ext_resource type="Texture2D" uid="uid://ci7r6b27hje8v" path="res://assets/character/Tijmen/sprites/TijmenCharacterselection.png" id="4_lohka"]
 [ext_resource type="Resource" uid="uid://bxoprmyk8fvv8" path="res://assets/character/Tijmen/moves/TijmenDeath.tres" id="5_iocb4"]
 [ext_resource type="Resource" uid="uid://dospj5c6c4uig" path="res://assets/character/Tijmen/moves/TijmenEntrance.tres" id="6_npl7r"]
 [ext_resource type="Resource" uid="uid://cxhn5ogipo54v" path="res://assets/character/Tijmen/moves/TijmenHurt.tres" id="7_2mkem"]
@@ -18,10 +18,12 @@
 [ext_resource type="Resource" uid="uid://b42qvqfi01564" path="res://assets/character/Tijmen/moves/TijmenWalkForward.tres" id="16_l64sw"]
 [ext_resource type="Resource" uid="uid://isbihlumst0j" path="res://assets/character/Tijmen/moves/TijmenWin.tres" id="17_bdgix"]
 [ext_resource type="Script" path="res://resources/character/CharacterRes.gd" id="18_lpljy"]
+[ext_resource type="AudioStream" uid="uid://cxwy6pfqc87xy" path="res://assets/geluid/sounds/aankondiging/Tijmenaankondiging.wav" id="19_34ovb"]
 
 [resource]
 script = ExtResource("18_lpljy")
 moves = Array[Resource("res://resources/character/moves/MoveRes.gd")]([ExtResource("4_4i117"), ExtResource("5_iocb4"), ExtResource("6_npl7r"), ExtResource("7_2mkem"), ExtResource("8_2ffpp"), ExtResource("10_n7mee"), ExtResource("11_p4x7p"), ExtResource("12_oej4v"), ExtResource("13_nrfqr"), ExtResource("14_yds5b"), ExtResource("15_32f0d"), ExtResource("16_l64sw"), ExtResource("17_bdgix")])
 combos = Array[Resource("res://resources/character/moves/ComboRes.gd")]([ExtResource("1_suaxm"), ExtResource("2_0ealr"), ExtResource("3_gxx8w")])
 hitpoints = Array[Resource("res://resources/character/HitpointRes.gd")]([])
-icon = ExtResource("4_1so7d")
+icon = ExtResource("4_lohka")
+selectionSound = ExtResource("19_34ovb")

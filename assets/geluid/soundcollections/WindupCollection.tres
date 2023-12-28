@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collection" load_steps=11 format=3 uid="uid://kr57ufrvksbf"]
+
+[ext_resource type="AudioStream" uid="uid://24qjtnb0ftof" path="res://assets/geluid/sounds/light/LAWU1.wav" id="1_6iilb"]
+[ext_resource type="Script" path="res://utils/Collection.gd" id="1_rxhbt"]
+[ext_resource type="AudioStream" uid="uid://ctq8qe5ei7h3t" path="res://assets/geluid/sounds/light/LAWU2.wav" id="2_bcpax"]
+[ext_resource type="AudioStream" uid="uid://bdknvkd81qfdd" path="res://assets/geluid/sounds/light/LAWU3.wav" id="3_r6mne"]
+[ext_resource type="AudioStream" uid="uid://b78yji0fvsdtn" path="res://assets/geluid/sounds/light/LAWU4.wav" id="4_780r0"]
+[ext_resource type="AudioStream" uid="uid://dx8piw4f024kv" path="res://assets/geluid/sounds/light/LAWU5.wav" id="5_i551k"]
+[ext_resource type="AudioStream" uid="uid://ccusl8etluoye" path="res://assets/geluid/sounds/light/LAWU6.wav" id="6_nex32"]
+[ext_resource type="AudioStream" uid="uid://duyrtyg1da37w" path="res://assets/geluid/sounds/light/LAWU7.wav" id="7_74ips"]
+[ext_resource type="AudioStream" uid="uid://u4cei5qivl58" path="res://assets/geluid/sounds/light/LAWU8.wav" id="8_o5tu7"]
+[ext_resource type="AudioStream" uid="uid://qqrp44v875kj" path="res://assets/geluid/sounds/light/LAWU9.wav" id="9_7kvok"]
+
+[resource]
+script = ExtResource("1_rxhbt")
+array = [ExtResource("1_6iilb"), ExtResource("2_bcpax"), ExtResource("3_r6mne"), ExtResource("4_780r0"), ExtResource("5_i551k"), ExtResource("6_nex32"), ExtResource("7_74ips"), ExtResource("8_o5tu7"), ExtResource("9_7kvok")]
+dictionary = {}

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collection" load_steps=12 format=3 uid="uid://1chhrlkhiavm"]
+
+[ext_resource type="Script" path="res://utils/Collection.gd" id="1_c6dbj"]
+[ext_resource type="AudioStream" uid="uid://bp00h3mltcn7s" path="res://assets/geluid/sounds/heavy/HAI1.wav" id="1_pxku0"]
+[ext_resource type="AudioStream" uid="uid://bxkwdnk3im3yh" path="res://assets/geluid/sounds/heavy/HAI2.wav" id="2_ojfg1"]
+[ext_resource type="AudioStream" uid="uid://tfhb5mt2y7nt" path="res://assets/geluid/sounds/heavy/HAI3.wav" id="3_2p82q"]
+[ext_resource type="AudioStream" uid="uid://618s4pciuyn" path="res://assets/geluid/sounds/heavy/HAI4.wav" id="4_yu8if"]
+[ext_resource type="AudioStream" uid="uid://ckaywimfxoq5k" path="res://assets/geluid/sounds/heavy/HAI5.wav" id="5_0mnsu"]
+[ext_resource type="AudioStream" uid="uid://bv4obkgkksow0" path="res://assets/geluid/sounds/heavy/HAI6.wav" id="6_upvhe"]
+[ext_resource type="AudioStream" uid="uid://ck5ki34ji8ndp" path="res://assets/geluid/sounds/heavy/HAI7.wav" id="7_f2hri"]
+[ext_resource type="AudioStream" uid="uid://n87rn8yph3fn" path="res://assets/geluid/sounds/heavy/HAI8.wav" id="8_sy2y0"]
+[ext_resource type="AudioStream" uid="uid://clroref70ghk6" path="res://assets/geluid/sounds/heavy/HAI9.wav" id="9_a3t8f"]
+[ext_resource type="AudioStream" uid="uid://cic4ybx40kw8p" path="res://assets/geluid/sounds/heavy/HAI10.wav" id="10_1f55w"]
+
+[resource]
+script = ExtResource("1_c6dbj")
+array = [ExtResource("1_pxku0"), ExtResource("2_ojfg1"), ExtResource("3_2p82q"), ExtResource("4_yu8if"), ExtResource("5_0mnsu"), ExtResource("6_upvhe"), ExtResource("7_f2hri"), ExtResource("8_sy2y0"), ExtResource("9_a3t8f"), ExtResource("10_1f55w")]
+dictionary = {}

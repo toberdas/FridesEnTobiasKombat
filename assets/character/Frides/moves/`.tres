@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=24 format=3 uid="uid://bqru7e05yvt7i"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=27 format=3 uid="uid://bqru7e05yvt7i"]
 
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="1_406lc"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_yimaq"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="3_fjrb7"]
 [ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_xadea"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="5_4rkse"]
+[ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="5_jp1uv"]
 [ext_resource type="Texture2D" uid="uid://wjj378u4api1" path="res://assets/character/Frides/sprites/snelle projectile.png" id="6_gy8cb"]
 
 [sub_resource type="Resource" id="Resource_xfh7q"]
@@ -30,14 +31,28 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_evgl6"]
 script = ExtResource("2_yimaq")
 verticalDisplacement = 0.0
 horizontalDisplacement = 24.0
 
+[sub_resource type="Resource" id="Resource_w6o8i"]
+script = ExtResource("4_xadea")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_djhe5"]
+script = ExtResource("5_jp1uv")
+recoveryTime = 0.0
+hitboxRes = SubResource("Resource_w6o8i")
+damageReduction = 0
+blocks = false
+
 [sub_resource type="Resource" id="Resource_dktdq"]
 script = ExtResource("3_fjrb7")
+hitRes = SubResource("Resource_djhe5")
 displacementRes = SubResource("Resource_evgl6")
 canBeCancelled = false
 canBeInterrupted = false
@@ -46,6 +61,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_f3gf0"]
 script = ExtResource("2_yimaq")
@@ -62,6 +78,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_6w11u"]
 script = ExtResource("2_yimaq")
@@ -78,6 +95,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_4h8ib"]
 script = ExtResource("2_yimaq")
@@ -94,6 +112,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_85lvy"]
 script = ExtResource("3_fjrb7")
@@ -104,6 +123,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_x36s0"]
 script = ExtResource("4_xadea")
@@ -128,6 +148,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_vhvdn"]
 script = ExtResource("3_fjrb7")
@@ -138,6 +159,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_eki6v"]
 script = ExtResource("3_fjrb7")
@@ -148,6 +170,7 @@ selfDestruct = true
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("5_4rkse")

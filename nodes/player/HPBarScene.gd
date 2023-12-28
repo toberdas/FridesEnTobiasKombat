@@ -9,4 +9,4 @@ func set_hitpoint_data(newData):
 	hitPointData = newData
 
 func update_hp_bar():
-	$Label.text = str(hitPointData.hitpoints)
+	frame = 11 - hitPointData.hitpoints

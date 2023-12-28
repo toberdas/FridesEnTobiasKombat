@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=11 format=3 uid="uid://cbkvqeoboc6oy"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=16 format=3 uid="uid://cbkvqeoboc6oy"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_106gq"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_mt45p"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_264xe"]
 [ext_resource type="Texture2D" uid="uid://b8afj2g4dv16" path="res://assets/character/Daan/sprites/Daan_MK-Punch.png" id="3_gumth"]
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_kv0wy"]
+[ext_resource type="Resource" uid="uid://bwri10fyb2wa1" path="res://assets/geluid/soundcollections/LightHitCollection.tres" id="4_akt5k"]
 
 [sub_resource type="Resource" id="Resource_enwjp"]
 script = ExtResource("1_mt45p")
@@ -13,6 +16,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_mgyqs"]
 script = ExtResource("1_mt45p")
@@ -23,6 +27,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_um5n0"]
 script = ExtResource("1_mt45p")
@@ -33,6 +38,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_631bd"]
 script = ExtResource("1_mt45p")
@@ -43,9 +49,24 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
+
+[sub_resource type="Resource" id="Resource_66tdr"]
+script = ExtResource("2_264xe")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_ciqyr"]
+script = ExtResource("3_kv0wy")
+hitboxRes = SubResource("Resource_66tdr")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
 
 [sub_resource type="Resource" id="Resource_pds50"]
 script = ExtResource("1_mt45p")
+attackRes = SubResource("Resource_ciqyr")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.2
@@ -53,6 +74,8 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+soundFromCollection = ExtResource("4_akt5k")
+grounds = true
 
 [sub_resource type="Resource" id="Resource_1mlvb"]
 script = ExtResource("1_mt45p")
@@ -63,6 +86,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_tgkbj"]
 script = ExtResource("1_mt45p")
@@ -73,6 +97,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("1_106gq")

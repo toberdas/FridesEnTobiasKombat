@@ -1,6 +1,10 @@
 extends Node2D
 
-var characterSelection : CharacterSelection = null
+var characterSelection : CharacterSelection = null:
+	set(val):
+		characterSelection = val
+		characterSelection.connect("character_confirmed", play_confirm)
+		characterSelection.connect("cycled", play_cycle)
 
 const selectableScene = preload("res://nodes/selection/SelectableScene.tscn")
 
@@ -21,3 +25,11 @@ func _input(event):
 	if characterSelection != null:
 		characterSelection.handle_input_event(event)
 
+func play_confirm(character : CharacterRes):
+	var anouncement = character.selectionSound
+	if anouncement != null:
+		$AankondigingPlayer.stream = anouncement
+		$AankondigingPlayer.play(0.0)
+
+func play_cycle():
+	$CyclePlayer.play(0.0)

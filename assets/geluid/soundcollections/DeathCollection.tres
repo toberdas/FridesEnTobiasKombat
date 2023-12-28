@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Collection" load_steps=9 format=3 uid="uid://djkclflem8bp2"]
+
+[ext_resource type="Script" path="res://utils/Collection.gd" id="1_pvy2a"]
+[ext_resource type="AudioStream" uid="uid://cr42f7u6ydydx" path="res://assets/geluid/sounds/fatality/Death1.wav" id="1_qk8da"]
+[ext_resource type="AudioStream" uid="uid://qr1ht47h64ep" path="res://assets/geluid/sounds/fatality/Death2.wav" id="2_6b0jo"]
+[ext_resource type="AudioStream" uid="uid://8nh0ia3sskh" path="res://assets/geluid/sounds/fatality/Death3.wav" id="3_s8pl3"]
+[ext_resource type="AudioStream" uid="uid://b245hxmlyiuja" path="res://assets/geluid/sounds/fatality/Death4.wav" id="4_ayo82"]
+[ext_resource type="AudioStream" uid="uid://c3mbnmvcjwv6f" path="res://assets/geluid/sounds/fatality/Death5.wav" id="5_udfxl"]
+[ext_resource type="AudioStream" uid="uid://cbpwmexmprrv0" path="res://assets/geluid/sounds/fatality/Death6.wav" id="6_bsxhg"]
+[ext_resource type="AudioStream" uid="uid://bljvpn5637hwp" path="res://assets/geluid/sounds/fatality/Death7.wav" id="7_wb7pf"]
+
+[resource]
+script = ExtResource("1_pvy2a")
+array = [ExtResource("1_qk8da"), ExtResource("2_6b0jo"), ExtResource("3_s8pl3"), ExtResource("4_ayo82"), ExtResource("5_udfxl"), ExtResource("6_bsxhg"), ExtResource("7_wb7pf")]
+dictionary = {}

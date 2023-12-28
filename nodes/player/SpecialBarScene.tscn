@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://be4nf4x3ixhdp"]
+
+[node name="SpecialBarScene" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1000
+offset_right = 40.0
+offset_bottom = 23.0

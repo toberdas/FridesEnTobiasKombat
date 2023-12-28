@@ -23,6 +23,12 @@ func _process(delta):
 			$CollisionManager.handle_attack_res(attackRes)
 			var projectileRes = parseFrame.projectileRes
 			$ProjectileManager.handle_projectile_res(projectileRes)
+			if parseFrame.soundFromCollection != null:
+				$MoveAudio.stream = parseFrame.soundFromCollection.get_random_item()
+				$MoveAudio.play(0.0)
+			if parseFrame.specificSound != null:
+				$MoveAudio.stream = parseFrame.specificSound
+				$MoveAudio.play(0.0)
 			if parseFrame.selfDestruct:
 				queue_free()
 			var currentMoveData : MoveData = actorData.get_current_move()
@@ -36,7 +42,10 @@ func _process(delta):
 					$Sprite2D.frame = spriteIndex
 				else:
 					print_debug("sprite index overflow")
+			if parseFrame.grounding:
+				global_position.y = 0.0
 		var passiveParseFrame : MoveFrameRes = actorData.parse_current_passive_frame()
+		
 		if passiveParseFrame:
 			var displacementRes = passiveParseFrame.displacementRes
 			if displacementRes != null:
@@ -65,3 +74,7 @@ func set_actor_data(_actorData):
 	actorData = _actorData
 	$CollisionManager.actorData = actorData
 	$ProjectileManager.actorData = actorData
+
+
+func _on_collision_manager_destroy_attacker():
+	queue_free()

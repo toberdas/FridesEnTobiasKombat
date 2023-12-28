@@ -1,13 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdcvonf8ymfvv"]
+[gd_scene load_steps=6 format=3 uid="uid://bdcvonf8ymfvv"]
 
 [ext_resource type="Script" path="res://nodes/player/PlayerScene.gd" id="1_wd58q"]
 [ext_resource type="PackedScene" uid="uid://rec6natd4x00" path="res://nodes/player/HPBarScene.tscn" id="2_cpn5o"]
 [ext_resource type="PackedScene" uid="uid://cakje4dknu4wv" path="res://nodes/player/ActorScene.tscn" id="2_xgc1f"]
+[ext_resource type="PackedScene" uid="uid://be4nf4x3ixhdp" path="res://nodes/player/SpecialBarScene.tscn" id="4_ar28q"]
+[ext_resource type="Script" path="res://nodes/player/SpecialBarScene.gd" id="5_wfkw6"]
 
 [node name="PlayerScene" type="Node2D"]
 script = ExtResource("1_wd58q")
 
-[node name="HpBarScene" parent="." instance=ExtResource("2_cpn5o")]
-position = Vector2(0, -64)
-
 [node name="ActorScene" parent="." instance=ExtResource("2_xgc1f")]
+
+[node name="HpRoot" type="Node2D" parent="."]
+
+[node name="HpBarScene" parent="HpRoot" instance=ExtResource("2_cpn5o")]
+z_index = 120
+position = Vector2(42, -75)
+
+[node name="SpecialBarScene" parent="HpRoot" instance=ExtResource("4_ar28q")]
+position = Vector2(-6, -74)
+script = ExtResource("5_wfkw6")

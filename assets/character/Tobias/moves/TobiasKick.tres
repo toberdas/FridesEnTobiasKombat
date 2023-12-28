@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=19 format=3 uid="uid://c8rta86iv0jye"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=20 format=3 uid="uid://c8rta86iv0jye"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_4sl2s"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_xa4y0"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_y4ogi"]
 [ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="3_phf4u"]
 [ext_resource type="Texture2D" uid="uid://bmnbi3t5lndyd" path="res://assets/character/Tobias/sprites/Tobias_Kick.png" id="3_rjo30"]
+[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="3_sh87c"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="4_7j76i"]
 
 [sub_resource type="Resource" id="Resource_4akxn"]
@@ -22,6 +23,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_ugf5a"]
 script = ExtResource("1_4sl2s")
@@ -38,6 +40,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_viiyk"]
 script = ExtResource("1_4sl2s")
@@ -54,6 +57,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_rgxyi"]
 script = ExtResource("1_y4ogi")
@@ -64,6 +68,8 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+soundFromCollection = ExtResource("3_sh87c")
+grounds = true
 
 [sub_resource type="Resource" id="Resource_56gsa"]
 script = ExtResource("3_phf4u")
@@ -88,6 +94,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_15i7m"]
 script = ExtResource("1_y4ogi")
@@ -98,6 +105,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [sub_resource type="Resource" id="Resource_73ek3"]
 script = ExtResource("1_y4ogi")
@@ -108,6 +116,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounds = true
 
 [resource]
 script = ExtResource("1_xa4y0")

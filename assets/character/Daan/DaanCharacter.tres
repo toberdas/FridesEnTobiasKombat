@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterRes" load_steps=20 format=3 uid="uid://cica0u7m0lhco"]
+[gd_resource type="Resource" script_class="CharacterRes" load_steps=21 format=3 uid="uid://cica0u7m0lhco"]
 
 [ext_resource type="Script" path="res://resources/character/CharacterRes.gd" id="1_eu8v5"]
 [ext_resource type="Resource" uid="uid://besuc2e0vx2ko" path="res://assets/character/Daan/moves/DaanEntrance.tres" id="1_pqsyl"]
@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://bfdpg8rbtgbhe" path="res://assets/character/Daan/moves/DaanWalkForward.tres" id="3_ffpvy"]
 [ext_resource type="Resource" uid="uid://dwpl72s8mb6ak" path="res://assets/character/Daan/combos/DaanJumpBackwardCombo.tres" id="3_rm761"]
 [ext_resource type="Resource" uid="uid://4c6gn30s2v0y" path="res://assets/character/Daan/moves/DaanWalkBackward.tres" id="4_5da7h"]
-[ext_resource type="Texture2D" uid="uid://od6o3dbc70ri" path="res://assets/character/Daan/sprites/Daan_HurtStill.png" id="4_7a1m4"]
+[ext_resource type="Texture2D" uid="uid://csfmvku12ohrt" path="res://assets/character/Daan/sprites/DaanCharacterselection.png" id="4_7qv82"]
 [ext_resource type="Resource" uid="uid://bv7w8rcn8juh3" path="res://assets/character/Daan/moves/DaanBlock.tres" id="5_70sco"]
 [ext_resource type="Resource" uid="uid://cbkvqeoboc6oy" path="res://assets/character/Daan/moves/DaanPunch.tres" id="6_vtlef"]
 [ext_resource type="Resource" uid="uid://cgf1ui6bfqle0" path="res://assets/character/Daan/moves/DaanKick.tres" id="7_q85rq"]
@@ -19,10 +19,12 @@
 [ext_resource type="Resource" uid="uid://df5fu2yjhupla" path="res://assets/character/Daan/moves/DaanWin.tres" id="14_p2gqr"]
 [ext_resource type="Resource" uid="uid://bae5y5272wygf" path="res://assets/character/Daan/moves/DaanDeath.tres" id="15_es0pu"]
 [ext_resource type="Resource" uid="uid://r6js5b5g51d5" path="res://assets/character/Daan/moves/DaanJumpBackward.tres" id="17_c03q8"]
+[ext_resource type="AudioStream" uid="uid://c0fmsrrccnm5g" path="res://assets/geluid/sounds/aankondiging/DaanAankond.wav" id="20_4rep1"]
 
 [resource]
 script = ExtResource("1_eu8v5")
 moves = Array[Resource("res://resources/character/moves/MoveRes.gd")]([ExtResource("1_pqsyl"), ExtResource("2_grfqb"), ExtResource("3_ffpvy"), ExtResource("4_5da7h"), ExtResource("5_70sco"), ExtResource("6_vtlef"), ExtResource("7_q85rq"), ExtResource("8_kwubl"), ExtResource("10_ld1e1"), ExtResource("12_7hjti"), ExtResource("13_qp1l2"), ExtResource("14_p2gqr"), ExtResource("15_es0pu"), ExtResource("17_c03q8")])
 combos = Array[Resource("res://resources/character/moves/ComboRes.gd")]([ExtResource("2_mow8s"), ExtResource("1_rkevo"), ExtResource("3_rm761")])
 hitpoints = Array[Resource("res://resources/character/HitpointRes.gd")]([])
-icon = ExtResource("4_7a1m4")
+icon = ExtResource("4_7qv82")
+selectionSound = ExtResource("20_4rep1")

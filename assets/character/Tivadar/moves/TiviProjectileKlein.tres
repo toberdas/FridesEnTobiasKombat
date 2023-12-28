@@ -1,11 +1,34 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=8 format=3 uid="uid://dvkx0jcn5uhis"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=23 format=3 uid="uid://dvkx0jcn5uhis"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_dn85k"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_p06ku"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="1_t7fjh"]
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="2_plohy"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="3_ejyti"]
 [ext_resource type="Texture2D" uid="uid://bk1rllsr0r33e" path="res://assets/character/Tivadar/sprites/Tivadar_Projectiles-Klein projectiel.png" id="3_njh3w"]
+
+[sub_resource type="Resource" id="Resource_pojbb"]
+script = ExtResource("1_t7fjh")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_dhqsq"]
+script = ExtResource("2_plohy")
+hitboxRes = SubResource("Resource_pojbb")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = true
+
+[sub_resource type="Resource" id="Resource_chl00"]
+script = ExtResource("3_ejyti")
+verticalDisplacement = -12.0
+horizontalDisplacement = 0.0
 
 [sub_resource type="Resource" id="Resource_fd8uj"]
 script = ExtResource("1_dn85k")
+attackRes = SubResource("Resource_dhqsq")
+displacementRes = SubResource("Resource_chl00")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -13,9 +36,30 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_cdjsq"]
+script = ExtResource("1_t7fjh")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
+[sub_resource type="Resource" id="Resource_nxgmo"]
+script = ExtResource("2_plohy")
+hitboxRes = SubResource("Resource_cdjsq")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = true
+
+[sub_resource type="Resource" id="Resource_3pg6h"]
+script = ExtResource("3_ejyti")
+verticalDisplacement = -12.0
+horizontalDisplacement = 0.0
 
 [sub_resource type="Resource" id="Resource_ero11"]
 script = ExtResource("1_dn85k")
+attackRes = SubResource("Resource_nxgmo")
+displacementRes = SubResource("Resource_3pg6h")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -23,9 +67,30 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_yt4u1"]
+script = ExtResource("1_t7fjh")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_gimim"]
+script = ExtResource("2_plohy")
+hitboxRes = SubResource("Resource_yt4u1")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = true
+
+[sub_resource type="Resource" id="Resource_3jwji"]
+script = ExtResource("3_ejyti")
+verticalDisplacement = -12.0
+horizontalDisplacement = 0.0
 
 [sub_resource type="Resource" id="Resource_8pg0t"]
 script = ExtResource("1_dn85k")
+attackRes = SubResource("Resource_gimim")
+displacementRes = SubResource("Resource_3jwji")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -33,9 +98,30 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_u35cp"]
+script = ExtResource("1_t7fjh")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_3olhm"]
+script = ExtResource("2_plohy")
+hitboxRes = SubResource("Resource_u35cp")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = true
+
+[sub_resource type="Resource" id="Resource_u3phc"]
+script = ExtResource("3_ejyti")
+verticalDisplacement = -12.0
+horizontalDisplacement = 0.0
 
 [sub_resource type="Resource" id="Resource_2aabk"]
 script = ExtResource("1_dn85k")
+attackRes = SubResource("Resource_3olhm")
+displacementRes = SubResource("Resource_u3phc")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -43,6 +129,7 @@ selfDestruct = true
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
+grounding = false
 
 [resource]
 script = ExtResource("1_p06ku")

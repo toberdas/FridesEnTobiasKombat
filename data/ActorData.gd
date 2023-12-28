@@ -4,6 +4,7 @@ class_name ActorData
 var location : Vector2 = Vector2.ZERO
 var direction : int = 1
 var targetDirection : int = 1
+var specialCharges : int = 0 ##TODO: dit in een eigen object stoppen
 var currentMoveData : MoveData = null
 var passiveMove : MoveData = null
 var nextMove : MoveRes = null
@@ -35,13 +36,13 @@ func do_next_move():
 	if get_next_move().moveName == currentMoveData.moveRes.moveName && canLoop:
 		print('a')
 		set_current_move(get_next_move())
-		moveBus.erase_all()
+		clear_move_bus()
 		print('bus cleares')
 		return true
 	if get_next_move().moveName != currentMoveData.moveRes.moveName && canBeCancelled:
 		print('b')
 		set_current_move(get_next_move())
-		moveBus.erase_all()
+		clear_move_bus()
 		print('bus cleares')
 		return true
 	return false
@@ -52,11 +53,15 @@ func cancel_process():
 	if get_next_move() != currentMoveData.moveRes && can_be_cancelled():
 		print('c')
 		set_current_move(get_next_move())
-		moveBus.erase_all()
+		clear_move_bus()
 		print('bus cleares')
 
 func do_move(move : MoveRes):
-	set_current_move(move)
+	if enough_special_for_move(move):
+		set_current_move(move)
+		spend_special_for_move(move)
+		return true
+	return false
 
 func do_move_by_name(moveName):
 	var moveRes = characterRes.get_move_by_name(moveName)
@@ -179,21 +184,45 @@ func add_moveinputname_to_bus(moveInputName):
 	var translatedName = translate_moveinputname_to_movename(moveInputName)
 	if translatedName != null:
 		moveBus.add_item(translatedName)
+	try_combo()
+
+func try_combo():
 	var moveBusCopy : Array = moveBus.get_all().duplicate()
 	moveBusCopy.insert(0, currentMoveData.moveRes.moveName)
 	var resultingMove : MoveRes = characterRes.check_combo_with_names(moveBusCopy)
 	if resultingMove:
-		moveBus.erase_all()
-		do_move(resultingMove)
+		var result = do_move(resultingMove)
+		if result:
+			clear_move_bus()
 
 func take_damage(damage:int):
 	if hitpointData != null:
 		hitpointData.take_damage(damage)
 	if hitpointData.hitpoints > 0:	
 		do_move(hurtMove)
+		clear_move_bus()
 
 func take_recovery_time(time:float):
 	recoveryTime = time
+
+func increase_special_charges():
+	if characterRes != null:
+		if specialCharges < characterRes.chargesNeededForSpecial:
+			specialCharges += 1
+
+func deplete_all_special_charges():
+	specialCharges = 0
+
+func spend_special_for_move(moveRes : MoveRes):
+	specialCharges -= moveRes.specialChargesRequired
+
+func enough_special_for_move(moveRes : MoveRes):
+	if specialCharges >= moveRes.specialChargesRequired:
+		return true
+	return false
+
+func clear_move_bus():
+	moveBus.erase_all()
 
 func translate_moveinputname_to_movename(moveInputName): ##Ik schrijf dit nu uit, maar zou mooi zijn om het ook in regels te kunnen vatten.
 	var rv = moveInputName
