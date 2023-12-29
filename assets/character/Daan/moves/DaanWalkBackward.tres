@@ -20,7 +20,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_e780g"]
 script = ExtResource("1_h2ims")
@@ -37,7 +37,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_gxeac"]
 script = ExtResource("1_h2ims")
@@ -54,7 +54,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_k102n"]
 script = ExtResource("1_h2ims")
@@ -71,7 +71,7 @@ selfDestruct = false
 canCombo = false
 canLoop = true
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [resource]
 script = ExtResource("1_pqhqb")
@@ -82,3 +82,4 @@ canBeHeld = false
 cacheTime = 0.8
 spriteFrameAmount = 4
 canBeSkippedInBus = true
+specialChargesRequired = 0

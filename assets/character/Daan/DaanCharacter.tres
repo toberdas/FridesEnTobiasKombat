@@ -28,3 +28,4 @@ combos = Array[Resource("res://resources/character/moves/ComboRes.gd")]([ExtReso
 hitpoints = Array[Resource("res://resources/character/HitpointRes.gd")]([])
 icon = ExtResource("4_7qv82")
 selectionSound = ExtResource("20_4rep1")
+chargesNeededForSpecial = 3

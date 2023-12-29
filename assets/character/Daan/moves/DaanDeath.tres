@@ -14,10 +14,11 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_2std6"]
 script = ExtResource("1_oisee")
+soundFromCollection = ExtResource("2_ar16g")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.12
@@ -25,8 +26,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-soundFromCollection = ExtResource("2_ar16g")
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_ljk1j"]
 script = ExtResource("1_oisee")
@@ -37,7 +37,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_8km0e"]
 script = ExtResource("1_oisee")
@@ -48,7 +48,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_kvl4m"]
 script = ExtResource("1_oisee")
@@ -59,7 +59,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_3jaya"]
 script = ExtResource("1_oisee")
@@ -70,7 +70,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_erpc6"]
 script = ExtResource("1_oisee")
@@ -81,7 +81,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_bnihp"]
 script = ExtResource("1_oisee")
@@ -92,7 +92,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_08ine"]
 script = ExtResource("1_oisee")
@@ -103,7 +103,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [resource]
 script = ExtResource("1_vxy1f")
@@ -114,3 +114,4 @@ canBeHeld = false
 cacheTime = 0.8
 spriteFrameAmount = 9
 canBeSkippedInBus = false
+specialChargesRequired = 0

@@ -178,3 +178,4 @@ canBeHeld = false
 cacheTime = 0.8
 spriteFrameAmount = 9
 canBeSkippedInBus = false
+specialChargesRequired = 0

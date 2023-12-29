@@ -15,7 +15,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_kh043"]
 script = ExtResource("1_406eq")
@@ -26,7 +26,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_ayhpj"]
 script = ExtResource("1_406eq")
@@ -37,7 +37,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_5u4nh"]
 script = ExtResource("2_rsqif")
@@ -47,6 +47,7 @@ horizontalDisplacement = 0.0
 [sub_resource type="Resource" id="Resource_875dr"]
 script = ExtResource("1_406eq")
 displacementRes = SubResource("Resource_5u4nh")
+soundFromCollection = ExtResource("3_kgjpj")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -54,8 +55,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-soundFromCollection = ExtResource("3_kgjpj")
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_4l3w6"]
 script = ExtResource("2_rsqif")
@@ -72,7 +72,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_66ybo"]
 script = ExtResource("2_rsqif")
@@ -89,7 +89,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_dt18r"]
 script = ExtResource("2_rsqif")
@@ -106,7 +106,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_nt0k5"]
 script = ExtResource("2_rsqif")
@@ -123,7 +123,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_geyaq"]
 script = ExtResource("2_rsqif")
@@ -140,7 +140,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_0upxy"]
 script = ExtResource("2_rsqif")
@@ -157,7 +157,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
-grounds = true
+grounding = false
 
 [sub_resource type="Resource" id="Resource_4wn6f"]
 script = ExtResource("2_rsqif")
@@ -174,7 +174,7 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = false
-grounds = true
+grounding = false
 
 [resource]
 script = ExtResource("3_6x5bo")
@@ -185,3 +185,4 @@ canBeHeld = false
 cacheTime = 0.8
 spriteFrameAmount = 6
 canBeSkippedInBus = false
+specialChargesRequired = 0
