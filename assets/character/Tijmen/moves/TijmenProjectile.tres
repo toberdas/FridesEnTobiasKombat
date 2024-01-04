@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=23 format=3 uid="uid://crl3sfxowslkv"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=32 format=3 uid="uid://crl3sfxowslkv"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_bi8ji"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_ucsu4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="3_32u5v"]
 [ext_resource type="Texture2D" uid="uid://dvf6snhhy8x51" path="res://assets/character/Tijmen/sprites/Tijmen projectiles-Special.png" id="3_grv7f"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="4_7jgqk"]
+[ext_resource type="Resource" uid="uid://boup3q45bahk4" path="res://assets/misc/LightKnockup.tres" id="5_ff5iq"]
 
 [sub_resource type="Resource" id="Resource_ddtms"]
 script = ExtResource("1_ucsu4")
@@ -23,6 +24,22 @@ script = ExtResource("1_ucsu4")
 specificSound = ExtResource("2_l0v05")
 canBeCancelled = false
 canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_0qf4n"]
+script = ExtResource("3_32u5v")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_otm75"]
+script = ExtResource("1_ucsu4")
+canBeCancelled = false
+canBeInterrupted = false
 frameDuration = 0.1
 selfDestruct = false
 canCombo = false
@@ -30,11 +47,32 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_dkg2u"]
+script = ExtResource("1_bi8ji")
+moveFrames = Array[ExtResource("1_ucsu4")]([SubResource("Resource_otm75")])
+moveName = 0
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 0
+canBeSkippedInBus = false
+specialChargesRequired = 0
+ignoresCollision = false
+
+[sub_resource type="Resource" id="Resource_1vj6t"]
+script = ExtResource("4_7jgqk")
+hitboxRes = SubResource("Resource_0qf4n")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+resultingPassiveMove = SubResource("Resource_dkg2u")
+
 [sub_resource type="Resource" id="Resource_ox3l6"]
 script = ExtResource("1_ucsu4")
+attackRes = SubResource("Resource_1vj6t")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.2
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -52,22 +90,24 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
-[sub_resource type="Resource" id="Resource_58som"]
-script = ExtResource("3_32u5v")
-hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(18, 0)
-
-[sub_resource type="Resource" id="Resource_v34mo"]
-script = ExtResource("4_7jgqk")
-hitboxRes = SubResource("Resource_58som")
-damage = 1
-recoveryTimeWhenBlocked = 0.4
-recoveryTimeWhenNotBlocked = 0.0
-destroyOnHit = false
-
 [sub_resource type="Resource" id="Resource_05l7u"]
 script = ExtResource("1_ucsu4")
-attackRes = SubResource("Resource_v34mo")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.12
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_sf11y"]
+script = ExtResource("3_32u5v")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_u3rsw"]
+script = ExtResource("1_ucsu4")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -77,11 +117,32 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_8nrge"]
+script = ExtResource("1_bi8ji")
+moveFrames = Array[ExtResource("1_ucsu4")]([SubResource("Resource_u3rsw")])
+moveName = 0
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 0
+canBeSkippedInBus = false
+specialChargesRequired = 0
+ignoresCollision = false
+
+[sub_resource type="Resource" id="Resource_sqsev"]
+script = ExtResource("4_7jgqk")
+hitboxRes = SubResource("Resource_sf11y")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+resultingPassiveMove = SubResource("Resource_8nrge")
+
 [sub_resource type="Resource" id="Resource_hu654"]
 script = ExtResource("1_ucsu4")
+attackRes = SubResource("Resource_sqsev")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.2
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -103,7 +164,7 @@ grounding = false
 script = ExtResource("1_ucsu4")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.12
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -114,7 +175,7 @@ grounding = false
 script = ExtResource("1_ucsu4")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.12
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -125,7 +186,7 @@ grounding = false
 script = ExtResource("1_ucsu4")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.12
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -136,7 +197,7 @@ grounding = false
 script = ExtResource("1_ucsu4")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.12
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -147,18 +208,33 @@ grounding = false
 script = ExtResource("1_ucsu4")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.12
 selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_g8pn4"]
+script = ExtResource("3_32u5v")
+hitboxSize = Vector2(24, 64)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_kt885"]
+script = ExtResource("4_7jgqk")
+hitboxRes = SubResource("Resource_g8pn4")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+resultingPassiveMove = ExtResource("5_ff5iq")
+
 [sub_resource type="Resource" id="Resource_bkasg"]
 script = ExtResource("1_ucsu4")
+attackRes = SubResource("Resource_kt885")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.2
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -186,3 +262,4 @@ cacheTime = 0.8
 spriteFrameAmount = 14
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

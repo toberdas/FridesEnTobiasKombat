@@ -17,7 +17,6 @@ func tick_time(delta):
 func check_increment():
 	var currentMoveFrame = get_current_move_frame()
 	if currentMoveFrame == null:
-		print("No move frame found")
 		return null
 	if timer >= get_current_move_frame().frameDuration:
 		if currentFrame >= moveRes.get_moveframes_amount() -1:

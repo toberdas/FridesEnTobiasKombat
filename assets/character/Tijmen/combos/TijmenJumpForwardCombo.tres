@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("2_jpbln")
-moveNames = Array[int]([2, 2, 2, 2])
+moveNames = Array[int]([2, 2, 2])
 resultingMove = ExtResource("1_gfkee")

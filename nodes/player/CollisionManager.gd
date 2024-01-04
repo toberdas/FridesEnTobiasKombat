@@ -22,17 +22,26 @@ func attack_body(body):
 				pass
 			Collision.HITS.LIGHT:
 				var sound = LIGHT_HIT_COLLECTION.get_random_item()
-				if sound != null:	
+				if sound != null:
+					show_effect(preload("res://assets/effects/HitSpriteFrames.tres"))
 					$HitAudio.stream = sound
 					$HitAudio.play(0.0)
 			Collision.HITS.HEAVY:
 				var sound = HEAVY_HIT_COLLECTION.get_random_item()
 				if sound != null:
+					show_effect(preload("res://assets/effects/HitSpriteFrames.tres"))
 					$HitAudio.stream = sound
 					$HitAudio.play(0.0)
 			Collision.HITS.BLOCKED:
 				var sound = BLOCKED_HIT_COLLECTION.get_random_item()
-				if sound != null:	
+				if sound != null:
+					show_effect(preload("res://assets/effects/BlockSpriteFrames.tres"))
+					$HitAudio.stream = sound
+					$HitAudio.play(0.0)
+			Collision.HITS.SPECIAL:
+				var sound = HEAVY_HIT_COLLECTION.get_random_item()
+				if sound != null:
+					show_effect(preload("res://assets/effects/HitSpriteFrames.tres"))
 					$HitAudio.stream = sound
 					$HitAudio.play(0.0)
 		if _collision.destroyAttacker:
@@ -65,3 +74,9 @@ func set_hitbox(hitRes : HitRes):
 func clear_hitbox():
 	$Hitbox.set_hitbox_from_res(preload("res://assets/misc/DefaultHitRes.tres").hitboxRes)
 	$Hitbox.monitorable = true
+
+func show_effect(spriteFrames):
+	var effectInstance = preload("res://nodes/Effect.tscn").instantiate()
+	effectInstance.sprite_frames = spriteFrames
+	$EffectRoot.add_child(effectInstance)
+	pass

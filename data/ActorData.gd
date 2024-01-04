@@ -13,7 +13,13 @@ var cacheTimer : float = 0
 var moveBus = InputBus.new(InputBus.OVERFLOWMODE.LIMIT, 6, 0.8)
 
 var ownerID : int = 0
-var characterRes : CharacterRes = null
+var characterRes : CharacterRes = null:
+	set(newRes):
+		characterRes = newRes
+		hurtMove = characterRes.get_move_by_name(MOVES.moves.HURT)
+		idleMove = characterRes.get_move_by_name(MOVES.moves.IDLE)
+		set_current_move(characterRes.get_move_by_name(MOVES.moves.ENTRANCE))
+		hitpointData = HitpointData.new(characterRes.hitpoints)
 var hitpointData : HitpointData = null
 var idleMove : MoveRes = preload("res://assets/character/Frides/moves/DefaultIdle.tres")
 var hurtMove : MoveRes = preload("res://assets/character/Frides/moves/DefaultHurt.tres")
@@ -25,7 +31,6 @@ func is_free_to_move():
 		return false
 
 func idle():
-	print("idle")
 	set_current_move(idleMove)
 
 func do_next_move():
@@ -34,16 +39,12 @@ func do_next_move():
 	if get_next_move() == null:
 		return false
 	if get_next_move().moveName == currentMoveData.moveRes.moveName && canLoop:
-		print('a')
 		set_current_move(get_next_move())
 		clear_move_bus()
-		print('bus cleares')
 		return true
 	if get_next_move().moveName != currentMoveData.moveRes.moveName && canBeCancelled:
-		print('b')
 		set_current_move(get_next_move())
 		clear_move_bus()
-		print('bus cleares')
 		return true
 	return false
 
@@ -51,10 +52,8 @@ func cancel_process():
 	if get_next_move() == null:
 		return
 	if get_next_move() != currentMoveData.moveRes && can_be_cancelled():
-		print('c')
 		set_current_move(get_next_move())
 		clear_move_bus()
-		print('bus cleares')
 
 func do_move(move : MoveRes):
 	if enough_special_for_move(move):
@@ -84,7 +83,6 @@ func tick_time(delta):
 	if currentMoveData != null:
 		var tickResult : TickResult = currentMoveData.tick_time(delta)
 		if tickResult == null:
-			print("tick failed")
 			return
 		match tickResult.result:
 			TickResult.RESULT.FRAMEINCREASE:
@@ -93,7 +91,6 @@ func tick_time(delta):
 				#do_next_move()
 				cancel_process()
 			TickResult.RESULT.MOVEENDED:
-				print('move ended')
 				direction = targetDirection
 				if !do_next_move():
 					idle()
@@ -112,6 +109,9 @@ func parse_current_passive_frame():
 
 func get_current_move():
 	return currentMoveData
+
+func get_current_passive_move():
+	return passiveMove
 
 func get_current_move_name():
 	if currentMoveData:
@@ -173,17 +173,24 @@ func get_next_move():
 		return null	
 	return characterRes.get_move_by_name(moveName)
 
-func set_character_res(newRes : CharacterRes):
-	characterRes = newRes
-	hurtMove = characterRes.get_move_by_name(MOVES.moves.HURT)
-	idleMove = characterRes.get_move_by_name(MOVES.moves.IDLE)
-	set_current_move(characterRes.get_move_by_name(MOVES.moves.ENTRANCE))
-	hitpointData = HitpointData.new(characterRes.hitpoints)
+#func set_character_res(newRes : CharacterRes):
+	#characterRes = newRes
+	#hurtMove = characterRes.get_move_by_name(MOVES.moves.HURT)
+	#idleMove = characterRes.get_move_by_name(MOVES.moves.IDLE)
+	#set_current_move(characterRes.get_move_by_name(MOVES.moves.ENTRANCE))
+	#hitpointData = HitpointData.new(characterRes.hitpoints)
 
 func add_moveinputname_to_bus(moveInputName):
 	var translatedName = translate_moveinputname_to_movename(moveInputName)
 	if translatedName != null:
 		moveBus.add_item(translatedName)
+	try_combo()
+
+func add_moveinputname_to_bus_deduplicated(moveInputName):
+	var translatedName = translate_moveinputname_to_movename(moveInputName)
+	if translatedName != null:
+		if get_current_move_name() != translatedName:
+			moveBus.add_item(translatedName)
 	try_combo()
 
 func try_combo():

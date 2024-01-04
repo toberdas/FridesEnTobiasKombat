@@ -44,7 +44,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_p6q0p"]
 script = ExtResource("1_17eql")
 verticalDisplacement = 0.0
-horizontalDisplacement = 2.0
+horizontalDisplacement = 4.0
 
 [sub_resource type="Resource" id="Resource_aix6g"]
 script = ExtResource("2_akbc7")
@@ -61,7 +61,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_eadua"]
 script = ExtResource("1_17eql")
 verticalDisplacement = 0.0
-horizontalDisplacement = 1.0
+horizontalDisplacement = 4.0
 
 [sub_resource type="Resource" id="Resource_rm70e"]
 script = ExtResource("2_akbc7")
@@ -116,3 +116,4 @@ cacheTime = 0.8
 spriteFrameAmount = 6
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

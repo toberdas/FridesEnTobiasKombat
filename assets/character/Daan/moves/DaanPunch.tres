@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=16 format=3 uid="uid://cbkvqeoboc6oy"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=20 format=3 uid="uid://cbkvqeoboc6oy"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_106gq"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_mt45p"]
 [ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_264xe"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_khgxe"]
 [ext_resource type="Texture2D" uid="uid://b8afj2g4dv16" path="res://assets/character/Daan/sprites/Daan_MK-Punch.png" id="3_gumth"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_kv0wy"]
 [ext_resource type="Resource" uid="uid://bwri10fyb2wa1" path="res://assets/geluid/soundcollections/LightHitCollection.tres" id="4_akt5k"]
@@ -18,8 +19,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_hvil6"]
+script = ExtResource("2_khgxe")
+verticalDisplacement = 0.0
+horizontalDisplacement = 4.0
+
 [sub_resource type="Resource" id="Resource_mgyqs"]
 script = ExtResource("1_mt45p")
+displacementRes = SubResource("Resource_hvil6")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.05
@@ -29,8 +36,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_jf506"]
+script = ExtResource("2_khgxe")
+verticalDisplacement = 0.0
+horizontalDisplacement = 3.0
+
 [sub_resource type="Resource" id="Resource_um5n0"]
 script = ExtResource("1_mt45p")
+displacementRes = SubResource("Resource_jf506")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -40,8 +53,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_i7ya2"]
+script = ExtResource("2_khgxe")
+verticalDisplacement = 0.0
+horizontalDisplacement = 2.0
+
 [sub_resource type="Resource" id="Resource_631bd"]
 script = ExtResource("1_mt45p")
+displacementRes = SubResource("Resource_i7ya2")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.05
@@ -109,3 +128,4 @@ cacheTime = 0.8
 spriteFrameAmount = 7
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

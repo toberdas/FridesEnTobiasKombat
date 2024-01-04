@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=12 format=3 uid="uid://boup3q45bahk4"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_53iqg"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_yge1c"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_j8jhe"]
+
+[sub_resource type="Resource" id="Resource_o3igj"]
+script = ExtResource("1_yge1c")
+verticalDisplacement = -3.0
+horizontalDisplacement = 0.0
+
+[sub_resource type="Resource" id="Resource_4wu1q"]
+script = ExtResource("2_j8jhe")
+displacementRes = SubResource("Resource_o3igj")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_8315t"]
+script = ExtResource("1_yge1c")
+verticalDisplacement = -2.0
+horizontalDisplacement = 0.0
+
+[sub_resource type="Resource" id="Resource_6enl2"]
+script = ExtResource("2_j8jhe")
+displacementRes = SubResource("Resource_8315t")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_2fqm3"]
+script = ExtResource("1_yge1c")
+verticalDisplacement = 2.0
+horizontalDisplacement = 0.0
+
+[sub_resource type="Resource" id="Resource_motom"]
+script = ExtResource("2_j8jhe")
+displacementRes = SubResource("Resource_2fqm3")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_slto8"]
+script = ExtResource("1_yge1c")
+verticalDisplacement = 3.0
+horizontalDisplacement = 0.0
+
+[sub_resource type="Resource" id="Resource_6j4l1"]
+script = ExtResource("2_j8jhe")
+displacementRes = SubResource("Resource_slto8")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[resource]
+script = ExtResource("1_53iqg")
+moveFrames = Array[ExtResource("2_j8jhe")]([SubResource("Resource_4wu1q"), SubResource("Resource_6enl2"), SubResource("Resource_motom"), SubResource("Resource_6j4l1")])
+moveName = 0
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 0
+canBeSkippedInBus = false
+specialChargesRequired = 0
+ignoresCollision = false

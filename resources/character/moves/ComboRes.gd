@@ -27,6 +27,5 @@ func check_combo(busMoveNames : Array):
 				return null
 		i += 1
 		if i == moveNames.size():
-			print("combo hit")
 			return get_resulting_move()
 

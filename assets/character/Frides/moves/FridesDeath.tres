@@ -137,3 +137,4 @@ cacheTime = 0.8
 spriteFrameAmount = 11
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

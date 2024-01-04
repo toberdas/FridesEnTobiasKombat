@@ -37,7 +37,7 @@ func start_match():
 func spawn_players():
 	var i = 0
 	for player : PlayerData in matchData.players:
-		var playerInstance = playerScene.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+		var playerInstance = playerScene.instantiate()
 		$PlayerSceneRoot.get_child(i).add_child(playerInstance)
 		playerInstance.start(player)
 		playerInstances.append(playerInstance)

@@ -55,7 +55,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_uh4ea"]
 script = ExtResource("2_ghg8h")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(16, 0)
+hitboxLocation = Vector2(10, 0)
 
 [sub_resource type="Resource" id="Resource_twdm6"]
 script = ExtResource("3_ycy7n")
@@ -98,3 +98,4 @@ cacheTime = 0.8
 spriteFrameAmount = 6
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

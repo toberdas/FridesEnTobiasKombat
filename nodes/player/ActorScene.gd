@@ -35,11 +35,11 @@ func _process(delta):
 			if currentMoveData:
 				var spriteSheet = currentMoveData.moveRes.spriteSheet
 				var frameCount = currentMoveData.get_sprite_frame_count()
-				$Sprite2D.texture = spriteSheet
-				$Sprite2D.hframes = frameCount
+				$CharacterSprite.texture = spriteSheet
+				$CharacterSprite.hframes = frameCount
 				var spriteIndex = actorData.get_current_sprite_index()
 				if spriteIndex < frameCount:
-					$Sprite2D.frame = spriteIndex
+					$CharacterSprite.frame = spriteIndex
 				else:
 					print_debug("sprite index overflow")
 			if parseFrame.grounding:
@@ -62,16 +62,28 @@ func adjust_sprite_location(currentMove):
 	var xDif = wpf - 64
 	var yDif = h - 64
 	var rX = xDif
-	$Sprite2D.position = Vector2(rX * 0.5, -yDif * 0.5)
+	$CharacterSprite.position = Vector2(rX * 0.5, -yDif * 0.5)
 
 func displace(displacementRes : DisplacementRes):
-	var hdisplacement = displacementRes.horizontalDisplacement
-	var displacedPosition = global_position.x + hdisplacement * actorData.direction
-	if displacedPosition > -145 && displacedPosition < 145: ##TODO:dit niet hardcoden pls
-		global_position.x = displacedPosition
+	global_position.x += get_actual_x_displacement(displacementRes)
 	global_position.y += displacementRes.verticalDisplacement
 	actorData.location = global_position
-	
+
+func get_actual_x_displacement(displacementRes : DisplacementRes):
+	var hdisplacement = displacementRes.horizontalDisplacement * actorData.direction
+	var displacedXPosition = global_position.x + hdisplacement
+	var currentMove : MoveData = actorData.get_current_move()
+	if currentMove.moveRes.ignoresCollision:
+		return hdisplacement
+	if displacedXPosition < -145 or displacedXPosition > 145: ##TODO:dit niet hardcoden pls
+		return 0.0
+	if displacementRes.horizontalDisplacement < 0:
+		return hdisplacement
+	$MovementCollider.global_position.x = displacedXPosition
+	if $MovementCollider.get_overlapping_areas().size() == 0:
+		return hdisplacement
+	return 0.0
+
 func set_actor_data(_actorData):
 	actorData = _actorData
 	$CollisionManager.actorData = actorData

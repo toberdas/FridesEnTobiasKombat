@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=27 format=3 uid="uid://cgf1ui6bfqle0"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=32 format=3 uid="uid://cgf1ui6bfqle0"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_f82y3"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_msv8u"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_ogt8u"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_gt3qr"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="3_smyj8"]
 [ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="4_45xu5"]
 [ext_resource type="Texture2D" uid="uid://1hhxowr0vjfy" path="res://assets/character/Daan/sprites/Daan_MK-Kick.png" id="5_a3u6g"]
 
@@ -27,7 +28,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_m3q0o"]
 script = ExtResource("1_f82y3")
 verticalDisplacement = 0.0
-horizontalDisplacement = 2.0
+horizontalDisplacement = 4.0
 
 [sub_resource type="Resource" id="Resource_5fgn7"]
 script = ExtResource("2_ogt8u")
@@ -44,7 +45,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_p6q0p"]
 script = ExtResource("1_f82y3")
 verticalDisplacement = 0.0
-horizontalDisplacement = 2.0
+horizontalDisplacement = 4.0
 
 [sub_resource type="Resource" id="Resource_aix6g"]
 script = ExtResource("2_ogt8u")
@@ -61,7 +62,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_eadua"]
 script = ExtResource("1_f82y3")
 verticalDisplacement = 0.0
-horizontalDisplacement = 1.0
+horizontalDisplacement = 2.0
 
 [sub_resource type="Resource" id="Resource_rm70e"]
 script = ExtResource("2_ogt8u")
@@ -75,10 +76,16 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_44jyg"]
+script = ExtResource("3_smyj8")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(12, 0)
+
 [sub_resource type="Resource" id="Resource_0rrh3"]
 script = ExtResource("3_gt3qr")
+hitboxRes = SubResource("Resource_44jyg")
 damage = 1
-recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenBlocked = 0.7
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 
@@ -95,8 +102,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_1ql2d"]
+script = ExtResource("1_f82y3")
+verticalDisplacement = 0.0
+horizontalDisplacement = 3.0
+
 [sub_resource type="Resource" id="Resource_4g6g3"]
 script = ExtResource("2_ogt8u")
+displacementRes = SubResource("Resource_1ql2d")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -106,8 +119,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_pj8br"]
+script = ExtResource("1_f82y3")
+verticalDisplacement = 0.0
+horizontalDisplacement = 2.0
+
 [sub_resource type="Resource" id="Resource_ivrvo"]
 script = ExtResource("2_ogt8u")
+displacementRes = SubResource("Resource_pj8br")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -120,7 +139,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_b5rdx"]
 script = ExtResource("1_f82y3")
 verticalDisplacement = 0.0
-horizontalDisplacement = 2.0
+horizontalDisplacement = 1.0
 
 [sub_resource type="Resource" id="Resource_s5tis"]
 script = ExtResource("2_ogt8u")
@@ -134,10 +153,16 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_8purk"]
+script = ExtResource("3_smyj8")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(12, 0)
+
 [sub_resource type="Resource" id="Resource_7p2bk"]
 script = ExtResource("3_gt3qr")
+hitboxRes = SubResource("Resource_8purk")
 damage = 1
-recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenBlocked = 0.7
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 
@@ -208,3 +233,4 @@ cacheTime = 0.8
 spriteFrameAmount = 13
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

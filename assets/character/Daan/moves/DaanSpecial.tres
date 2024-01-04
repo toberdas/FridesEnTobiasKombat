@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=29 format=3 uid="uid://dpsxogq5oqxvx"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=31 format=3 uid="uid://dpsxogq5oqxvx"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_4v7qh"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_onbwl"]
@@ -63,8 +63,22 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_ky48m"]
+script = ExtResource("2_482v3")
+damage = 0
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+
+[sub_resource type="Resource" id="Resource_i3i2c"]
+script = ExtResource("3_ck1ix")
+verticalDisplacement = 0.0
+horizontalDisplacement = 14.0
+
 [sub_resource type="Resource" id="Resource_pde6f"]
 script = ExtResource("1_4v7qh")
+attackRes = SubResource("Resource_ky48m")
+displacementRes = SubResource("Resource_i3i2c")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -101,7 +115,7 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_a6uo2"]
 script = ExtResource("2_482v3")
-damage = 1
+damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
@@ -126,7 +140,7 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_ry4ch"]
 script = ExtResource("2_482v3")
-damage = 1
+damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
@@ -151,7 +165,7 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_2r84x"]
 script = ExtResource("2_482v3")
-damage = 1
+damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
@@ -228,3 +242,4 @@ cacheTime = 0.8
 spriteFrameAmount = 11
 canBeSkippedInBus = false
 specialChargesRequired = 3
+ignoresCollision = true

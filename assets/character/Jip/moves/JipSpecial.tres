@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=20 format=3 uid="uid://dlxkk1u37pds0"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=22 format=3 uid="uid://dlxkk1u37pds0"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_mifey"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="2_pdge8"]
@@ -30,8 +30,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_adron"]
+script = ExtResource("2_s2dyv")
+verticalDisplacement = 0.0
+horizontalDisplacement = 4.0
+
 [sub_resource type="Resource" id="Resource_hlly3"]
 script = ExtResource("1_mifey")
+displacementRes = SubResource("Resource_adron")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -41,8 +47,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_wm56c"]
+script = ExtResource("2_s2dyv")
+verticalDisplacement = 0.0
+horizontalDisplacement = 4.0
+
 [sub_resource type="Resource" id="Resource_w0c7f"]
 script = ExtResource("1_mifey")
+displacementRes = SubResource("Resource_wm56c")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.04
@@ -62,7 +74,7 @@ destroyOnHit = false
 [sub_resource type="Resource" id="Resource_f08iv"]
 script = ExtResource("2_s2dyv")
 verticalDisplacement = 0.0
-horizontalDisplacement = 6.0
+horizontalDisplacement = 8.0
 
 [sub_resource type="Resource" id="Resource_x5onc"]
 script = ExtResource("1_mifey")
@@ -87,7 +99,7 @@ destroyOnHit = false
 [sub_resource type="Resource" id="Resource_64sg1"]
 script = ExtResource("2_s2dyv")
 verticalDisplacement = 0.0
-horizontalDisplacement = 3.0
+horizontalDisplacement = 6.0
 
 [sub_resource type="Resource" id="Resource_188bn"]
 script = ExtResource("1_mifey")
@@ -137,3 +149,4 @@ cacheTime = 0.8
 spriteFrameAmount = 7
 canBeSkippedInBus = false
 specialChargesRequired = 3
+ignoresCollision = false

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://utils/Collection.gd" id="1_s1f80"]
 [ext_resource type="Resource" uid="uid://dgnnbfi6hg5a6" path="res://assets/stage/WoodsStage.tres" id="1_su8l3"]
-[ext_resource type="Resource" uid="uid://m4mpip1vtme8" path="res://assets/stage/PipesStage.tres" id="2_cvci4"]
+[ext_resource type="Resource" uid="uid://m4mpip1vtme8" path="res://assets/character/Jip/PipesStage.tres" id="2_cvci4"]
 
 [resource]
 script = ExtResource("1_s1f80")

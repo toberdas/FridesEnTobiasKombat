@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="StageRes" load_steps=12 format=3 uid="uid://m4mpip1vtme8"]
+
+[ext_resource type="Script" path="res://resources/StageRes.gd" id="1_mp2qb"]
+[ext_resource type="Texture2D" uid="uid://cyp2k1je7of5x" path="res://assets/stage/PipeslevelNew.png" id="1_onttc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5c4a"]
+atlas = ExtResource("1_onttc")
+region = Rect2(0, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrvp5"]
+atlas = ExtResource("1_onttc")
+region = Rect2(300, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fb3i"]
+atlas = ExtResource("1_onttc")
+region = Rect2(600, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl7dl"]
+atlas = ExtResource("1_onttc")
+region = Rect2(900, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urh13"]
+atlas = ExtResource("1_onttc")
+region = Rect2(1200, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjb3k"]
+atlas = ExtResource("1_onttc")
+region = Rect2(1500, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkwoi"]
+atlas = ExtResource("1_onttc")
+region = Rect2(1800, 0, 300, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pp5f"]
+atlas = ExtResource("1_onttc")
+region = Rect2(2100, 0, 300, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgpw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5c4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrvp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fb3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rl7dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urh13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjb3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkwoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pp5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[resource]
+script = ExtResource("1_mp2qb")
+backgroundSpriteFrames = SubResource("SpriteFrames_dgpw0")

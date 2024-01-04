@@ -1,7 +1,7 @@
 extends Resource
 class_name Collision
 
-enum HITS{NONE,LIGHT,HEAVY,BLOCKED}
+enum HITS{NONE,LIGHT,HEAVY,SPECIAL,BLOCKED}
 
 var attackedCharacter 
 var attackingCharacter
@@ -22,7 +22,7 @@ func handle_collision(attacker : ActorData, attacked : ActorData):
 	var attackingMoveFrame : MoveFrameRes = attacker.get_current_move_frame()
 	var attackedMoveFrame : MoveFrameRes = attacked.get_current_move_frame()
 	var hitRes : HitRes = attackedMoveFrame.hitRes
-	var attackRes : AttackRes = attackingMoveFrame.attackRes
+	var attackRes : AttackRes = attackingMoveFrame.attackRes	
 	
 	if attackedMoveFrame == null or attackingMoveFrame == null:
 		return
@@ -57,3 +57,5 @@ func handle_collision(attacker : ActorData, attacked : ActorData):
 		hit = HITS.LIGHT
 	if attackMove.get_move_name() == MOVES.moves.HEAVYATTACK:
 		hit = HITS.HEAVY
+	if attackMove.get_move_name() == MOVES.moves.SPECIAL:
+		hit = HITS.SPECIAL

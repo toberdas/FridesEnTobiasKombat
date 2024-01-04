@@ -1,14 +1,14 @@
 extends Resource
 class_name MoveFrameRes
 
-@export_group("Nested resources")
+@export_category("Nested resources")
 @export var hitRes : HitRes
 @export var attackRes : AttackRes
 @export var displacementRes : DisplacementRes
 @export var projectileRes : ProjectileRes
 @export var soundFromCollection : Collection = null
 @export var specificSound : AudioStream = null
-@export_group("Frame properties")
+@export_category("Frame properties")
 @export var canBeCancelled : bool = false
 @export var canBeInterrupted : bool = false
 @export var frameDuration : float = 0.1

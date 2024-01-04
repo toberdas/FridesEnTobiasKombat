@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=35 format=3 uid="uid://d3t2lg0dseqei"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=38 format=3 uid="uid://d3t2lg0dseqei"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_d42c5"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_nhp11"]
@@ -12,8 +12,8 @@
 
 [sub_resource type="Resource" id="Resource_mm58t"]
 script = ExtResource("3_pq1px")
-hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(18, 0)
+hitboxSize = Vector2(16, 24)
+hitboxLocation = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_4fod2"]
 script = ExtResource("4_8xdme")
@@ -44,8 +44,8 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_44xj2"]
 script = ExtResource("3_pq1px")
-hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(18, 0)
+hitboxSize = Vector2(16, 24)
+hitboxLocation = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_nws5s"]
 script = ExtResource("4_8xdme")
@@ -75,8 +75,8 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_4gcs1"]
 script = ExtResource("3_pq1px")
-hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(18, 0)
+hitboxSize = Vector2(16, 24)
+hitboxLocation = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_eysuh"]
 script = ExtResource("4_8xdme")
@@ -107,8 +107,8 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_pl65v"]
 script = ExtResource("3_pq1px")
-hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(18, 0)
+hitboxSize = Vector2(16, 24)
+hitboxLocation = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_wngxu"]
 script = ExtResource("4_8xdme")
@@ -136,8 +136,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_cusn5"]
+script = ExtResource("3_pq1px")
+hitboxSize = Vector2(16, 24)
+hitboxLocation = Vector2(0, 0)
+
 [sub_resource type="Resource" id="Resource_ai1wl"]
 script = ExtResource("4_8xdme")
+hitboxRes = SubResource("Resource_cusn5")
 damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
@@ -176,8 +182,30 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_w1abg"]
 script = ExtResource("3_pq1px")
-hitboxSize = Vector2(48, 64)
-hitboxLocation = Vector2(18, 0)
+hitboxSize = Vector2(36, 64)
+hitboxLocation = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_town1"]
+script = ExtResource("2_nhp11")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_ju080"]
+script = ExtResource("7_kd4dl")
+moveFrames = Array[ExtResource("2_nhp11")]([SubResource("Resource_town1")])
+moveName = 8
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 0
+canBeSkippedInBus = false
+specialChargesRequired = 0
+ignoresCollision = false
 
 [sub_resource type="Resource" id="Resource_33pwh"]
 script = ExtResource("4_8xdme")
@@ -186,6 +214,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+resultingPassiveMove = SubResource("Resource_ju080")
 
 [sub_resource type="Resource" id="Resource_57uyv"]
 script = ExtResource("2_nhp11")
@@ -232,3 +261,4 @@ cacheTime = 0.8
 spriteFrameAmount = 9
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = true

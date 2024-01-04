@@ -33,7 +33,6 @@ func get_at(ind):
 
 func pop_at(ind):
 	if array.size()>0:
-		#print(str(self) + " popped index " + str(ind))
 		return array.pop_at(ind)
 	return null
 

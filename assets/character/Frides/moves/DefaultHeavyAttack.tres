@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=27 format=3 uid="uid://bnfraro8o3f0d"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=29 format=3 uid="uid://bnfraro8o3f0d"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_m0ri0"]
 [ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="2_vkbbo"]
@@ -88,13 +88,13 @@ grounding = false
 [sub_resource type="Resource" id="Resource_y6u4n"]
 script = ExtResource("4_fuc2h")
 hitboxSize = Vector2(24, 20)
-hitboxLocation = Vector2(14, 0)
+hitboxLocation = Vector2(12, 0)
 
 [sub_resource type="Resource" id="Resource_ftkac"]
 script = ExtResource("5_sm3ki")
 hitboxRes = SubResource("Resource_y6u4n")
 damage = 1
-recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenBlocked = 0.7
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 
@@ -110,8 +110,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_6etdn"]
+script = ExtResource("1_m0ri0")
+verticalDisplacement = 0.0
+horizontalDisplacement = 3.0
+
 [sub_resource type="Resource" id="Resource_mpkns"]
 script = ExtResource("3_juv36")
+displacementRes = SubResource("Resource_6etdn")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -121,8 +127,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_25oet"]
+script = ExtResource("1_m0ri0")
+verticalDisplacement = 0.0
+horizontalDisplacement = 3.0
+
 [sub_resource type="Resource" id="Resource_wrr1k"]
 script = ExtResource("3_juv36")
+displacementRes = SubResource("Resource_25oet")
 soundFromCollection = ExtResource("4_i0nfs")
 canBeCancelled = false
 canBeInterrupted = false
@@ -136,13 +148,13 @@ grounding = false
 [sub_resource type="Resource" id="Resource_lr6ea"]
 script = ExtResource("4_fuc2h")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(18, 0)
+hitboxLocation = Vector2(12, 0)
 
 [sub_resource type="Resource" id="Resource_h336g"]
 script = ExtResource("5_sm3ki")
 hitboxRes = SubResource("Resource_lr6ea")
 damage = 1
-recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenBlocked = 0.7
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 
@@ -179,3 +191,4 @@ cacheTime = 0.8
 spriteFrameAmount = 9
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

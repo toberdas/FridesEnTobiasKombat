@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=20 format=3 uid="uid://c8rta86iv0jye"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=23 format=3 uid="uid://c8rta86iv0jye"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_4sl2s"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_xa4y0"]
@@ -28,7 +28,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_ugf5a"]
 script = ExtResource("1_4sl2s")
 verticalDisplacement = 0.0
-horizontalDisplacement = 2.0
+horizontalDisplacement = 4.0
 
 [sub_resource type="Resource" id="Resource_c2xcm"]
 script = ExtResource("1_y4ogi")
@@ -45,7 +45,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_viiyk"]
 script = ExtResource("1_4sl2s")
 verticalDisplacement = 0.0
-horizontalDisplacement = 2.0
+horizontalDisplacement = 6.0
 
 [sub_resource type="Resource" id="Resource_wrti8"]
 script = ExtResource("1_y4ogi")
@@ -59,8 +59,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_s3d5m"]
+script = ExtResource("1_4sl2s")
+verticalDisplacement = 0.0
+horizontalDisplacement = 8.0
+
 [sub_resource type="Resource" id="Resource_rgxyi"]
 script = ExtResource("1_y4ogi")
+displacementRes = SubResource("Resource_s3d5m")
 soundFromCollection = ExtResource("3_sh87c")
 canBeCancelled = false
 canBeInterrupted = false
@@ -96,8 +102,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_6xrwl"]
+script = ExtResource("1_4sl2s")
+verticalDisplacement = 0.0
+horizontalDisplacement = -8.0
+
 [sub_resource type="Resource" id="Resource_15i7m"]
 script = ExtResource("1_y4ogi")
+displacementRes = SubResource("Resource_6xrwl")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.02
@@ -107,8 +119,14 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_w67p8"]
+script = ExtResource("1_4sl2s")
+verticalDisplacement = 0.0
+horizontalDisplacement = -2.0
+
 [sub_resource type="Resource" id="Resource_73ek3"]
 script = ExtResource("1_y4ogi")
+displacementRes = SubResource("Resource_w67p8")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.05
@@ -128,3 +146,4 @@ cacheTime = 0.8
 spriteFrameAmount = 7
 canBeSkippedInBus = false
 specialChargesRequired = 0
+ignoresCollision = false

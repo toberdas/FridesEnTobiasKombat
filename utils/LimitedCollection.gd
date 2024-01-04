@@ -19,5 +19,4 @@ func add_item(item):
 		if overflowMode == OVERFLOWMODE.POPFRONT:
 			array.pop_front()
 	array.append(item)
-	#print(str(item) + " added to collection, array size is now " + str(array.size()))
 

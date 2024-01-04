@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=11 format=3 uid="uid://hd8dex6in7tb"]
+
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_2mvuc"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_o71vl"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_memt3"]
+
+[sub_resource type="Resource" id="Resource_cri28"]
+script = ExtResource("1_2mvuc")
+verticalDisplacement = 0.0
+horizontalDisplacement = -16.0
+
+[sub_resource type="Resource" id="Resource_f5m5a"]
+script = ExtResource("2_memt3")
+displacementRes = SubResource("Resource_cri28")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_c6x6x"]
+script = ExtResource("1_2mvuc")
+verticalDisplacement = 0.0
+horizontalDisplacement = -12.0
+
+[sub_resource type="Resource" id="Resource_i72cc"]
+script = ExtResource("2_memt3")
+displacementRes = SubResource("Resource_c6x6x")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_ydp85"]
+script = ExtResource("1_2mvuc")
+verticalDisplacement = 0.0
+horizontalDisplacement = -10.0
+
+[sub_resource type="Resource" id="Resource_vm0dc"]
+script = ExtResource("2_memt3")
+displacementRes = SubResource("Resource_ydp85")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[sub_resource type="Resource" id="Resource_h0irs"]
+script = ExtResource("2_memt3")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+grounding = false
+
+[resource]
+script = ExtResource("1_o71vl")
+moveFrames = Array[ExtResource("2_memt3")]([SubResource("Resource_f5m5a"), SubResource("Resource_i72cc"), SubResource("Resource_vm0dc"), SubResource("Resource_h0irs")])
+moveName = 1
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 0
+canBeSkippedInBus = false
+specialChargesRequired = 0
+ignoresCollision = false

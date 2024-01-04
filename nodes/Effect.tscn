@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm4uqcbc3173q"]
+
+[ext_resource type="SpriteFrames" uid="uid://pbvo0ng1s2m1" path="res://assets/effects/BlockSpriteFrames.tres" id="1_wnvyl"]
+[ext_resource type="Script" path="res://nodes/Effect.gd" id="2_g5mt2"]
+
+[node name="Effect" type="AnimatedSprite2D"]
+z_index = 1000
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("1_wnvyl")
+script = ExtResource("2_g5mt2")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

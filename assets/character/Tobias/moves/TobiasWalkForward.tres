@@ -1,21 +1,15 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=15 format=3 uid="uid://ds3q72qh728f"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=14 format=3 uid="uid://ds3q72qh728f"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_0ksh4"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_q6o48"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_lk4li"]
 [ext_resource type="Texture2D" uid="uid://dsa81q3sv3fa3" path="res://assets/character/Tobias/sprites/Tobias_Run.png" id="4_25y8q"]
 
-[sub_resource type="Resource" id="Resource_y2nth"]
-script = ExtResource("1_0ksh4")
-verticalDisplacement = 0.0
-horizontalDisplacement = 5.0
-
 [sub_resource type="Resource" id="Resource_050rf"]
 script = ExtResource("2_lk4li")
-displacementRes = SubResource("Resource_y2nth")
 canBeCancelled = true
 canBeInterrupted = false
-frameDuration = 0.12
+frameDuration = 0.001
 selfDestruct = false
 canCombo = false
 canLoop = false
@@ -100,3 +94,4 @@ cacheTime = 0.8
 spriteFrameAmount = 5
 canBeSkippedInBus = true
 specialChargesRequired = 0
+ignoresCollision = false
