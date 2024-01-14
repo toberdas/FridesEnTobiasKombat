@@ -38,7 +38,7 @@ func handle_collision(attacker : ActorData, attacked : ActorData):
 	
 	if hitRes.blocks:
 		hit = HITS.BLOCKED
-		attacked.increase_special_charges()
+		attacked.increase_special_charges(1)
 		attacker.take_recovery_time(attackingMoveFrame.attackRes.recoveryTimeWhenBlocked)
 		return
 	
@@ -47,9 +47,9 @@ func handle_collision(attacker : ActorData, attacked : ActorData):
 	else:
 		attacked.do_passive_move(attackRes.resultingPassiveMove)
 	
-	attacker.increase_special_charges()
+	attacker.increase_special_charges(attackRes.specialChargesGainedOnHit)
 	attacked.take_damage(attackingMoveFrame.attackRes.damage - hitRes.damageReduction)
-	##TODO:recoverytime uitwerken
+
 	var recoveryTime = hitRes.recoveryTime
 	attacked.take_recovery_time(0.2)
 	

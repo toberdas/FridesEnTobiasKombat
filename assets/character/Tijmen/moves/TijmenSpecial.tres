@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MoveRes" load_steps=20 format=3 uid="uid://ikccib0pgrfr"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_0jj52"]
-[ext_resource type="AudioStream" uid="uid://cslg6lnan58fu" path="res://assets/geluid/sounds/special/TijmenSpecialWindup.wav" id="2_qyu8b"]
+[ext_resource type="Resource" uid="uid://bqmfnro31sspv" path="res://assets/geluid/soundcollections/TijmenSpecialSoundCollection.tres" id="2_8jug3"]
 [ext_resource type="Resource" uid="uid://crl3sfxowslkv" path="res://assets/character/Tijmen/moves/TijmenProjectile.tres" id="2_unoyn"]
 [ext_resource type="Script" path="res://resources/character/moves/ProjectileRes.gd" id="3_2k5on"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="4_t0hwl"]
@@ -20,7 +20,7 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_hl4o0"]
 script = ExtResource("1_0jj52")
-specificSound = ExtResource("2_qyu8b")
+soundFromCollection = ExtResource("2_8jug3")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.08

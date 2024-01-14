@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=22 format=3 uid="uid://dlxkk1u37pds0"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=26 format=3 uid="uid://dlxkk1u37pds0"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_mifey"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="2_pdge8"]
-[ext_resource type="AudioStream" uid="uid://c4mgeoaenk0cl" path="res://assets/geluid/sounds/special/JipSpecial.wav" id="2_pgmbu"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_s2dyv"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="3_qygck"]
+[ext_resource type="Resource" uid="uid://bqbiwu3xuolks" path="res://assets/geluid/soundcollections/JipSpecialSoundCollection.tres" id="3_t3qgq"]
 [ext_resource type="Texture2D" uid="uid://d1qpi6eqnqvuu" path="res://assets/character/Jip/sprites/Jip_MK-Special.png" id="4_lwuie"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_mib28"]
 
 [sub_resource type="Resource" id="Resource_7l5b6"]
 script = ExtResource("1_mifey")
@@ -20,7 +21,6 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_6u6io"]
 script = ExtResource("1_mifey")
-specificSound = ExtResource("2_pgmbu")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1
@@ -55,6 +55,7 @@ horizontalDisplacement = 4.0
 [sub_resource type="Resource" id="Resource_w0c7f"]
 script = ExtResource("1_mifey")
 displacementRes = SubResource("Resource_wm56c")
+soundFromCollection = ExtResource("3_t3qgq")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.04
@@ -64,12 +65,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_ydkom"]
+script = ExtResource("4_mib28")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
 [sub_resource type="Resource" id="Resource_u6voy"]
 script = ExtResource("2_pdge8")
+hitboxRes = SubResource("Resource_ydkom")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_f08iv"]
 script = ExtResource("2_s2dyv")
@@ -89,12 +97,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_gd7gu"]
+script = ExtResource("4_mib28")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
 [sub_resource type="Resource" id="Resource_gn1g6"]
 script = ExtResource("2_pdge8")
+hitboxRes = SubResource("Resource_gd7gu")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_64sg1"]
 script = ExtResource("2_s2dyv")
@@ -114,12 +129,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_7ki13"]
+script = ExtResource("4_mib28")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
 [sub_resource type="Resource" id="Resource_axkk7"]
 script = ExtResource("2_pdge8")
+hitboxRes = SubResource("Resource_7ki13")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_jssxi"]
 script = ExtResource("2_s2dyv")

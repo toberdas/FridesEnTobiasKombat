@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=25 format=3 uid="uid://bniw5qrc5e53c"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=27 format=3 uid="uid://bniw5qrc5e53c"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_n6lny"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_u7s1q"]
 [ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="3_8xrnv"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_drohm"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="4_a7iqm"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_i442f"]
 [ext_resource type="Texture2D" uid="uid://lt6r1t2wrgql" path="res://assets/character/Tivadar/sprites/Tivadar_MK-Kick.png" id="5_awdhw"]
 
 [sub_resource type="Resource" id="Resource_4akxn"]
@@ -59,12 +60,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_kfncv"]
+script = ExtResource("4_i442f")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
 [sub_resource type="Resource" id="Resource_swxhu"]
 script = ExtResource("3_drohm")
+hitboxRes = SubResource("Resource_kfncv")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_6n68q"]
 script = ExtResource("1_n6lny")

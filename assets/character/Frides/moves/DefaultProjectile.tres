@@ -22,6 +22,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_0hr3v"]
 script = ExtResource("1_d42c5")
@@ -54,6 +55,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_evgl6"]
 script = ExtResource("1_d42c5")
@@ -85,6 +87,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_f3gf0"]
 script = ExtResource("1_d42c5")
@@ -117,6 +120,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_6w11u"]
 script = ExtResource("1_d42c5")
@@ -149,6 +153,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = ExtResource("6_1yhfj")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_4h8ib"]
 script = ExtResource("1_d42c5")
@@ -215,6 +220,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = SubResource("Resource_ju080")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_57uyv"]
 script = ExtResource("2_nhp11")

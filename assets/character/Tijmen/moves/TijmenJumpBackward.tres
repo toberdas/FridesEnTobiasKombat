@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=13 format=3 uid="uid://dgqp1f588pds2"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=14 format=3 uid="uid://dgqp1f588pds2"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_k7hsp"]
 [ext_resource type="AudioStream" uid="uid://c5ehs78bhiuja" path="res://assets/geluid/sounds/special/FridesschokgolfSpecial.wav" id="2_4dd0q"]
+[ext_resource type="AudioStream" uid="uid://1vspduljjld8" path="res://assets/geluid/sounds/jump/TijmenJump1.wav" id="2_5qmv1"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_nnf2f"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="3_11gw1"]
 [ext_resource type="Texture2D" uid="uid://uc3odgugglml" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Jump.png" id="4_sus35"]
@@ -30,7 +31,7 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_sk8fe"]
 script = ExtResource("1_k7hsp")
-specificSound = ExtResource("2_4dd0q")
+specificSound = ExtResource("2_5qmv1")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1

@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=22 format=3 uid="uid://x7dm6x5r55yj"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=25 format=3 uid="uid://x7dm6x5r55yj"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_57lb1"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_k1kvl"]
+[ext_resource type="Resource" uid="uid://bwb5hf1i24omb" path="res://assets/geluid/soundcollections/JipWindupCollection.tres" id="3_2rpmj"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_apyhb"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="3_etxe0"]
-[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="3_whwki"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_3obce"]
 [ext_resource type="Texture2D" uid="uid://d3eio8ya0cif0" path="res://assets/character/Jip/sprites/Jip_MK-Kick.png" id="4_xhsnp"]
 
 [sub_resource type="Resource" id="Resource_4akxn"]
@@ -78,7 +79,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_yll2h"]
 script = ExtResource("1_57lb1")
 verticalDisplacement = 0.0
-horizontalDisplacement = 2.0
+horizontalDisplacement = 3.0
 
 [sub_resource type="Resource" id="Resource_jj8sq"]
 script = ExtResource("2_k1kvl")
@@ -92,9 +93,15 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_v4hf5"]
+script = ExtResource("1_57lb1")
+verticalDisplacement = 0.0
+horizontalDisplacement = 6.0
+
 [sub_resource type="Resource" id="Resource_15i7m"]
 script = ExtResource("2_k1kvl")
-soundFromCollection = ExtResource("3_whwki")
+displacementRes = SubResource("Resource_v4hf5")
+soundFromCollection = ExtResource("3_2rpmj")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.02
@@ -104,12 +111,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_tmvkx"]
+script = ExtResource("4_3obce")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
 [sub_resource type="Resource" id="Resource_obla2"]
 script = ExtResource("3_apyhb")
+hitboxRes = SubResource("Resource_tmvkx")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_73ek3"]
 script = ExtResource("2_k1kvl")

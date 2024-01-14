@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=31 format=3 uid="uid://dpsxogq5oqxvx"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=33 format=3 uid="uid://dpsxogq5oqxvx"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_4v7qh"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_onbwl"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://d5n7rei1ivuv" path="res://assets/geluid/sounds/special/DaanSpecial.wav" id="2_cup5v"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="3_ck1ix"]
 [ext_resource type="Texture2D" uid="uid://l6owlhc5yl1v" path="res://assets/character/Daan/sprites/Daan_MK-Special.png" id="5_0m7ub"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="5_30jah"]
 
 [sub_resource type="Resource" id="Resource_42qay"]
 script = ExtResource("1_4v7qh")
@@ -69,6 +70,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_i3i2c"]
 script = ExtResource("3_ck1ix")
@@ -88,12 +90,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_75yht"]
+script = ExtResource("5_30jah")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(18, 0)
+
 [sub_resource type="Resource" id="Resource_hdbb3"]
 script = ExtResource("2_482v3")
+hitboxRes = SubResource("Resource_75yht")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_wxpno"]
 script = ExtResource("3_ck1ix")
@@ -119,6 +128,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_ssry3"]
 script = ExtResource("3_ck1ix")
@@ -144,6 +154,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_ko5rm"]
 script = ExtResource("3_ck1ix")
@@ -169,6 +180,7 @@ damage = 0
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_um5ll"]
 script = ExtResource("3_ck1ix")

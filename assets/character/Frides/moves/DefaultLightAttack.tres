@@ -64,6 +64,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_i37h5"]
 script = ExtResource("1_l8qq1")

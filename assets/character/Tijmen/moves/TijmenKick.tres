@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=18 format=3 uid="uid://b5nvi68218bmh"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=20 format=3 uid="uid://b5nvi68218bmh"]
 
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_17eql"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_akbc7"]
+[ext_resource type="Resource" uid="uid://bs2bvhu7xrfrh" path="res://assets/geluid/soundcollections/TijmenWindupCollection.tres" id="3_b2hgx"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_eym4e"]
-[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="3_plsna"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="4_6prfs"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_462ws"]
 [ext_resource type="Texture2D" uid="uid://ddpb2hidjagtw" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Kick.png" id="5_eq6fn"]
 
 [sub_resource type="Resource" id="Resource_n7whe"]
@@ -66,7 +67,7 @@ horizontalDisplacement = 4.0
 [sub_resource type="Resource" id="Resource_rm70e"]
 script = ExtResource("2_akbc7")
 displacementRes = SubResource("Resource_eadua")
-soundFromCollection = ExtResource("3_plsna")
+soundFromCollection = ExtResource("3_b2hgx")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.07
@@ -76,12 +77,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_a5f6s"]
+script = ExtResource("4_462ws")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(16, 0)
+
 [sub_resource type="Resource" id="Resource_0rrh3"]
 script = ExtResource("3_eym4e")
+hitboxRes = SubResource("Resource_a5f6s")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_k38o3"]
 script = ExtResource("2_akbc7")

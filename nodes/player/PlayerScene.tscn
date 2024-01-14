@@ -15,6 +15,7 @@ script = ExtResource("1_wd58q")
 
 [node name="HpBarScene" parent="HpRoot" instance=ExtResource("2_cpn5o")]
 z_index = 120
+texture_filter = 1
 position = Vector2(42, -75)
 
 [node name="SpecialBarScene" parent="HpRoot" instance=ExtResource("4_ar28q")]

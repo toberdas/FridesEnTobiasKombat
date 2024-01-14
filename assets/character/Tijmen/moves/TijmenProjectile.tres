@@ -66,6 +66,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = SubResource("Resource_dkg2u")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_ox3l6"]
 script = ExtResource("1_ucsu4")
@@ -136,6 +137,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = SubResource("Resource_8nrge")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_hu654"]
 script = ExtResource("1_ucsu4")
@@ -228,6 +230,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = ExtResource("5_ff5iq")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_bkasg"]
 script = ExtResource("1_ucsu4")

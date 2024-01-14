@@ -205,17 +205,17 @@ func try_combo():
 func take_damage(damage:int):
 	if hitpointData != null:
 		hitpointData.take_damage(damage)
-	if hitpointData.hitpoints > 0:	
-		do_move(hurtMove)
-		clear_move_bus()
+		if hitpointData.hitpoints > 0:	
+			do_move(hurtMove)
+			clear_move_bus()
 
 func take_recovery_time(time:float):
 	recoveryTime = time
 
-func increase_special_charges():
+func increase_special_charges(amount : int):
 	if characterRes != null:
 		if specialCharges < characterRes.chargesNeededForSpecial:
-			specialCharges += 1
+			specialCharges += amount
 
 func deplete_all_special_charges():
 	specialCharges = 0
@@ -252,5 +252,3 @@ func handle_movement_input(moveInputName):
 	if moveInputName == MOVES.moveInputs.WALKRIGHT:
 		if direction == -1:
 			return MOVES.moves.WALKBACKWARD
-
-

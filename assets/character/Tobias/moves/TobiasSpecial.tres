@@ -68,7 +68,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_sxpge"]
 script = ExtResource("2_j77bm")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(6, 0)
+hitboxLocation = Vector2(14, 0)
 
 [sub_resource type="Resource" id="Resource_my5b8"]
 script = ExtResource("3_7imqk")
@@ -78,6 +78,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = ExtResource("4_gy5od")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_64sg1"]
 script = ExtResource("2_3f2xt")
@@ -100,7 +101,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_tisfk"]
 script = ExtResource("2_j77bm")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(6, 0)
+hitboxLocation = Vector2(14, 0)
 
 [sub_resource type="Resource" id="Resource_urn83"]
 script = ExtResource("3_7imqk")
@@ -110,6 +111,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = ExtResource("4_gy5od")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_jssxi"]
 script = ExtResource("2_3f2xt")
@@ -132,7 +134,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_xlug1"]
 script = ExtResource("2_j77bm")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(6, 0)
+hitboxLocation = Vector2(14, 0)
 
 [sub_resource type="Resource" id="Resource_g6yww"]
 script = ExtResource("3_7imqk")
@@ -142,6 +144,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = ExtResource("4_gy5od")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_rkfrf"]
 script = ExtResource("2_3f2xt")
@@ -164,7 +167,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_f52cd"]
 script = ExtResource("2_j77bm")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(6, 0)
+hitboxLocation = Vector2(14, 0)
 
 [sub_resource type="Resource" id="Resource_mwgmr"]
 script = ExtResource("3_7imqk")
@@ -174,6 +177,7 @@ recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
 resultingPassiveMove = ExtResource("4_gy5od")
+specialChargesGainedOnHit = 0
 
 [sub_resource type="Resource" id="Resource_odp8m"]
 script = ExtResource("2_3f2xt")

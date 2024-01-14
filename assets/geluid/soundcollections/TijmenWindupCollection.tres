@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Collection" load_steps=4 format=3 uid="uid://bs2bvhu7xrfrh"]
+
+[ext_resource type="AudioStream" uid="uid://dhd6l0rvqq6an" path="res://assets/geluid/sounds/light/TijmenWindUp1.wav" id="1_m1rm3"]
+[ext_resource type="Script" path="res://utils/Collection.gd" id="1_ugp0r"]
+[ext_resource type="AudioStream" uid="uid://ccvtaol24xny7" path="res://assets/geluid/sounds/light/TijmenWindUp2.wav" id="2_2u5tf"]
+
+[resource]
+script = ExtResource("1_ugp0r")
+array = [ExtResource("1_m1rm3"), ExtResource("2_2u5tf")]
+dictionary = {}

@@ -141,7 +141,7 @@ decayTime = 1.0
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_uf5f1"]
 device = 1
-button_index = 11
+button_index = 3
 
 [sub_resource type="Resource" id="Resource_rjqx5"]
 script = ExtResource("1_trap3")

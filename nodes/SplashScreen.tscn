@@ -247,6 +247,7 @@ animations = [{
 script = ExtResource("1_crski")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_smarl")
 autoplay = "default"
 frame = 1

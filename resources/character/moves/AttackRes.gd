@@ -7,3 +7,4 @@ class_name AttackRes
 @export var recoveryTimeWhenNotBlocked : float = 0.0
 @export var destroyOnHit : bool = false
 @export var resultingPassiveMove : MoveRes
+@export var specialChargesGainedOnHit : int = 1

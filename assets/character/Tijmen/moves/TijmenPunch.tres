@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=21 format=3 uid="uid://wi4r4abrl2p3"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=23 format=3 uid="uid://wi4r4abrl2p3"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_52isq"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="2_mqc8x"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_npfue"]
 [ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_rqmbj"]
-[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="2_xjai7"]
+[ext_resource type="Resource" uid="uid://bs2bvhu7xrfrh" path="res://assets/geluid/soundcollections/TijmenWindupCollection.tres" id="3_dh2i3"]
 [ext_resource type="Texture2D" uid="uid://cegu0adade6mb" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Punch.png" id="3_xmdhp"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="4_vtd24"]
 
 [sub_resource type="Resource" id="Resource_enwjp"]
 script = ExtResource("1_52isq")
@@ -60,7 +61,7 @@ horizontalDisplacement = 2.0
 [sub_resource type="Resource" id="Resource_631bd"]
 script = ExtResource("1_52isq")
 displacementRes = SubResource("Resource_v4kch")
-soundFromCollection = ExtResource("2_xjai7")
+soundFromCollection = ExtResource("3_dh2i3")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.05
@@ -70,12 +71,19 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_53jx4"]
+script = ExtResource("4_vtd24")
+hitboxSize = Vector2(24, 24)
+hitboxLocation = Vector2(14, 0)
+
 [sub_resource type="Resource" id="Resource_pjnu3"]
 script = ExtResource("2_mqc8x")
+hitboxRes = SubResource("Resource_53jx4")
 damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_pds50"]
 script = ExtResource("1_52isq")

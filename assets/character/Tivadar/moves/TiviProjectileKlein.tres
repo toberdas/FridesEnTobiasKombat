@@ -19,6 +19,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = true
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_chl00"]
 script = ExtResource("3_ejyti")
@@ -50,6 +51,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = true
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_3pg6h"]
 script = ExtResource("3_ejyti")
@@ -81,6 +83,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = true
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_3jwji"]
 script = ExtResource("3_ejyti")
@@ -112,6 +115,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = true
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_u3phc"]
 script = ExtResource("3_ejyti")

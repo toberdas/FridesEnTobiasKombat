@@ -11,18 +11,21 @@ position = Vector2(0, -13)
 [node name="Background" type="Sprite2D" parent="Camera2D"]
 visible = false
 z_index = -10
+texture_filter = 1
 
 [node name="Foreground" type="Sprite2D" parent="Camera2D"]
 visible = false
 z_index = 100
+texture_filter = 1
 
 [node name="AnimatedBackground" type="AnimatedSprite2D" parent="Camera2D"]
 visible = false
-texture_filter = 2
+texture_filter = 1
 autoplay = "default"
 
 [node name="AnimatedForeground" type="AnimatedSprite2D" parent="Camera2D"]
 visible = false
+texture_filter = 1
 
 [node name="PlayerSceneRoot" type="Node2D" parent="."]
 

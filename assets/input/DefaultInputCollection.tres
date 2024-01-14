@@ -142,7 +142,7 @@ holdBufferFrames = 6
 decayTime = 1.0
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_oq2n1"]
-button_index = 11
+button_index = 3
 
 [sub_resource type="Resource" id="Resource_s8c2y"]
 script = ExtResource("1_aklht")

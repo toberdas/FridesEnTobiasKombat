@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=10 format=3 uid="uid://btba66lqhduiu"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=12 format=3 uid="uid://btba66lqhduiu"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_51syk"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_m8ko3"]
+[ext_resource type="Script" path="res://resources/character/moves/HitRes.gd" id="2_wylhg"]
 [ext_resource type="Texture2D" uid="uid://offj1my045av" path="res://assets/character/Tijmen/sprites/Tijmen_MK-Block.png" id="3_nllsa"]
 
 [sub_resource type="Resource" id="Resource_fd0ju"]
@@ -37,11 +38,18 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_thokn"]
+script = ExtResource("2_wylhg")
+recoveryTime = 0.0
+damageReduction = 0
+blocks = true
+
 [sub_resource type="Resource" id="Resource_44ivd"]
 script = ExtResource("1_51syk")
+hitRes = SubResource("Resource_thokn")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.2
+frameDuration = 0.3
 selfDestruct = false
 canCombo = false
 canLoop = false

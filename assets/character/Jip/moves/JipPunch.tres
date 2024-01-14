@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="MoveRes" load_steps=16 format=3 uid="uid://huuq05r5xv17"]
+[gd_resource type="Resource" script_class="MoveRes" load_steps=20 format=3 uid="uid://huuq05r5xv17"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_alw3w"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_e16tm"]
-[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="2_e48n7"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="2_v7a2x"]
 [ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="3_36mt7"]
+[ext_resource type="Resource" uid="uid://bwb5hf1i24omb" path="res://assets/geluid/soundcollections/JipWindupCollection.tres" id="3_ckhe1"]
 [ext_resource type="Texture2D" uid="uid://6yxllsgydye1" path="res://assets/character/Jip/sprites/Jip_MK-Punch.png" id="3_udmet"]
 [ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="4_1h7b6"]
 
@@ -18,31 +19,49 @@ canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_cehak"]
+script = ExtResource("2_v7a2x")
+verticalDisplacement = 0.0
+horizontalDisplacement = 3.0
+
 [sub_resource type="Resource" id="Resource_o2l3h"]
 script = ExtResource("1_alw3w")
+displacementRes = SubResource("Resource_cehak")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.08
 selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
+
+[sub_resource type="Resource" id="Resource_mseix"]
+script = ExtResource("2_v7a2x")
+verticalDisplacement = 0.0
+horizontalDisplacement = 3.0
 
 [sub_resource type="Resource" id="Resource_t5of6"]
 script = ExtResource("1_alw3w")
+displacementRes = SubResource("Resource_mseix")
 canBeCancelled = false
 canBeInterrupted = false
-frameDuration = 0.1
+frameDuration = 0.08
 selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
 grounding = false
 
+[sub_resource type="Resource" id="Resource_65iun"]
+script = ExtResource("2_v7a2x")
+verticalDisplacement = 0.0
+horizontalDisplacement = 6.0
+
 [sub_resource type="Resource" id="Resource_a8otk"]
 script = ExtResource("1_alw3w")
-soundFromCollection = ExtResource("2_e48n7")
+displacementRes = SubResource("Resource_65iun")
+soundFromCollection = ExtResource("3_ckhe1")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.08
@@ -55,7 +74,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_tfs43"]
 script = ExtResource("3_36mt7")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(18, 0)
+hitboxLocation = Vector2(16, 0)
 
 [sub_resource type="Resource" id="Resource_f3snv"]
 script = ExtResource("4_1h7b6")
@@ -64,6 +83,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_rviiq"]
 script = ExtResource("1_alw3w")

@@ -43,7 +43,6 @@ characterSelectScene = ExtResource("3_74t4a")
 splashScreenScene = ExtResource("8_e83nr")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -10.0
 
 [node name="Control" type="CenterContainer" parent="."]
 anchors_preset = 15

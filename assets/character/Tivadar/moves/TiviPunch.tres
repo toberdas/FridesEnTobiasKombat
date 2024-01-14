@@ -74,7 +74,7 @@ grounding = false
 [sub_resource type="Resource" id="Resource_ubfu6"]
 script = ExtResource("4_doqa0")
 hitboxSize = Vector2(24, 24)
-hitboxLocation = Vector2(10, 0)
+hitboxLocation = Vector2(14, 0)
 
 [sub_resource type="Resource" id="Resource_ml54v"]
 script = ExtResource("2_bdbc5")
@@ -83,6 +83,7 @@ damage = 1
 recoveryTimeWhenBlocked = 0.4
 recoveryTimeWhenNotBlocked = 0.0
 destroyOnHit = false
+specialChargesGainedOnHit = 1
 
 [sub_resource type="Resource" id="Resource_rviiq"]
 script = ExtResource("1_44a0s")

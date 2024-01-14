@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="MoveRes" load_steps=26 format=3 uid="uid://dttn3lukfmxh6"]
 
 [ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_74ure"]
+[ext_resource type="Resource" uid="uid://ci581d5mkyle1" path="res://assets/geluid/sounds/fatality/JipDoodSoundCollection.tres" id="2_l1x1b"]
 [ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="2_teu7x"]
-[ext_resource type="Resource" uid="uid://djkclflem8bp2" path="res://assets/geluid/soundcollections/DeathCollection.tres" id="2_w1c3v"]
 [ext_resource type="Texture2D" uid="uid://c5qvskrrti4wm" path="res://assets/character/Jip/sprites/Jip_Death.png" id="3_gd15r"]
 
 [sub_resource type="Resource" id="Resource_jhrba"]
@@ -18,7 +18,7 @@ grounding = false
 
 [sub_resource type="Resource" id="Resource_13nv8"]
 script = ExtResource("1_74ure")
-soundFromCollection = ExtResource("2_w1c3v")
+soundFromCollection = ExtResource("2_l1x1b")
 canBeCancelled = false
 canBeInterrupted = false
 frameDuration = 0.1

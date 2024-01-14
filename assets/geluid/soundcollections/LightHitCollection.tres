@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Collection" load_steps=8 format=3 uid="uid://bwri10fyb2wa1"]
+[gd_resource type="Resource" script_class="Collection" load_steps=12 format=3 uid="uid://bwri10fyb2wa1"]
 
 [ext_resource type="Script" path="res://utils/Collection.gd" id="1_i115v"]
 [ext_resource type="AudioStream" uid="uid://cjwkt115qibl5" path="res://assets/geluid/sounds/light/LAI1.wav" id="1_mk3pr"]
@@ -7,8 +7,12 @@
 [ext_resource type="AudioStream" uid="uid://dyn2yynaldbwt" path="res://assets/geluid/sounds/light/LAI4.wav" id="4_byiys"]
 [ext_resource type="AudioStream" uid="uid://nwq5extcv0bu" path="res://assets/geluid/sounds/light/LAI5.wav" id="5_op0lr"]
 [ext_resource type="AudioStream" uid="uid://78lbsumknl7h" path="res://assets/geluid/sounds/light/LAI6.wav" id="6_cmmfk"]
+[ext_resource type="AudioStream" uid="uid://bkp4udefec0wu" path="res://assets/geluid/sounds/light/JipImpact1.wav" id="7_eqgi7"]
+[ext_resource type="AudioStream" uid="uid://dyr1ghvygt3ca" path="res://assets/geluid/sounds/light/JipImpact2.wav" id="8_48ds1"]
+[ext_resource type="AudioStream" uid="uid://gjqrhss2hqah" path="res://assets/geluid/sounds/light/TijmenImpact1.wav" id="9_dvkxq"]
+[ext_resource type="AudioStream" uid="uid://br2iq3w3i7dsu" path="res://assets/geluid/sounds/light/TijmenImpact2.wav" id="10_t40wd"]
 
 [resource]
 script = ExtResource("1_i115v")
-array = [ExtResource("1_mk3pr"), ExtResource("2_48swi"), ExtResource("3_bybs2"), ExtResource("4_byiys"), ExtResource("5_op0lr"), ExtResource("6_cmmfk")]
+array = [ExtResource("1_mk3pr"), ExtResource("2_48swi"), ExtResource("3_bybs2"), ExtResource("4_byiys"), ExtResource("5_op0lr"), ExtResource("6_cmmfk"), ExtResource("7_eqgi7"), ExtResource("8_48ds1"), ExtResource("9_dvkxq"), ExtResource("10_t40wd")]
 dictionary = {}
