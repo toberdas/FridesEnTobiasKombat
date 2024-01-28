@@ -106,3 +106,4 @@ spriteFrameAmount = 5
 canBeSkippedInBus = true
 specialChargesRequired = 0
 ignoresCollision = false
+cantBeHit = false

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InputCollection" load_steps=29 format=3 uid="uid://csosbuga346lp"]
+[gd_resource type="Resource" script_class="InputCollection" load_steps=33 format=3 uid="uid://csosbuga346lp"]
 
 [ext_resource type="Script" path="res://data/input/InputCollection.gd" id="1_68nu5"]
 [ext_resource type="Script" path="res://data/input/InputRule.gd" id="1_aklht"]
@@ -152,6 +152,30 @@ canBeHeld = false
 holdBufferFrames = 6
 decayTime = 1.0
 
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_xanb8"]
+axis = 1
+axis_value = -1.0
+
+[sub_resource type="Resource" id="Resource_g174o"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadMotion_xanb8")
+moveInputName = 2
+canBeHeld = true
+holdBufferFrames = 6
+decayTime = 1.0
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_0lbr4"]
+axis = 1
+axis_value = 1.0
+
+[sub_resource type="Resource" id="Resource_imkag"]
+script = ExtResource("1_aklht")
+input = SubResource("InputEventJoypadMotion_0lbr4")
+moveInputName = 3
+canBeHeld = true
+holdBufferFrames = 6
+decayTime = 1.0
+
 [resource]
 script = ExtResource("1_68nu5")
-inputRules = Array[ExtResource("1_aklht")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle"), SubResource("Resource_hhsbv"), SubResource("Resource_v4vsq"), SubResource("Resource_kdqsh"), SubResource("Resource_417t6"), SubResource("Resource_i22mk"), SubResource("Resource_j7qn7"), SubResource("Resource_s8c2y")])
+inputRules = Array[ExtResource("1_aklht")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle"), SubResource("Resource_hhsbv"), SubResource("Resource_v4vsq"), SubResource("Resource_kdqsh"), SubResource("Resource_417t6"), SubResource("Resource_i22mk"), SubResource("Resource_j7qn7"), SubResource("Resource_s8c2y"), SubResource("Resource_g174o"), SubResource("Resource_imkag")])

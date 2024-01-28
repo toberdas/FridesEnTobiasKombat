@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InputCollection" load_steps=29 format=3 uid="uid://kdqh24eh5amh"]
+[gd_resource type="Resource" script_class="InputCollection" load_steps=33 format=3 uid="uid://kdqh24eh5amh"]
 
 [ext_resource type="Script" path="res://data/input/InputRule.gd" id="1_trap3"]
 [ext_resource type="Script" path="res://data/input/InputCollection.gd" id="2_yatdj"]
@@ -151,6 +151,31 @@ canBeHeld = false
 holdBufferFrames = 6
 decayTime = 1.0
 
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_fyw5g"]
+axis = 1
+axis_value = -1.0
+
+[sub_resource type="Resource" id="Resource_4e63b"]
+script = ExtResource("1_trap3")
+input = SubResource("InputEventJoypadMotion_fyw5g")
+moveInputName = 2
+canBeHeld = true
+holdBufferFrames = 6
+decayTime = 1.0
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_2a4ma"]
+device = 1
+axis = 1
+axis_value = 1.0
+
+[sub_resource type="Resource" id="Resource_ow4dy"]
+script = ExtResource("1_trap3")
+input = SubResource("InputEventJoypadMotion_2a4ma")
+moveInputName = 3
+canBeHeld = true
+holdBufferFrames = 6
+decayTime = 1.0
+
 [resource]
 script = ExtResource("2_yatdj")
-inputRules = Array[ExtResource("1_trap3")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle"), SubResource("Resource_hhsbv"), SubResource("Resource_bxlv1"), SubResource("Resource_0j772"), SubResource("Resource_ir7i0"), SubResource("Resource_bqplj"), SubResource("Resource_v4xkk"), SubResource("Resource_rjqx5")])
+inputRules = Array[ExtResource("1_trap3")]([SubResource("Resource_ad072"), SubResource("Resource_84rvh"), SubResource("Resource_qf45d"), SubResource("Resource_uwwch"), SubResource("Resource_i0uin"), SubResource("Resource_pxwle"), SubResource("Resource_hhsbv"), SubResource("Resource_bxlv1"), SubResource("Resource_0j772"), SubResource("Resource_ir7i0"), SubResource("Resource_bqplj"), SubResource("Resource_v4xkk"), SubResource("Resource_rjqx5"), SubResource("Resource_4e63b"), SubResource("Resource_ow4dy")])
