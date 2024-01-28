@@ -13,7 +13,8 @@ selfDestruct = false
 canCombo = false
 canLoop = false
 increasesSpriteFrameCounter = true
-grounding = true
+setsY = true
+setToY = 0
 
 [resource]
 script = ExtResource("1_7ltd8")

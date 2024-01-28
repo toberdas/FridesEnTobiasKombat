@@ -6,14 +6,15 @@
 
 [sub_resource type="Resource" id="Resource_j7gxu"]
 script = ExtResource("1_xby27")
-canBeCancelled = false
-canBeInterrupted = false
-frameDuration = 0.1
-selfDestruct = false
-canCombo = false
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = true
+canBeCancelled = null
+canBeInterrupted = null
+frameDuration = null
+selfDestruct = null
+canCombo = null
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = true
+setToY = 0
 
 [resource]
 script = ExtResource("2_0wlmc")
@@ -26,3 +27,4 @@ spriteFrameAmount = 1
 canBeSkippedInBus = false
 specialChargesRequired = 0
 ignoresCollision = false
+cantBeHit = false

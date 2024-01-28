@@ -18,11 +18,15 @@ func check_if_different_owner(actor : ActorData,actor2 : ActorData):
 
 func handle_collision(attacker : ActorData, attacked : ActorData):
 	var attackMove : MoveData = attacker.get_current_move()
+	var attackedMove : MoveData = attacked.get_current_move()
 	
 	var attackingMoveFrame : MoveFrameRes = attacker.get_current_move_frame()
 	var attackedMoveFrame : MoveFrameRes = attacked.get_current_move_frame()
 	var hitRes : HitRes = attackedMoveFrame.hitRes
 	var attackRes : AttackRes = attackingMoveFrame.attackRes	
+	
+	if attackedMove.moveRes.cantBeHit: ##TODO:eigenlijk per frame maar luiheid
+		return
 	
 	if attackedMoveFrame == null or attackingMoveFrame == null:
 		return
@@ -59,3 +63,5 @@ func handle_collision(attacker : ActorData, attacked : ActorData):
 		hit = HITS.HEAVY
 	if attackMove.get_move_name() == MOVES.moves.SPECIAL:
 		hit = HITS.SPECIAL
+	if attackMove.get_move_name() == MOVES.moves.AIRKICK:
+		hit = HITS.HEAVY

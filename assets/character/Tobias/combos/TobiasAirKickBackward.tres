@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ComboRes" load_steps=3 format=3 uid="uid://dstsqfj88edkk"]
+
+[ext_resource type="Resource" uid="uid://o7sd28obh0pp" path="res://assets/character/Tobias/moves/TobiasAirKick.tres" id="1_ay8tk"]
+[ext_resource type="Script" path="res://resources/character/moves/ComboRes.gd" id="1_tn0n8"]
+
+[resource]
+script = ExtResource("1_tn0n8")
+moveNames = Array[int]([7, 3, 1])
+resultingMove = ExtResource("1_ay8tk")

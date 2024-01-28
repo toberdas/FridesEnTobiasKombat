@@ -25,6 +25,7 @@ autoplay = "default"
 
 [node name="AnimatedForeground" type="AnimatedSprite2D" parent="Camera2D"]
 visible = false
+z_index = 100
 texture_filter = 1
 
 [node name="PlayerSceneRoot" type="Node2D" parent="."]

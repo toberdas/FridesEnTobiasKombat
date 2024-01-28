@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ComboRes" load_steps=3 format=3 uid="uid://db4e6gqvv4p17"]
+
+[ext_resource type="Resource" uid="uid://qissn0xxliug" path="res://assets/character/Frides/moves/FridesJumpKick.tres" id="1_lvano"]
+[ext_resource type="Script" path="res://resources/character/moves/ComboRes.gd" id="1_pcsi0"]
+
+[resource]
+script = ExtResource("1_pcsi0")
+moveNames = Array[int]([6, 2, 1])
+resultingMove = ExtResource("1_lvano")

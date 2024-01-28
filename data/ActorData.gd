@@ -198,9 +198,11 @@ func try_combo():
 	moveBusCopy.insert(0, currentMoveData.moveRes.moveName)
 	var resultingMove : MoveRes = characterRes.check_combo_with_names(moveBusCopy)
 	if resultingMove:
-		var result = do_move(resultingMove)
-		if result:
-			clear_move_bus()
+		var currentFrame : MoveFrameRes = get_current_move_frame()
+		if currentFrame.can_combo():
+			var result = do_move(resultingMove)
+			if result:
+				clear_move_bus()
 
 func take_damage(damage:int):
 	if hitpointData != null:

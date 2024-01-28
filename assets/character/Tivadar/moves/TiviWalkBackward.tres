@@ -14,13 +14,14 @@ horizontalDisplacement = -5.0
 script = ExtResource("2_cbdmk")
 displacementRes = SubResource("Resource_pubvu")
 canBeCancelled = true
-canBeInterrupted = false
+canBeInterrupted = null
 frameDuration = 0.12
-selfDestruct = false
+selfDestruct = null
 canCombo = true
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_pp7au"]
 script = ExtResource("1_i67dd")
@@ -31,13 +32,14 @@ horizontalDisplacement = -5.0
 script = ExtResource("2_cbdmk")
 displacementRes = SubResource("Resource_pp7au")
 canBeCancelled = true
-canBeInterrupted = false
+canBeInterrupted = null
 frameDuration = 0.12
-selfDestruct = false
+selfDestruct = null
 canCombo = true
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_svxsb"]
 script = ExtResource("1_i67dd")
@@ -48,13 +50,14 @@ horizontalDisplacement = -5.0
 script = ExtResource("2_cbdmk")
 displacementRes = SubResource("Resource_svxsb")
 canBeCancelled = true
-canBeInterrupted = false
+canBeInterrupted = null
 frameDuration = 0.12
-selfDestruct = false
+selfDestruct = null
 canCombo = true
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_vo282"]
 script = ExtResource("1_i67dd")
@@ -65,13 +68,14 @@ horizontalDisplacement = -5.0
 script = ExtResource("2_cbdmk")
 displacementRes = SubResource("Resource_vo282")
 canBeCancelled = true
-canBeInterrupted = false
+canBeInterrupted = null
 frameDuration = 0.12
-selfDestruct = false
+selfDestruct = null
 canCombo = true
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_daedr"]
 script = ExtResource("1_i67dd")
@@ -82,13 +86,14 @@ horizontalDisplacement = -5.0
 script = ExtResource("2_cbdmk")
 displacementRes = SubResource("Resource_daedr")
 canBeCancelled = true
-canBeInterrupted = false
-frameDuration = 0.1
-selfDestruct = false
+canBeInterrupted = null
+frameDuration = null
+selfDestruct = null
 canCombo = true
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_t757n"]
 script = ExtResource("1_i67dd")
@@ -99,13 +104,14 @@ horizontalDisplacement = -5.0
 script = ExtResource("2_cbdmk")
 displacementRes = SubResource("Resource_t757n")
 canBeCancelled = true
-canBeInterrupted = false
-frameDuration = 0.1
-selfDestruct = false
+canBeInterrupted = null
+frameDuration = null
+selfDestruct = null
 canCombo = true
 canLoop = true
-increasesSpriteFrameCounter = true
-grounding = false
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [resource]
 script = ExtResource("3_p6nbk")

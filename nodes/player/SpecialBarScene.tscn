@@ -4,6 +4,6 @@
 scale = Vector2(0.8, 0.8)
 
 [node name="Label" type="Label" parent="."]
-z_index = 1000
+z_index = 80
 offset_right = 40.0
 offset_bottom = 23.0

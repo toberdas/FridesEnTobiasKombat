@@ -42,8 +42,8 @@ func _process(delta):
 					$CharacterSprite.frame = spriteIndex
 				else:
 					print_debug("sprite index overflow")
-			if parseFrame.grounding:
-				global_position.y = 0.0
+			if parseFrame.setsY:
+				global_position.y = parseFrame.setToY
 		var passiveParseFrame : MoveFrameRes = actorData.parse_current_passive_frame()
 		
 		if passiveParseFrame:

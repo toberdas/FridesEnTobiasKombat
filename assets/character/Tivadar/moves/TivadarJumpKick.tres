@@ -1,0 +1,200 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=28 format=3 uid="uid://cv7k7mn4vqdhd"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_2rxqa"]
+[ext_resource type="Script" path="res://resources/character/moves/DisplacementRes.gd" id="1_layis"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="2_s2vxx"]
+[ext_resource type="Resource" uid="uid://kr57ufrvksbf" path="res://assets/geluid/soundcollections/WindupCollection.tres" id="3_3rrc3"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="3_6bb86"]
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="4_dha4h"]
+[ext_resource type="Texture2D" uid="uid://pppmbpxb5t63" path="res://assets/character/Tivadar/sprites/Tivadar_MK-JumpKick.png" id="4_q7bn1"]
+
+[sub_resource type="Resource" id="Resource_egqrn"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 12.0
+
+[sub_resource type="Resource" id="Resource_e16d2"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_egqrn")
+soundFromCollection = ExtResource("3_3rrc3")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = true
+setToY = -48
+
+[sub_resource type="Resource" id="Resource_1gl7j"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 10.0
+
+[sub_resource type="Resource" id="Resource_08q8p"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_1gl7j")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_kes33"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 10.0
+
+[sub_resource type="Resource" id="Resource_k218y"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_kes33")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_ihha5"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 10.0
+
+[sub_resource type="Resource" id="Resource_t2wmb"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_ihha5")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_gof5m"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 8.0
+
+[sub_resource type="Resource" id="Resource_48m80"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_gof5m")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_s4vsj"]
+script = ExtResource("3_6bb86")
+hitboxSize = Vector2(24, 0)
+hitboxLocation = Vector2(10, 0)
+
+[sub_resource type="Resource" id="Resource_qtad3"]
+script = ExtResource("4_dha4h")
+hitboxRes = SubResource("Resource_s4vsj")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+specialChargesGainedOnHit = 1
+
+[sub_resource type="Resource" id="Resource_a05bk"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 8.0
+
+[sub_resource type="Resource" id="Resource_hnen1"]
+script = ExtResource("2_s2vxx")
+attackRes = SubResource("Resource_qtad3")
+displacementRes = SubResource("Resource_a05bk")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_feg4c"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 6.0
+
+[sub_resource type="Resource" id="Resource_h7ffc"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_feg4c")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_45oa2"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 6.0
+
+[sub_resource type="Resource" id="Resource_s7knr"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_45oa2")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_o40oi"]
+script = ExtResource("1_layis")
+verticalDisplacement = 6.0
+horizontalDisplacement = 6.0
+
+[sub_resource type="Resource" id="Resource_58uft"]
+script = ExtResource("2_s2vxx")
+displacementRes = SubResource("Resource_o40oi")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = false
+setsY = false
+setToY = 0
+
+[resource]
+script = ExtResource("1_2rxqa")
+spriteSheet = ExtResource("4_q7bn1")
+moveFrames = Array[ExtResource("2_s2vxx")]([SubResource("Resource_e16d2"), SubResource("Resource_08q8p"), SubResource("Resource_k218y"), SubResource("Resource_t2wmb"), SubResource("Resource_48m80"), SubResource("Resource_hnen1"), SubResource("Resource_h7ffc"), SubResource("Resource_s7knr"), SubResource("Resource_58uft")])
+moveName = 16
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 6
+canBeSkippedInBus = false
+specialChargesRequired = 0
+ignoresCollision = false
+cantBeHit = false

@@ -16,7 +16,8 @@ class_name MoveFrameRes
 @export var canCombo : bool = false
 @export var canLoop : bool = false
 @export var increasesSpriteFrameCounter : bool = true
-@export var grounding : bool = false
+@export var setsY : bool = false
+@export var setToY : int = 0
 
 func get_frame_duration():
 	return frameDuration

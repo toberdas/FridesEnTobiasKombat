@@ -12,6 +12,8 @@ class_name MoveRes
 @export var canBeSkippedInBus : bool = false
 @export var specialChargesRequired : int = 0
 @export var ignoresCollision : bool = false
+@export var cantBeHit : bool = false
+
 func get_moveframe_res(index):
 	if index < moveFrames.size():
 		return moveFrames[index]

@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="Collection" load_steps=4 format=3 uid="uid://b2vixpvneera8"]
+[gd_resource type="Resource" script_class="Collection" load_steps=6 format=3 uid="uid://b2vixpvneera8"]
 
 [ext_resource type="Script" path="res://utils/Collection.gd" id="1_s1f80"]
 [ext_resource type="Resource" uid="uid://dgnnbfi6hg5a6" path="res://assets/stage/WoodsStage.tres" id="1_su8l3"]
-[ext_resource type="Resource" uid="uid://m4mpip1vtme8" path="res://assets/character/Jip/PipesStage.tres" id="2_cvci4"]
+[ext_resource type="Resource" uid="uid://m4mpip1vtme8" path="res://assets/stage/PipesStage.tres" id="2_6mlqo"]
+[ext_resource type="Resource" uid="uid://cft1xkt5ux2cd" path="res://assets/stage/WaveStage.tres" id="3_nqrve"]
+[ext_resource type="Resource" uid="uid://crf3askafvvqs" path="res://assets/stage/MountainStage.tres" id="4_ffckt"]
 
 [resource]
 script = ExtResource("1_s1f80")
-array = [ExtResource("1_su8l3"), ExtResource("2_cvci4")]
+array = [ExtResource("1_su8l3"), ExtResource("2_6mlqo"), ExtResource("3_nqrve"), ExtResource("4_ffckt")]
 dictionary = {}

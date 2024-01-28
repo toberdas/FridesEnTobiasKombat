@@ -14,7 +14,7 @@ script = ExtResource("1_wd58q")
 [node name="HpRoot" type="Node2D" parent="."]
 
 [node name="HpBarScene" parent="HpRoot" instance=ExtResource("2_cpn5o")]
-z_index = 120
+z_index = 80
 texture_filter = 1
 position = Vector2(42, -75)
 

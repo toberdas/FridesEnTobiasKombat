@@ -8,25 +8,27 @@
 
 [sub_resource type="Resource" id="Resource_ybwuk"]
 script = ExtResource("1_mr1bc")
-canBeCancelled = false
-canBeInterrupted = false
+canBeCancelled = null
+canBeInterrupted = null
 frameDuration = 0.02
-selfDestruct = false
-canCombo = false
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+selfDestruct = null
+canCombo = null
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_cltmk"]
 script = ExtResource("1_mr1bc")
-canBeCancelled = false
-canBeInterrupted = false
+canBeCancelled = null
+canBeInterrupted = null
 frameDuration = 0.08
-selfDestruct = false
-canCombo = false
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+selfDestruct = null
+canCombo = null
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_xj7dl"]
 script = ExtResource("2_1ag42")
@@ -43,25 +45,27 @@ blocks = true
 [sub_resource type="Resource" id="Resource_klcnx"]
 script = ExtResource("1_mr1bc")
 hitRes = SubResource("Resource_5i3m5")
-canBeCancelled = false
-canBeInterrupted = false
+canBeCancelled = null
+canBeInterrupted = null
 frameDuration = 0.2
-selfDestruct = false
-canCombo = false
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+selfDestruct = null
+canCombo = null
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [sub_resource type="Resource" id="Resource_2ebxf"]
 script = ExtResource("1_mr1bc")
-canBeCancelled = false
-canBeInterrupted = false
+canBeCancelled = null
+canBeInterrupted = null
 frameDuration = 0.3
-selfDestruct = false
-canCombo = false
-canLoop = false
-increasesSpriteFrameCounter = true
-grounding = false
+selfDestruct = null
+canCombo = null
+canLoop = null
+increasesSpriteFrameCounter = null
+setsY = false
+setToY = 0
 
 [resource]
 script = ExtResource("1_5phtn")

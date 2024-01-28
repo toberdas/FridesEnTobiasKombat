@@ -1,23 +1,23 @@
 [gd_resource type="Resource" script_class="Match" load_steps=9 format=3 uid="uid://evhr5hihbisf"]
 
-[ext_resource type="Resource" uid="uid://e8i0yic5dk8h" path="res://assets/character/Frides/FridesCharacter.tres" id="1_8fnkp"]
+[ext_resource type="Resource" uid="uid://cica0u7m0lhco" path="res://assets/character/Daan/DaanCharacter.tres" id="1_pk53q"]
 [ext_resource type="Script" path="res://data/Match.gd" id="1_qehrb"]
+[ext_resource type="Resource" uid="uid://c2gv50iig14q6" path="res://assets/character/Jip/JipCharacter.tres" id="1_yu36d"]
 [ext_resource type="Resource" uid="uid://csosbuga346lp" path="res://assets/input/DefaultInputCollection.tres" id="2_60l8r"]
 [ext_resource type="Resource" uid="uid://kdqh24eh5amh" path="res://assets/input/SecondDefaultInputCollection.tres" id="4_du8te"]
 [ext_resource type="Script" path="res://data/PlayerData.gd" id="4_p7oiy"]
-[ext_resource type="Resource" uid="uid://cmaoj7821e6j0" path="res://assets/character/Tobias/TobiasCharacter.tres" id="4_rm3ml"]
 
 [sub_resource type="Resource" id="Resource_sc53b"]
 script = ExtResource("4_p7oiy")
 playerID = 0
-characterRes = ExtResource("1_8fnkp")
+characterRes = ExtResource("1_yu36d")
 inputCollection = ExtResource("4_du8te")
 color = Color(0.870588, 0.819608, 0.545098, 1)
 
 [sub_resource type="Resource" id="Resource_hn1hf"]
 script = ExtResource("4_p7oiy")
 playerID = 1
-characterRes = ExtResource("4_rm3ml")
+characterRes = ExtResource("1_pk53q")
 inputCollection = ExtResource("2_60l8r")
 color = Color(0.870588, 0.694118, 0.976471, 1)
 

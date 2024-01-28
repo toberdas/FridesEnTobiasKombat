@@ -1,0 +1,145 @@
+[gd_resource type="Resource" script_class="MoveRes" load_steps=18 format=3 uid="uid://bwala8fdu3ty7"]
+
+[ext_resource type="Script" path="res://resources/character/moves/MoveRes.gd" id="1_5pwto"]
+[ext_resource type="Script" path="res://resources/character/moves/MoveFrameRes.gd" id="1_nap6l"]
+[ext_resource type="Script" path="res://resources/character/moves/HitboxRes.gd" id="2_7un0h"]
+[ext_resource type="AudioStream" uid="uid://ctc0lwdrjmlbq" path="res://assets/geluid/sounds/special/TivadarProjectileSpecial.wav" id="2_xxm1a"]
+[ext_resource type="Script" path="res://resources/character/moves/AttackRes.gd" id="3_hkwa8"]
+[ext_resource type="Texture2D" uid="uid://6ab1mbiv85bt" path="res://assets/character/Tobias/sprites/Tobias_projejctile.png" id="5_1yadi"]
+
+[sub_resource type="Resource" id="Resource_i11bg"]
+script = ExtResource("1_nap6l")
+specificSound = ExtResource("2_xxm1a")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_3bnmd"]
+script = ExtResource("1_nap6l")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_iol2t"]
+script = ExtResource("1_nap6l")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.1
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_6837v"]
+script = ExtResource("2_7un0h")
+hitboxSize = Vector2(50, 50)
+hitboxLocation = Vector2(50, 0)
+
+[sub_resource type="Resource" id="Resource_hk4g1"]
+script = ExtResource("3_hkwa8")
+hitboxRes = SubResource("Resource_6837v")
+damage = 1
+recoveryTimeWhenBlocked = 0.4
+recoveryTimeWhenNotBlocked = 0.0
+destroyOnHit = false
+specialChargesGainedOnHit = 1
+
+[sub_resource type="Resource" id="Resource_i14mn"]
+script = ExtResource("1_nap6l")
+attackRes = SubResource("Resource_hk4g1")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.2
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_22dv7"]
+script = ExtResource("1_nap6l")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.04
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_8u8cb"]
+script = ExtResource("1_nap6l")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.04
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_uckfc"]
+script = ExtResource("1_nap6l")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.04
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_ql743"]
+script = ExtResource("1_nap6l")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.04
+selfDestruct = false
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[sub_resource type="Resource" id="Resource_rgrny"]
+script = ExtResource("1_nap6l")
+canBeCancelled = false
+canBeInterrupted = false
+frameDuration = 0.06
+selfDestruct = true
+canCombo = false
+canLoop = false
+increasesSpriteFrameCounter = true
+setsY = false
+setToY = 0
+
+[resource]
+script = ExtResource("1_5pwto")
+spriteSheet = ExtResource("5_1yadi")
+moveFrames = Array[ExtResource("1_nap6l")]([SubResource("Resource_i11bg"), SubResource("Resource_3bnmd"), SubResource("Resource_iol2t"), SubResource("Resource_i14mn"), SubResource("Resource_22dv7"), SubResource("Resource_8u8cb"), SubResource("Resource_uckfc"), SubResource("Resource_ql743"), SubResource("Resource_rgrny")])
+moveName = 11
+canBeHeld = false
+cacheTime = 0.8
+spriteFrameAmount = 9
+canBeSkippedInBus = false
+specialChargesRequired = 0
+ignoresCollision = true
+cantBeHit = true
