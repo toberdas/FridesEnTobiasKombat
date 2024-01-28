@@ -21,7 +21,8 @@ func matches_event(event : InputEvent):
 	if event is InputEventJoypadMotion:
 		if input is InputEventJoypadMotion:
 			if input.axis == event.axis:
-				return true
+				if sign(event.axis_value) == input.axis_value:
+					return true
 	if event is InputEventMouseButton:
 		if input is InputEventMouseButton:
 			if input.button_index == event.button_index:

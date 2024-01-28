@@ -152,8 +152,9 @@ holdBufferFrames = 6
 decayTime = 1.0
 
 [sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_fyw5g"]
+device = 1
 axis = 1
-axis_value = -1.0
+axis_value = 1.0
 
 [sub_resource type="Resource" id="Resource_4e63b"]
 script = ExtResource("1_trap3")
@@ -166,7 +167,7 @@ decayTime = 1.0
 [sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_2a4ma"]
 device = 1
 axis = 1
-axis_value = 1.0
+axis_value = -1.0
 
 [sub_resource type="Resource" id="Resource_ow4dy"]
 script = ExtResource("1_trap3")
